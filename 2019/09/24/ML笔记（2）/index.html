@@ -404,8 +404,8 @@
 </li>
 <li><p>9.19 </p>
 <ul>
-<li><p>Metric MDS的一个具体的例子。一般做mMDS的时候，令变换$T(\delta<em>{ij})=a+b\delta</em>{ij}(i\neq j)$。这个的作用是考虑到由于</p>
-<p>$\min<em>a\min_X||B(a)-XX^t||^2=\min_a(\sum</em>{i=1}^n\bar{\lambda<em>i}^2(a)+\sum</em>{i=n+1}^m)\lambda_i^2$</p>
+<li><p>Metric MDS的一个具体的例子。一般做mMDS的时候，令变换$T(\delta_{ij})=a+b\delta_{ij}(i\neq j)$。这个的作用是考虑到由于</p>
+<p>$\min_a\min_X||B(a)-XX^t||^2=\min_a(\sum_{i=1}^n\bar{\lambda_i}^2(a)+\sum_{i=n+1}^m)\lambda_i^2$</p>
 <p>如果我们把B弄成正定的，那么所有的$\bar{\lambda_i}^2$都是0，所以我们把a调到$a\gg b$，这样可以保证B正定。</p>
 </li>
 <li><p>Spectral Clustering。</p>
@@ -421,7 +421,7 @@
 </li>
 <li><p>提了一个 grassmanian manifold的概念，我不是很懂，希望下周能讲清楚些。大致是说，有同样的节点连了许多不同图，产生许多graph laplacian。我们又不能同时把他们对角化，但是每个L的本征向量构成的subspace可以被认为是一个grassmanian manifold上的点，而同时对许多图聚类可以通过在grassmanian manifold上寻找一个特定的点来完成。</p>
 </li>
-<li><p>不同类型的graph laplacian。一般的L的问题在于，它是unnormalized。$L<em>{\mathrm{rw}}=D^{-1} L=I-D^{-1} K$是random walk的L，因为$D^{-1}K$可以认为是一个随机行走的transition probability的矩阵。但这个$L</em>{rw}$不对称。$L<em>{\mathrm{sym}}=D^{1 / 2} L</em>{\mathrm{rw}} D^{-1 / 2}=D^{-1 / 2} L D^{-1 / 2}$就是symmetric normalized graph laplacian。</p>
+<li><p>不同类型的graph laplacian。一般的L的问题在于，它是unnormalized。$L_{\mathrm{rw}}=D^{-1} L=I-D^{-1} K$是random walk的L，因为$D^{-1}K$可以认为是一个随机行走的transition probability的矩阵。但这个$L_{rw}$不对称。$L_{\mathrm{sym}}=D^{1 / 2} L_{\mathrm{rw}} D^{-1 / 2}=D^{-1 / 2} L D^{-1 / 2}$就是symmetric normalized graph laplacian。</p>
 </li>
 </ul>
 </li>
@@ -434,10 +434,10 @@
 <li><p>MDS。这方面在taxonomy上感觉极其混乱。</p>
 <ul>
 <li><p>Classical MDS（1）：等距同构嵌入（isometric embedding）。首先，定义距离。距离就是不需要满足三角不等式的一个度规。选取一个距离$\delta:X\times X\hookrightarrow\mathbb{R}$。寻找一个embedding$X\hookrightarrow(\mathbb{R}^n,||\cdot||_2)$，使得$\delta(x_i, x_j)=||f(x_i)-f(x_j)||_2$。当然这个时候这个distance已经是个metric了，这也是为什么这种embedding被叫做iso<em>metric</em>。</p>
-<p>定义mean-centering operator $J=I<em>{m\times m}-\mathbb{I\cdot I}^t/m$，其中$\mathbb{I}=(1, \cdots, 1)^t$。现在我们定义${H}=(\delta^2(x_i, x_j))$，$B=-\frac{1}{2}JHJ$。我们可以算出来$B</em>{ii}+B<em>{jj}-2B</em>{ij}=H_{ij}$，且我们有定理：$(x,\delta)$可以被isometrically embedded into $(\mathbb{R}^n,||\cdot||_2)$，当且仅当B半正定，且$rank(B)\leq n$。</p>
+<p>定义mean-centering operator $J=I_{m\times m}-\mathbb{I\cdot I}^t/m$，其中$\mathbb{I}=(1, \cdots, 1)^t$。现在我们定义${H}=(\delta^2(x_i, x_j))$，$B=-\frac{1}{2}JHJ$。我们可以算出来$B_{ii}+B_{jj}-2B_{ij}=H_{ij}$，且我们有定理：$(x,\delta)$可以被isometrically embedded into $(\mathbb{R}^n,||\cdot||_2)$，当且仅当B半正定，且$rank(B)\leq n$。</p>
 <p>这个过程看上去像巫术。它的动机是这样的：<strong>1）H记录了原feature空间中各点距离的结构，2）用J把这个结构平移到原点周围，方便我们把对距离的约束转成对内积的约束，而后者是可以解的。</strong>两个要求意味着存在一个内积的结构，并且它能放进$\mathbb{R}^n$。</p>
 <p>具体来说，比如已经知道存在一个等距同构的嵌入，那么我们直接把H用欧氏空间中的距离写成</p>
-<p>$H<em>{i j}=\delta\left(s</em>{i}, s<em>{j}\right)^{2}=\left|x</em>{i}-x<em>{j}\right|</em>{2}^{2}=\left|x<em>{i}\right|</em>{2}^{2}+\left|x<em>{j}\right|</em>{2}^{2}-2 x<em>{i} \cdot x</em>{j}$</p>
+<p>$H_{i j}=\delta\left(s_{i}, s_{j}\right)^{2}=\left|x_{i}-x_{j}\right|_{2}^{2}=\left|x_{i}\right|_{2}^{2}+\left|x_{j}\right|_{2}^{2}-2 x_{i} \cdot x_{j}$</p>
 <p>或者说</p>
 <p>$H=v \mathbb{I}^{t}+\mathbb{I} v^{t}-2 X X^{t}$</p>
 <p>因此</p>
@@ -447,15 +447,15 @@ B=J X X^{t} J=(J X)(J X)^{t}</script><p>满足条件。其中JX就是在欧氏�
 <li><p>Classical MDS（2）：近似版本。Isometric 这一点太严格了，基本上不能把数据点嵌入低维，但是它的思维方式非常有帮助。</p>
 <p>现在，我们把被欧氏空间压到很低的n维，希望找到一个$B’$，和B尽可能近，并且能够表示一个内积的结构。这个“尽可能近”的标准，出于计算难度的考量，选取frobenius norm：</p>
 <script type="math/tex; mode=display">
-X=\arg \min _{X}\left\|B-X X^{t}\right\|_{F}^{2}</script><p>因为$\left|B-X X^{t}\right|<em>{F}^{2}=\left|\Lambda-V^{t} X X^{t} V\right|</em>{F}^{2}$，令$S=V^{t} X X^{t} V$，我们有</p>
+X=\arg \min _{X}\left\|B-X X^{t}\right\|_{F}^{2}</script><p>因为$\left|B-X X^{t}\right|_{F}^{2}=\left|\Lambda-V^{t} X X^{t} V\right|_{F}^{2}$，令$S=V^{t} X X^{t} V$，我们有</p>
 <script type="math/tex; mode=display">
 \left\|B-X X^{t}\right\|_{F}^{2}=\sum_{i=1}^{m}\left(\lambda_{i}-S_{i i}\right)^{2}+\sum_{i \neq j} S_{i j}^{2}</script><p>最小化这东西，我们得让$S_{ij}=0,$并且尽量多的把正的、大的$\lambda_i$消掉。因此，</p>
 <script type="math/tex; mode=display">
 S=\operatorname{diag}\left(\lambda_{1}-\overline{\lambda}_{1}, \ldots, \lambda_{n}-\overline{\lambda}_{n}, 0, \ldots, 0\right)</script><p>其中$\bar{\lambda}=min(\lambda, 0)$。Scaling在这里就是指把feature空间中的距离scale到欧氏空间的距离的过程。</p>
 </li>
-<li><p>metric MDS。我们寻找单调的$T(\delta)$，使得$T\left(\delta\left(s<em>{i}, s</em>{j}\right)\right) \approx d\left(x<em>{i}, x</em>{j}\right)$，其中$d\left(x<em>{i}, x</em>{j}\right)=\left|x<em>{i}-x</em>{j}\right|_{2}$。然后我们使用一个stress function来优化这个T。例如，可以选取stress function 为</p>
-<p>$\mathcal{L}(d, T(\delta))=\sum<em>{i j}\left(d\left(x</em>{i}, x<em>{j}\right)-T\left(\delta\left(s</em>{i}, s_{j}\right)\right)\right)^{2}$</p>
-<p>然后在欧氏空间找到最合适的一群${x_i}$。这个优化过程和cMDS很像，$T(\delta)$相当于B，$d(x_i, x_j)$相当于$XX^T$。</p>
+<li><p>metric MDS。我们寻找单调的$T(\delta)$，使得$T\left(\delta\left(s_{i}, s_{j}\right)\right) \approx d\left(x_{i}, x_{j}\right)$，其中$d\left(x_{i}, x_{j}\right)=\left|x_{i}-x_{j}\right|_{2}$。然后我们使用一个stress function来优化这个T。例如，可以选取stress function 为</p>
+<p>$\mathcal{L}(d, T(\delta))=\sum_{i j}\left(d\left(x_{i}, x_{j}\right)-T\left(\delta\left(s_{i}, s_{j}\right)\right)\right)^{2}$</p>
+<p>然后在欧氏空间找到最合适的一群$\{x_i\}$。这个优化过程和cMDS很像，$T(\delta)$相当于B，$d(x_i, x_j)$相当于$XX^T$。</p>
 </li>
 </ul>
 </li>
@@ -731,7 +731,7 @@ S=\operatorname{diag}\left(\lambda_{1}-\overline{\lambda}_{1}, \ldots, \lambda_{
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">274.7k</span>
+    <span title="Site words total count">275.1k</span>
   
 </div>
 
@@ -950,6 +950,26 @@ S=\operatorname{diag}\left(\lambda_{1}-\overline{\lambda}_{1}, \ldots, \lambda_{
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

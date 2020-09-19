@@ -376,23 +376,23 @@
 <h3 id="week-1-2"><a href="#week-1-2" class="headerlink" title="week 1, 2"></a>week 1, 2</h3><h4 id="lecture"><a href="#lecture" class="headerlink" title="lecture"></a>lecture</h4><ul>
 <li><p>8.29</p>
 <ul>
-<li>spanning set和记号$\text{span}_\mathbb{R}{x_i}_n$。basis也可以此定义。</li>
-<li>feature map。有一个“特征”的集合$\mathcal{X}={x<em>i}_n$，它可以是quantitative也可以是categorical的。建立$\phi:\mathcal{X}\rightarrow\mathcal{H}$把它embed到HS上。这就是feature map。HS中具有由内积确定的几何结构，所以可以用$\langle\phi(x_i),\phi(x_j)\rangle$来度量$\mathcal{X}$中元素的相似度$s</em>{ij}=k(x_i, x_j)$。k就是kernel，$k:\mathcal{X}\times\mathcal{X}\rightarrow\mathbb{R}$。这个过程差不多可以理解为“线性化”空间。</li>
+<li>spanning set和记号$\text{span}_\mathbb{R}\{x_i\}_n$。basis也可以此定义。</li>
+<li>feature map。有一个“特征”的集合$\mathcal{X}=\{x_i\}_n$，它可以是quantitative也可以是categorical的。建立$\phi:\mathcal{X}\rightarrow\mathcal{H}$把它embed到HS上。这就是feature map。HS中具有由内积确定的几何结构，所以可以用$\langle\phi(x_i),\phi(x_j)\rangle$来度量$\mathcal{X}$中元素的相似度$s_{ij}=k(x_i, x_j)$。k就是kernel，$k:\mathcal{X}\times\mathcal{X}\rightarrow\mathbb{R}$。这个过程差不多可以理解为“线性化”空间。</li>
 <li>有一类HS叫RKHS（<strong><em>reproducing kernel hilbert space</em></strong>），具有一些<strong><em>我还不认识的</em></strong>好性质，例子：$L^2([0, L])$不是RKHS。在RKHS里，evaluation operator也在他里面。相反，$\delta(x)\notin L^2$。</li>
 <li>function space $\mathbb{R}^X$。有$f:\mathbb{R}^X\rightarrow\mathbb{R}^n$确定isomorphism。</li>
 <li>内积-&gt;范数-&gt;度规。有内积一定有范数，反之不亦然。有范数一定有度规，反之不亦然。</li>
 <li>linear map $V\rightarrow W$。如果像集是$\mathbb{R}$，那么这映射就是<strong>线性泛函</strong>。可以用内积表示为$\langle v,\cdot\rangle_V$。</li>
-<li>V的基底是{e}，W的基底是{$\tilde{e}$}。 采取记号$L(e<em>i)=\tilde{e_j}L</em>{ji}$，把映射L写成$v<em>iL</em>{ji}\tilde{e_j}$。这个就可以写成矩阵表示了。</li>
+<li>V的基底是{e}，W的基底是{$\tilde{e}$}。 采取记号$L(e_i)=\tilde{e_j}L_{ji}$，把映射L写成$v_iL_{ji}\tilde{e_j}$。这个就可以写成矩阵表示了。</li>
 <li>cokernel。coker(L)=$W/Im(L)\simeq Im(L)^\perp$。</li>
 <li>在W里有coker(L),Im(L)。在V里有ker(L),Im($L^T$)。人们可以感觉到，Im(L)对应（同胚？）于Im($L^T$)，ker(L)对应于coker($L^T$)。</li>
 <li>L的秩就是dim(im(L))。容易知道$dim(W)=rank(L)+dim(coker(L)),dim(V)=rank(L^T)+dim(ker(L))$。这个叫dimension theorem。</li>
 <li>algebraic dual。就是V上的线性泛函的空间$V^*$。还有一个topological dual，要求线性泛函得连续。（在有限维的情况下，必然连续，二者没区别）</li>
-<li>Riesz表示。线性泛函可以用和V中一个元素的内积来表示。具体地，先用$e<em>i^*(e_j)=\delta</em>{ij}$定义出来dual空间的基底，那么$e_j^*=\langle e_j,\cdot\rangle$。（要求V的基底是正交归一的，但这很容易做到）</li>
+<li>Riesz表示。线性泛函可以用和V中一个元素的内积来表示。具体地，先用$e_i^<em>(e_j)=\delta_{ij}$定义出来dual空间的基底，那么$e_j^</em>=\langle e_j,\cdot\rangle$。（要求V的基底是正交归一的，但这很容易做到）</li>
 </ul>
 </li>
 <li><p>9.3</p>
 <ul>
-<li>又重新讲了一下我们这个<strong>切入点的图景</strong>：<em>我们想要把feature set X里面的similarity很好的在hilbert space里面表示出来，所以我们建立feature map，并且树立其核心为kernel函数$\mathcal{K}(x<em>i, x_j)=\langle\phi(x_i), \phi(x_j)\rangle</em>{\mathcal{H}}$。分别考虑在$x<em>i,x_j$的evaluation下的写法：$\mathcal{K}(x_i, x_j)=\delta</em>{x<em>i}(\mathcal{K}(\cdot, x_j))=\delta</em>{x<em>j}(\mathcal{K}(x_i, \cdot))$。$\mathcal{K}(\cdot, x_j)$是一个hilbert空间的向量，而从Riesz表示定理，因为某一点的evaluation是一个泛函，所以可以写出$\mathcal{K}(x_i, x_j)=\langle\mathcal{K}(\cdot, x_j), \mathbb{I}</em>{x<em>i}\rangle=\langle\mathcal{K}(x_i, \cdot),\mathbb{I}</em>{x_j}\rangle$。 如果说K是一个reproducing kernel，我们就由RK的性质知道$\mathcal{K}(\cdot, x)=\mathbb{I}_x=\phi(x)$。</em>因为riesz表示针对的是<strong>连续</strong>的泛函，所以RKHS要求<strong>evaluation</strong>（delta function, in some sense）<strong>有界</strong>。</li>
+<li>又重新讲了一下我们这个<strong>切入点的图景</strong>：<em>我们想要把feature set X里面的similarity很好的在hilbert space里面表示出来，所以我们建立feature map，并且树立其核心为kernel函数$\mathcal{K}(x_i, x_j)=\langle\phi(x_i), \phi(x_j)\rangle_{\mathcal{H}}$。分别考虑在$x_i,x_j$的evaluation下的写法：$\mathcal{K}(x_i, x_j)=\delta_{x_i}(\mathcal{K}(\cdot, x_j))=\delta_{x_j}(\mathcal{K}(x_i, \cdot))$。$\mathcal{K}(\cdot, x_j)$是一个hilbert空间的向量，而从Riesz表示定理，因为某一点的evaluation是一个泛函，所以可以写出$\mathcal{K}(x_i, x_j)=\langle\mathcal{K}(\cdot, x_j), \mathbb{I}_{x_i}\rangle=\langle\mathcal{K}(x_i, \cdot),\mathbb{I}_{x_j}\rangle$。 如果说K是一个reproducing kernel，我们就由RK的性质知道$\mathcal{K}(\cdot, x)=\mathbb{I}_x=\phi(x)$。</em>因为riesz表示针对的是<strong>连续</strong>的泛函，所以RKHS要求<strong>evaluation</strong>（delta function, in some sense）<strong>有界</strong>。</li>
 <li>以上的那个$\mathbb{I}$叫representer，实际上，在riesz表示里面和原向量做内积得到原向量在某泛函下的像的那个向量就叫representer。我差不多很久以前就知道delta function是一个functional，但是直到今天才理解。</li>
 <li>本征值，本征向量，Gershgorin圆定理，许多讲义上的内容。。。</li>
 <li>为什么要搞gershgorin，power method之类的。因为高阶矩阵的特征多项式超过5次没法因式分解。</li>
@@ -443,7 +443,7 @@ M=\sum\sigma_iw_iv_i^t</script></li>
 \operatorname{det}(M)=\sum_{i_{1}=1}^{n} \sum_{i_{2}=1}^{n} \cdots \sum_{i_{n}=1}^{n} \epsilon^{i_{1}, i_{2}, \ldots, i_{n}} M_{1 i_{1}} M_{2 i_{2}} \cdots M_{n i_{n}}</script></li>
 <li><p>$\operatorname{det}(T-\lambda I)=0$叫特征多项式。我已经忘了。。特征值的绝对值的最大值叫谱半径。</p>
 </li>
-<li><p>Gershgorin圆定理。矩阵有复的元素，那么在复平面上，矩阵的特征值位于以每个对角线元素为圆心，以每行非对角线元素之和的模为半径的一堆圆的并集里面。证明这个定理：把本征向量最大的元素归一化到1，那么$M u=\lambda u$的第i行给出$\sum<em>{j \neq i} m</em>{i j} u<em>{j}+m</em>{i i}=\lambda$。从这个差不多就能得到以上定理了。</p>
+<li><p>Gershgorin圆定理。矩阵有复的元素，那么在复平面上，矩阵的特征值位于以每个对角线元素为圆心，以每行非对角线元素之和的模为半径的一堆圆的并集里面。证明这个定理：把本征向量最大的元素归一化到1，那么$M u=\lambda u$的第i行给出$\sum_{j \neq i} m_{i j} u_{j}+m_{i i}=\lambda$。从这个差不多就能得到以上定理了。</p>
 </li>
 <li><p>n阶实对称阵的好性质：实本征值，完备、正交的本征向量。</p>
 </li>
@@ -453,13 +453,13 @@ M=\sum\sigma_iw_iv_i^t</script></li>
 </li>
 <li><p>diagonally dominant。就是说每一行元素，论绝对值，别的加起来也比不上对角元。一个这样的对称阵，如果其对角元都非负，从gershgorin圆定理知道，它肯定（半）正定。</p>
 </li>
-<li><p>graph laplacian。取$\delta<em>{i}=\sum</em>{j=1}^{n} w<em>{i j}$，$W=\left(w</em>{i j}\right)$，$D=diag(\delta)$，L=D-W。显然，这东西半正定。</p>
+<li><p>graph laplacian。取$\delta_{i}=\sum_{j=1}^{n} w_{i j}$，$W=\left(w_{i j}\right)$，$D=diag(\delta)$，L=D-W。显然，这东西半正定。</p>
 </li>
 <li><p>projection。就是幂等矩阵。</p>
 </li>
 <li><p>数值方法和矩阵的范数：</p>
 <ul>
-<li><p>估计一个矩阵绝对值最大的本征值（dominant eigenvalue）的power method。可以证明，$v<em>{k} \equiv M^{k} v$随着k越来越大，无限的趋于dominant eigenvalue对应的本征向量，前提是v不和这向量垂直。因此，dominant eigenvalue就是$\frac{v</em>{k}^{t} M v<em>{k}}{v</em>{k}^{t} v_{k}}$。</p>
+<li><p>估计一个矩阵绝对值最大的本征值（dominant eigenvalue）的power method。可以证明，$v_{k} \equiv M^{k} v$随着k越来越大，无限的趋于dominant eigenvalue对应的本征向量，前提是v不和这向量垂直。因此，dominant eigenvalue就是$\frac{v_{k}^{t} M v_{k}}{v_{k}^{t} v_{k}}$。</p>
 </li>
 <li><p>奇异值分解。对于不是方阵的实算子M，我们可以构造对称的方阵$MM^T,M^TM$。这些方阵有很好的性质，比如半正定性，比如它们之间本征值的一致性</p>
 <script type="math/tex; mode=display">
@@ -470,7 +470,7 @@ M=\left(w_{1} w_{2} \cdots w_{k}\right)\left(\begin{array}{cccc}{\sigma_{1}} & {
 </li>
 <li><p>矩阵对应的$\mathbb{R}^{m n}$上的一些操作。</p>
 <ul>
-<li>$\langle M, N\rangle<em>{F}=\operatorname{tr}\left(M^{t} N\right)$为Frobenius内积。这个内积诱导的范数是frobenius norm。它很好理解，因为$|M|</em>{F}^{2}=\operatorname{tr}\left(M^{t} M\right)=\sum<em>{i=1}^{n} \lambda</em>{i}=\sum<em>{i=1}^{k} \sigma</em>{i}^{2}$。</li>
+<li>$\langle M, N\rangle_{F}=\operatorname{tr}\left(M^{t} N\right)$为Frobenius内积。这个内积诱导的范数是frobenius norm。它很好理解，因为$|M|_{F}^{2}=\operatorname{tr}\left(M^{t} M\right)=\sum_{i=1}^{n} \lambda_{i}=\sum_{i=1}^{k} \sigma_{i}^{2}$。</li>
 <li>现在假如我们要找离M最近的rank 1矩阵。这就是找$\left|M-\sigma u v^{t}\right|_{F}$的最小值，也就是找最大的奇异值。这个时候找$M^kv$和$M^{tk}w$就能用power method解决问题。</li>
 </ul>
 </li>
@@ -478,12 +478,12 @@ M=\left(w_{1} w_{2} \cdots w_{k}\right)\left(\begin{array}{cccc}{\sigma_{1}} & {
 <script type="math/tex; mode=display">
 \|M\|_{p}=\sup _{v \in V \backslash\{0\}} \frac{\|M v\|_{p}}{\|v\|_{p}}=\sup _{v \in V,\|v\|_{p}=1}\|M v\|_{p}</script><p>在这种情况下，可以推导出（此处只有结论，但是比较好推）：</p>
 <ul>
-<li>$l<em>1$-norm：$|M|</em>{1}=\max <em>{j}\left{\left|m</em>{*, j}\right|_{1}\right}$</li>
-<li>$l<em>2$-norm(即spectral norm)：$|M|</em>{2}=\sigma_{1}$</li>
-<li>$l<em>\infty$-norm：$|M|</em>{\infty}=\max <em>{i}\left{\left|m</em>{i, *}\right|_{1}\right}$</li>
+<li>$l_1$-norm：$|M|_{1}=\max _{j}\left\{\left|m_{*, j}\right|_{1}\right\}$</li>
+<li>$l_2$-norm(即spectral norm)：$|M|_{2}=\sigma_{1}$</li>
+<li>$l_\infty$-norm：$|M|_{\infty}=\max _{i}\left\{\left|m_{i, *}\right|_{1}\right\}$</li>
 </ul>
 <p>对于spectral radius即最大的本征值绝对值，有$\rho(M) \leq\left|M^{k}\right|^{\frac{1}{k}}$。这里还有 Gelfand 谱半径定理：$\lim _{k \rightarrow \infty}\left|M^{k}\right|^{\frac{1}{k}}=\rho(M)$。</p>
-<p>关于范数的等价性（equivalence）。$\exists c, C&gt;0, s.t.\text{  }c|v|<em>{\alpha} \leq|v|</em>{\beta} \leq C|v|_{\alpha}, \forall v \in V$，这就代表等价性。有一个很强的定理，说有限维向量空间上的norm统统等价。这就引出引理，<strong>说有限维向量空间之间的线性映射$L:V\to W$都是有界、连续的。实际上，V有限维就已经够了。</strong>所以在有限维空间上，我们基本上不用操心以上所有这些概念，但是在无穷维空间上，我们将会十分感激这些性质的出现。<strong>一旦来了一个有界、连续的线性映射，我们就拿他定义一个RK</strong>，进而在对应的RKHS上处理问题。从课上我们知道，<strong>RK对应着evaluation这个泛函在riesz表示下的representer。</strong></p>
+<p>关于范数的等价性（equivalence）。$\exists c, C&gt;0, s.t.\text{  }c|v|_{\alpha} \leq|v|_{\beta} \leq C|v|_{\alpha}, \forall v \in V$，这就代表等价性。有一个很强的定理，说有限维向量空间上的norm统统等价。这就引出引理，<strong>说有限维向量空间之间的线性映射$L:V\to W$都是有界、连续的。实际上，V有限维就已经够了。</strong>所以在有限维空间上，我们基本上不用操心以上所有这些概念，但是在无穷维空间上，我们将会十分感激这些性质的出现。<strong>一旦来了一个有界、连续的线性映射，我们就拿他定义一个RK</strong>，进而在对应的RKHS上处理问题。从课上我们知道，<strong>RK对应着evaluation这个泛函在riesz表示下的representer。</strong></p>
 </li>
 </ul>
 </li>
@@ -503,12 +503,12 @@ M=\left(w_{1} w_{2} \cdots w_{k}\right)\left(\begin{array}{cccc}{\sigma_{1}} & {
 </li>
 <li><p>evaluation functional。取$f:\mathcal{X}\rightarrow\mathbb{R}$构成的HS，$\delta_x:f\rightarrow f(x)$就是（dirac）evaluation functional。</p>
 </li>
-<li><p>RKHS。就是evaluation functional连续的HS。如果$\lim <em>{n \rightarrow \infty}\left|f</em>{n}-f\right|<em>{\mathcal{H}}=0$，那么$\lim </em>{n \rightarrow \infty} f_{n}(x)=f(x), \forall x \in \mathcal{X}$。这是一个非常好的性质。现在想象一个<strong>反例</strong>：</p>
-<p>$\left|f<em>{1}-f</em>{2}\right|<em>{L</em>{2}([0,1])}=\left(\int<em>{0}^{1}\left|f</em>{1}(x)-f_{2}(x)\right|^{2} d x\right)^{1 / 2}$</p>
-<p>再考虑函数序列$\left{x^n\right}_{n=1}^{\infty}$。这个序列的norm收敛到0，可是在x=1这一点它还是1。</p>
+<li><p>RKHS。就是evaluation functional连续的HS。如果$\lim _{n \rightarrow \infty}\left|f_{n}-f\right|_{\mathcal{H}}=0$，那么$\lim _{n \rightarrow \infty} f_{n}(x)=f(x), \forall x \in \mathcal{X}$。这是一个非常好的性质。现在想象一个<strong>反例</strong>：</p>
+<p>$\left|f_{1}-f_{2}\right|_{L_{2}([0,1])}=\left(\int_{0}^{1}\left|f_{1}(x)-f_{2}(x)\right|^{2} d x\right)^{1 / 2}$</p>
+<p>再考虑函数序列$\left\{x^n\right\}_{n=1}^{\infty}$。这个序列的norm收敛到0，可是在x=1这一点它还是1。</p>
 <p>RK是一个核，它满足性质$\forall x \in \mathcal{X}, \forall f \in \mathcal{H}, \quad\langle f, k(\cdot, x)\rangle_{\mathcal{H}}=f(x)$。还是那句话，RK对应着evaluation这个泛函在riesz表示下的representer。可以证明，RK的存在等价于这个HS是一个RKHS。</p>
 </li>
-<li><p>正定函数与RKHS的对应。Moore-Aronszajn定理是说，<strong>每一个正定型$k : \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}$都对应唯一的RKHS$\mathcal{H} \subset \mathbb{R}^{\mathcal{X}}$，其RK就是k</strong>。我们这样证明这件事：首先，我们构造一个pre-RKHS $\mathcal{H}<em>{0}=\operatorname{span}\left[{k(\cdot, x)}</em>{x \in \mathcal{X}}\right]$，在它上赋予内积$\langle f, g\rangle<em>{\mathcal{H}</em>{0}}=\sum<em>{i=1}^{n} \sum</em>{j=1}^{m} \alpha<em>{i} \beta</em>{j} k\left(x<em>{i}, y</em>{j}\right)$，其中$f=\sum<em>{i=1}^{n} \alpha</em>{i} k\left(\cdot, x<em>{i}\right)$ 且 $g=\sum</em>{j=1}^{m} \beta<em>{j} k\left(\cdot, y</em>{j}\right)$，并证明该pre-RKHS具有两条性质：</p>
+<li><p>正定函数与RKHS的对应。Moore-Aronszajn定理是说，<strong>每一个正定型$k : \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}$都对应唯一的RKHS$\mathcal{H} \subset \mathbb{R}^{\mathcal{X}}$，其RK就是k</strong>。我们这样证明这件事：首先，我们构造一个pre-RKHS $\mathcal{H}_{0}=\operatorname{span}\left[\{k(\cdot, x)\}_{x \in \mathcal{X}}\right]$，在它上赋予内积$\langle f, g\rangle_{\mathcal{H}_{0}}=\sum_{i=1}^{n} \sum_{j=1}^{m} \alpha_{i} \beta_{j} k\left(x_{i}, y_{j}\right)$，其中$f=\sum_{i=1}^{n} \alpha_{i} k\left(\cdot, x_{i}\right)$ 且 $g=\sum_{j=1}^{m} \beta_{j} k\left(\cdot, y_{j}\right)$，并证明该pre-RKHS具有两条性质：</p>
 <ul>
 <li>evaluation有界</li>
 <li>任意逐点收敛到0的cauchy seq，其$\mathcal{H}_0$-norm也收敛到0</li>
@@ -531,7 +531,7 @@ M=\left(w_{1} w_{2} \cdots w_{k}\right)\left(\begin{array}{cccc}{\sigma_{1}} & {
 </li>
 <li><p>具体操作：对于度量空间$(X, d)$，取其完备化</p>
 <script type="math/tex; mode=display">
-Y=\left\{\text { Cauchy sequences }\left\{x_{n}\right\} \subset X\right\} / \sim</script><p>其中$\left{x<em>{n}\right} \sim\left{y</em>{n}\right}$ ，如果 $d\left(x<em>{n}, y</em>{n}\right) \rightarrow 0$。Y上的度规定义为$D\left(\left{x<em>{n}\right},\left{y</em>{n}\right}\right)=\lim <em>{n \rightarrow \infty} d\left(x</em>{n}, y_{n}\right)$。那么$(Y, D)$是完备化的度量空间。</p>
+Y=\left\{\text { Cauchy sequences }\left\{x_{n}\right\} \subset X\right\} / \sim</script><p>其中$\left\{x_{n}\right\} \sim\left\{y_{n}\right\}$ ，如果 $d\left(x_{n}, y_{n}\right) \rightarrow 0$。Y上的度规定义为$D\left(\left\{x_{n}\right\},\left\{y_{n}\right\}\right)=\lim _{n \rightarrow \infty} d\left(x_{n}, y_{n}\right)$。那么$(Y, D)$是完备化的度量空间。</p>
 </li>
 <li><p>粗略地说，可以认为这个完备化是唯一的。</p>
 </li>
@@ -797,7 +797,7 @@ Y=\left\{\text { Cauchy sequences }\left\{x_{n}\right\} \subset X\right\} / \sim
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">274.7k</span>
+    <span title="Site words total count">275.1k</span>
   
 </div>
 
@@ -1016,6 +1016,26 @@ Y=\left\{\text { Cauchy sequences }\left\{x_{n}\right\} \subset X\right\} / \sim
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

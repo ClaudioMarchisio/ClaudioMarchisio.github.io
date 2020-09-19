@@ -382,7 +382,7 @@
 <p>从这个简单版本里面也能得到四个临界指数：热容对温度、序参量对温度、响应函数对温度、序参量对刺激。</p>
 <p>这儿可以考虑一个概念：自发对称破缺。比如高温时系统只有一个free energy extremum，稳定在一团乱麻上，降温后降低内能的需求压倒了升高熵的需求，系统必须选一个边站：在一些free energy extremum中选一个。如果对称性是离散的，则选了一个之后，基本上不容易翻越势垒跑到另外一个。但如果对称性是连续的，则在这些地方中间跑来跑去并不怎么会被制裁。这种行为叫goldstone模，它有更深刻的含义，我也不懂。比如超流He的序参量$\phi=\bar{\phi}e^{i\theta(x)}$在复平面上，只要保证$\bar{\phi}$找对地方了，$\theta$的变化不怎么费事。此时$\beta\mathcal{H}=\beta\mathcal{H_0}+\int d^dx (K\bar{\phi}/2)(\nabla\theta)^2$，我听说后一项就是超流的奥秘了，但我也不是很懂这些。</p>
 <p>一个学过朗道相变的人知道那种铁磁-顺磁相变是没有goldstone模的。容易想到这种连续的local extremum的存在性和维数有关。实际上，Mermin-Wagner定理说明了goldstone模的维数下限就是2。对于这里的这种特殊情况（$\int d^dx (K\bar{\phi}/2)(\nabla\theta)^2$），我们可以通过计算系统的涨落$\left&lt;[\theta(x)-\theta(x’)]^2\right&gt;$来证明，这玩意在$d&lt;2$会发散掉，反之则不会。</p>
-<p>研究系统的涨落是很有好处的。对于最普遍的情况，研究平衡态附近的涨落：$m=(\bar{m}+\phi<em>l(x))\hat{e}_1+\phi</em>{t, \alpha}(x)\hat{e<em>\alpha}$。算出来这种微扰后对应的概率，（用Fourier变换，变换出来是一个$\exp[-\frac{K(q^2+\xi^{-2})}{2}|\phi(q)|^2]$的连乘的形式，再基于$\phi(q)$往下算，都是常规操作，不过我以前不熟悉，更显得很菜。），并借着这个结果把关联函数$G=\left&lt;(m</em>\alpha(x)-\bar{m}<em>\alpha)(m</em>\beta(x)-\bar{m}<em>\beta)\right&gt;=\left&lt;\phi</em>\alpha(x)\phi_\beta(x’)\right&gt;$算出来，发现他正比于$e^{-x/\xi}$（这儿也能看出来，$\xi$就是关联长度）。</p>
+<p>研究系统的涨落是很有好处的。对于最普遍的情况，研究平衡态附近的涨落：$m=(\bar{m}+\phi_l(x))\hat{e}_1+\phi_{t, \alpha}(x)\hat{e_\alpha}$。算出来这种微扰后对应的概率，（用Fourier变换，变换出来是一个$\exp[-\frac{K(q^2+\xi^{-2})}{2}|\phi(q)|^2]$的连乘的形式，再基于$\phi(q)$往下算，都是常规操作，不过我以前不熟悉，更显得很菜。），并借着这个结果把关联函数$G=\left&lt;(m_\alpha(x)-\bar{m}_\alpha)(m_\beta(x)-\bar{m}_\beta)\right&gt;=\left&lt;\phi_\alpha(x)\phi_\beta(x’)\right&gt;$算出来，发现他正比于$e^{-x/\xi}$（这儿也能看出来，$\xi$就是关联长度）。</p>
 <p>最后，我们来看一看spa合法性的问题。把上面那涨落带进配分函数（的奇异的部分），做Fourier变换得到$e^{-V(\bar{m}^2t/2+u\bar{m}^4)}$和一堆gauss积分的连乘。求热容，容易知道平衡态部分（指数部分）对应的热容是0和1/8u，而涨落部分要分开看：$d\geq4$的时候，是常数，可以不用管；反之，$C_{fluc}\propto\frac{\xi^{4-d}}{K^2}$， 这时通过比较这项和$1/8u$来判断涨落是否仍可以忽略，这就是Ginzburg判据了。在顺磁-铁磁的情形下，不能忽略；但是对于超导体，尽管其序参量也不到四维，但库珀对比较大，这导致$\xi$也大，所以就可以不考虑这部分涨落。</p>
 
       
@@ -616,7 +616,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">274.7k</span>
+    <span title="Site words total count">275.1k</span>
   
 </div>
 

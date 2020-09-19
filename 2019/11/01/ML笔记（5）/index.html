@@ -338,7 +338,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  4.6k words
+                  4.7k words
                 </span>
               
 
@@ -391,133 +391,133 @@
 <p>对于我不幸的大脑来说，这些定义都太数学了。况且，我不像许多其他同学一样学过许多高明的量子场论。因此，在了解这些定义的具体内容之前，不妨先产生一个模糊的概念：张量是线性映射之间的线性映射。</p>
 </li>
 <li><p>第一个定义的解释</p>
-<p>取$n<em>{1}, \dots, n</em>{k}$维欧氏空间$V<em>{1}, \ldots, V</em>{k}$，令$\mathcal{F}$代表这些空间的cartesian积生成的所谓”free vector space”，这就是说，Cartesian积得到的$\sum n<em>i$维空间中的每一个元素都是该空间的一个basis（现在，忘掉直和空间中的线性性）。一开始，我还以为$V</em>{1} \times V<em>{2} \times \ldots \times V</em>{k}$就是$\mathcal{F}$呢。实际上，Cartesian Product弄出来的这东西叫直和，维数是$\sum n_i$；直积得到的空间，维数是$\prod n_i$。</p>
+<p>取$n_{1}, \dots, n_{k}$维欧氏空间$V_{1}, \ldots, V_{k}$，令$\mathcal{F}$代表这些空间的cartesian积生成的所谓”free vector space”，这就是说，Cartesian积得到的$\sum n_i$维空间中的每一个元素都是该空间的一个basis（现在，忘掉直和空间中的线性性）。一开始，我还以为$V_{1} \times V_{2} \times \ldots \times V_{k}$就是$\mathcal{F}$呢。实际上，Cartesian Product弄出来的这东西叫直和，维数是$\sum n_i$；直积得到的空间，维数是$\prod n_i$。</p>
 <p>令$\mathcal{M}$是由形如</p>
-<p>$\left(x<em>{1}, \ldots, x</em>{i-1}, x<em>{i}+y</em>{i}, x<em>{i+1}, \ldots, x</em>{k}\right)-\left(x<em>{1}, \ldots, x</em>{i-1}, x<em>{i}, x</em>{i+1}, \ldots, x<em>{k}\right)-\left(x</em>{1}, \ldots, x<em>{i-1}, y</em>{i}, x<em>{i+1}, \ldots, x</em>{k}\right)$</p>
+<p>$\left(x_{1}, \ldots, x_{i-1}, x_{i}+y_{i}, x_{i+1}, \ldots, x_{k}\right)-\left(x_{1}, \ldots, x_{i-1}, x_{i}, x_{i+1}, \ldots, x_{k}\right)-\left(x_{1}, \ldots, x_{i-1}, y_{i}, x_{i+1}, \ldots, x_{k}\right)$</p>
 <p>和</p>
-<p>$\alpha\left(x<em>{1}, \ldots, x</em>{i-1}, x<em>{i}, x</em>{i+1}, \ldots, x<em>{k}\right)-\left(x</em>{1}, \ldots, x<em>{i-1}, \alpha x</em>{i}, x<em>{i+1}, \ldots, x</em>{k}\right)$</p>
-<p>的元素构成的子空间。那么，直积$V<em>{1} \otimes \cdots \otimes V</em>{k}$就是商空间$\mathcal{F} / \mathcal{M}$。商空间的意思就是说，对于$\mathcal{F}$中的元素F, f，$F=f+m,m\in\mathcal{M}$，那么这两个元素属于同一个等价类，这些等价类的集合就是商空间。一个简单的例子。取$V_1$，$V_2$。他们的基是${v_k}$，${w_k}$。$V_1\times V_2$的基底是${(v_i,0)+(0,w_j)}$。$V_1\otimes V_2$的基底是${(v_i, w_j)}$。</p>
+<p>$\alpha\left(x_{1}, \ldots, x_{i-1}, x_{i}, x_{i+1}, \ldots, x_{k}\right)-\left(x_{1}, \ldots, x_{i-1}, \alpha x_{i}, x_{i+1}, \ldots, x_{k}\right)$</p>
+<p>的元素构成的子空间。那么，直积$V_{1} \otimes \cdots \otimes V_{k}$就是商空间$\mathcal{F} / \mathcal{M}$。商空间的意思就是说，对于$\mathcal{F}$中的元素F, f，$F=f+m,m\in\mathcal{M}$，那么这两个元素属于同一个等价类，这些等价类的集合就是商空间。一个简单的例子。取$V_1$，$V_2$。他们的基是$\{v_k\}$，$\{w_k\}$。$V_1\times V_2$的基底是$\{(v_i,0)+(0,w_j)\}$。$V_1\otimes V_2$的基底是$\{(v_i, w_j)\}$。</p>
 <p>为什么说这个定义是QM里面采用的呢？在QM里面，量子态的直积满足以下性质：</p>
 <p>$\psi_1\otimes(\phi_1+\phi_2)=\psi_1\otimes\phi_1+\psi_1\otimes\phi_2; \alpha\psi\otimes\phi=\psi\otimes(\alpha\phi)=\alpha(\psi\otimes\phi)$</p>
 <p>此处等号就表示属于同一个等价类。</p>
 </li>
 <li><p>第二个定义的解释</p>
-<p>取V有基$\left{e<em>{1}, \ldots, e</em>{n}\right}$，其对偶空间有$\left{e^{<em> 1}, \ldots, e^{</em> n}\right}$ 满足 $e^{* j}\left(e<em>{i}\right)=\delta</em>{i}^{j}$。现在，我们旋转一下，将V的基换成$\tilde{e}<em>{k}=\sum</em>{i=1}^{n} A<em>{k}^{i} e</em>{i}$。或者说，$e<em>{i}=\sum</em>{k=1}^{n}\left(A^{-1}\right)<em>{i}^{k} \tilde{e}</em>{k}$。</p>
-<p>我们可以知道，$\tilde{e}^{<em> \ell}=\sum<em>{j=1}^{n}\left(A^{-1}\right)</em>{j}^{\ell} e^{</em> j}$。对偶空间基底的变化是A的逆决定的。这种变化方式与V的基底的变化方式相逆，因此称这是逆变的。</p>
+<p>取V有基$\left\{e_{1}, \ldots, e_{n}\right\}$，其对偶空间有$\left\{e^{<em> 1}, \ldots, e^{</em> n}\right\}$ 满足 $e^{* j}\left(e_{i}\right)=\delta_{i}^{j}$。现在，我们旋转一下，将V的基换成$\tilde{e}_{k}=\sum_{i=1}^{n} A_{k}^{i} e_{i}$。或者说，$e_{i}=\sum_{k=1}^{n}\left(A^{-1}\right)_{i}^{k} \tilde{e}_{k}$。</p>
+<p>我们可以知道，$\tilde{e}^{<em> \ell}=\sum_{j=1}^{n}\left(A^{-1}\right)_{j}^{\ell} e^{</em> j}$。对偶空间基底的变化是A的逆决定的。这种变化方式与V的基底的变化方式相逆，因此称这是逆变的。</p>
 <p>对于V中向量v，</p>
-<p>$\sum<em>{i=1}^{n} \sum</em>{k=1}^{n} v^{i}\left(A^{-1}\right)<em>{i}^{k} \tilde{e}</em>{k}=\sum<em>{k=1}^{n} \tilde{v}^{k} \tilde{e}</em>{k} \Rightarrow\tilde{v}^{k}=\sum<em>{i=1}^{n}\left(A^{-1}\right)</em>{i}^{k} v^{i}$</p>
+<p>$\sum_{i=1}^{n} \sum_{k=1}^{n} v^{i}\left(A^{-1}\right)_{i}^{k} \tilde{e}_{k}=\sum_{k=1}^{n} \tilde{v}^{k} \tilde{e}_{k} \Rightarrow\tilde{v}^{k}=\sum_{i=1}^{n}\left(A^{-1}\right)_{i}^{k} v^{i}$</p>
 <p>其分量值的变化也是逆变的。</p>
-<p>对于对偶空间中向量w的分量，自然是协变（与V的基底的变化方式协同）的：$\tilde{w}<em>{\ell}=\sum</em>{j=1}^{n} A<em>{\ell}^{j} w</em>{j}$。</p>
+<p>对于对偶空间中向量w的分量，自然是协变（与V的基底的变化方式协同）的：$\tilde{w}_{\ell}=\sum_{j=1}^{n} A_{\ell}^{j} w_{j}$。</p>
 <p>因此，我们可以写出张量的<em>分量</em>的变化规律来：</p>
-<p>$\tilde{t}<em>{\ell</em>{1} \cdots \ell<em>{q}}^{k</em>{1} \cdots k<em>{p}}=\left(A^{-1}\right)</em>{i<em>{1}}^{k</em>{1}} \cdots\left(A^{-1}\right)<em>{i</em>{p}}^{k<em>{p}} A</em>{\ell<em>{1}}^{j</em>{1}} \cdots A<em>{\ell</em>{q}}^{j<em>{q}} t</em>{j<em>{1} \cdots j</em>{q}}^{i<em>{1} \cdots i</em>{p}}$</p>
+<p>$\tilde{t}_{\ell_{1} \cdots \ell_{q}}^{k_{1} \cdots k_{p}}=\left(A^{-1}\right)_{i_{1}}^{k_{1}} \cdots\left(A^{-1}\right)_{i_{p}}^{k_{p}} A_{\ell_{1}}^{j_{1}} \cdots A_{\ell_{q}}^{j_{q}} t_{j_{1} \cdots j_{q}}^{i_{1} \cdots i_{p}}$</p>
 <p>考虑一个矩阵M，它是两个线性空间之间的线性映射。现在这两个空间的基底都旋转：</p>
-<p>$\tilde{e}<em>{k}=\sum</em>{j=1}^{n} A<em>{k}^{j} e</em>{j}$ ； $\tilde{f}<em>{\ell}=\sum</em>{i=1}^{m} B<em>{\ell}^{i} f</em>{i}$</p>
-<p>如果我们把M的分量写成$M^i<em>j$的形式，$M\left(e</em>{j}\right)=\sum<em>{i=1}^{m} M</em>{j}^{i} f_{i}$，那么</p>
-<p>$\begin{aligned} M\left(\tilde{e}<em>{k}\right) &amp;=M\left(\sum</em>{j=1}^{n} A<em>{k}^{j} e</em>{j}\right)=\sum<em>{j=1}^{n} A</em>{k}^{j} M\left(e<em>{j}\right)=\sum</em>{j=1}^{n} A<em>{k}^{j}\left(\sum</em>{i=1}^{m} M<em>{j}^{i} f</em>{i}\right) \ &amp;=\sum<em>{i=1}^{m} \sum</em>{j=1}^{n} M<em>{j}^{i} A</em>{k}^{j} f<em>{i}=\sum</em>{\ell=1}^{m}\left(\sum<em>{i=1}^{m} \sum</em>{j=1}^{n}\left(B^{-1}\right)<em>{i}^{\ell} M</em>{j}^{i} A<em>{k}^{j}\right) \tilde{f}</em>{\ell} \end{aligned}$</p>
+<p>$\tilde{e}_{k}=\sum_{j=1}^{n} A_{k}^{j} e_{j}$ ； $\tilde{f}_{\ell}=\sum_{i=1}^{m} B_{\ell}^{i} f_{i}$</p>
+<p>如果我们把M的分量写成$M^i_j$的形式，$M\left(e_{j}\right)=\sum_{i=1}^{m} M_{j}^{i} f_{i}$，那么</p>
+<p>$\begin{aligned} M\left(\tilde{e}_{k}\right) &amp;=M\left(\sum_{j=1}^{n} A_{k}^{j} e_{j}\right)=\sum_{j=1}^{n} A_{k}^{j} M\left(e_{j}\right)=\sum_{j=1}^{n} A_{k}^{j}\left(\sum_{i=1}^{m} M_{j}^{i} f_{i}\right) \\ &amp;=\sum_{i=1}^{m} \sum_{j=1}^{n} M_{j}^{i} A_{k}^{j} f_{i}=\sum_{\ell=1}^{m}\left(\sum_{i=1}^{m} \sum_{j=1}^{n}\left(B^{-1}\right)_{i}^{\ell} M_{j}^{i} A_{k}^{j}\right) \tilde{f}_{\ell} \end{aligned}$</p>
 <p>顺理成章。</p>
 <p>因此，M的变换方式正是（1,1）张量的变换方式，M可以认为是$W \otimes V^{*}$的一个元素了。</p>
 </li>
 <li><p>张量积空间的一些情形</p>
 <p>$V^{<em>} \otimes W$和$W \otimes V^{</em>}$是一样的。这就是说，ij的前后顺序没什么关系。为了理解这个事实，我们引入张量积作为向量的写法，因为张量积空间是向量空间，这是很自然的。将两个向量的张量积记成：</p>
-<p>$a \otimes b=\left(\begin{array}{c}{a^{1} b} \ {a^{2} b} \ {\vdots} \ {a^{n_{1}} b}\end{array}\right)$</p>
-<p>现在有线性映射$A: V<em>{1} \rightarrow W</em>{1}$ and $B: V<em>{2} \rightarrow W</em>{2}$。我们知道，$A\otimes B$作用在$V_1$中元素和$V_2$中元素的张量积上，得到$(A \otimes B)(a \otimes b)=(A a) \otimes(B b)$。在这种记号之下，</p>
-<p>$A \otimes B=\left(\begin{array}{cccc}{A<em>{11} B} &amp; {A</em>{12} B} &amp; {\cdots} &amp; {A<em>{1 n</em>{1}} B} \ {A<em>{21} B} &amp; {A</em>{22} B} &amp; {\cdots} &amp; {A<em>{2 n} B} \ {\vdots} &amp; {\vdots} &amp; {} &amp; {\vdots} \ {A</em>{m<em>{11} B}} &amp; {A</em>{m<em>{12}} B} &amp; {\cdots} &amp; {A</em>{m_{1 n 1}} B}\end{array}\right)$</p>
+<p>$a \otimes b=\left(\begin{array}{c}{a^{1} b} \\ {a^{2} b} \\ {\vdots} \\ {a^{n_{1}} b}\end{array}\right)$</p>
+<p>现在有线性映射$A: V_{1} \rightarrow W_{1}$ and $B: V_{2} \rightarrow W_{2}$。我们知道，$A\otimes B$作用在$V_1$中元素和$V_2$中元素的张量积上，得到$(A \otimes B)(a \otimes b)=(A a) \otimes(B b)$。在这种记号之下，</p>
+<p>$A \otimes B=\left(\begin{array}{cccc}{A_{11} B} &amp; {A_{12} B} &amp; {\cdots} &amp; {A_{1 n_{1}} B} \\ {A_{21} B} &amp; {A_{22} B} &amp; {\cdots} &amp; {A_{2 n} B} \\ {\vdots} &amp; {\vdots} &amp; {} &amp; {\vdots} \\ {A_{m_{11} B}} &amp; {A_{m_{12}} B} &amp; {\cdots} &amp; {A_{m_{1 n 1}} B}\end{array}\right)$</p>
 <p>这是很令人满意的。这种矩阵运算也叫矩阵的Kronecker积。特别的，可以想见，取$M=A\otimes B$，取A和B的standard basis（即cartesian basis），显然有</p>
-<p>$f<em>{i} \otimes e^{* j}=f</em>{i}\left(e_{j}\right)^{t}$</p>
-<p>$e^{* j} \otimes f<em>{i}=f</em>{i}\left(e_{j}\right)^{t}$</p>
-<p>（根据$W\otimes V^<em>$的意思，$M<em>{j}^{i} f</em>{i} \otimes e^{</em> j}=M$）</p>
+<p>$f_{i} \otimes e^{* j}=f_{i}\left(e_{j}\right)^{t}$</p>
+<p>$e^{* j} \otimes f_{i}=f_{i}\left(e_{j}\right)^{t}$</p>
+<p>（根据$W\otimes V^<em>$的意思，$M_{j}^{i} f_{i} \otimes e^{</em> j}=M$）</p>
 <p>因此本节初提到的两个张量积空间是相等的。</p>
 </li>
 <li><p>张量的缩并</p>
-<p>$T<em>{q}^{p}=V</em>{1} \otimes \cdots \otimes V<em>{p} \otimes W</em>{1}^{<em>} \otimes \cdots \times W_{q}^{</em>}$</p>
-<p>取$v^{(i)} \in V<em>{i}$，$\varphi^{(j)} \in W</em>{j}^{*}$，定义线性映射$C<em>{s}^{r}: T</em>{q}^{p} \longrightarrow T_{q-1}^{p-1}$，那么映射</p>
+<p>$T_{q}^{p}=V_{1} \otimes \cdots \otimes V_{p} \otimes W_{1}^{<em>} \otimes \cdots \times W_{q}^{</em>}$</p>
+<p>取$v^{(i)} \in V_{i}$，$\varphi^{(j)} \in W_{j}^{*}$，定义线性映射$C_{s}^{r}: T_{q}^{p} \longrightarrow T_{q-1}^{p-1}$，那么映射</p>
 <p>$C_{s}^{r}\left(v^{(1)} \otimes \cdots \otimes v^{(p)} \otimes \varphi^{(1)} \otimes \cdots \otimes \varphi^{(q)}\right)=\varphi^{(s)}\left(v^{(r)}\right) v^{(1)} \otimes \cdots v^{(\hat{r})} \cdots \otimes v^{(p)} \otimes \varphi^{(1)} \otimes \cdots \varphi^{(\hat{s})} \cdots \otimes \varphi^{(q)}$</p>
 <p>是缩并映射。其中，带帽子的指标表示在直积中略去这一项。</p>
 </li>
 <li><p>张量的秩</p>
-<p>张量积空间也是向量空间，所以张量积之间还可以继续张量积。取$t \in T<em>{q}^{p}$，$s \in T</em>{s}^{r}$，我们记</p>
-<p>$\begin{aligned} T<em>{q}^{p} &amp; \times T</em>{s}^{r} \rightarrow T<em>{q}^{p} \otimes T</em>{s}^{r} \(t, s) &amp; \mapsto t \otimes s \end{aligned}$</p>
-<p>由上一节的结论，我们可以shuffle所有那些一维的向量空间，从而得到$T<em>{q}^{p} \otimes T</em>{s}^{r} \cong T_{q+s}^{p+r}$。</p>
+<p>张量积空间也是向量空间，所以张量积之间还可以继续张量积。取$t \in T_{q}^{p}$，$s \in T_{s}^{r}$，我们记</p>
+<p>$\begin{aligned} T_{q}^{p} &amp; \times T_{s}^{r} \rightarrow T_{q}^{p} \otimes T_{s}^{r} \(t, s) &amp; \mapsto t \otimes s \end{aligned}$</p>
+<p>由上一节的结论，我们可以shuffle所有那些一维的向量空间，从而得到$T_{q}^{p} \otimes T_{s}^{r} \cong T_{q+s}^{p+r}$。</p>
 <p>授课者的remark：由此，我们可以建立张量代数$T(V)=\bigoplus_{p=0}^{\infty} T^{p}(V)$，从而进入数学家熟悉的领域。</p>
-<p>令$t \in T^{p}=V<em>{1} \otimes \cdots \otimes V</em>{p}$，那么定义张量秩</p>
-<p>$\operatorname{rank}(t)=\arg \min <em>{r}\left{r \in \mathbb{N} | t=\sum</em>{i=1}^{r} v<em>{(i)}^{(1)} \otimes \cdots \otimes v</em>{(i)}^{(p)}, \text { where } v<em>{(i)}^{(j)} \in V</em>{j}\right}$</p>
+<p>令$t \in T^{p}=V_{1} \otimes \cdots \otimes V_{p}$，那么定义张量秩</p>
+<p>$\operatorname{rank}(t)=\arg \min _{r}\left\{r \in \mathbb{N} | t=\sum_{i=1}^{r} v_{(i)}^{(1)} \otimes \cdots \otimes v_{(i)}^{(p)}, \text { where } v_{(i)}^{(j)} \in V_{j}\right\}$</p>
 <p>与矩阵秩意义差不多，都是用尽可能少的秩为一的分量刻画一个线性映射。所以说一个秩为一的(p,0)张量就是p个向量的张量积（用上一节的符号写下来，还是一个向量的样子）。</p>
 <p>一般张量的秩的计算是NP-hard问题。常用的算法是CP（canonical polyadic） decomposition。我们之后会再提到它。张量的情况里，我们同样希望做低秩的近似。有一种叫Kruskal记号的，是这样做的：$\lambda \in \mathbb{R}^{k}$，$U^{(n)} \in \mathbb{R}^{I_{n} \times k}$，$i=1, \ldots, p$，记</p>
-<p>$[\lambda ; U^{(1)}, \ldots, U^{(p)}] \equiv \sum<em>{j=1}^{k} \lambda</em>{j} u<em>{(j)}^{(1)} \otimes \cdots \otimes u</em>{(j)}^{(p)}$</p>
-<p>$I<em>n$是一个数列，表示每个U矩阵的行数。每个U矩阵都有k列，并且规定它们全是$l_2$-norm为1的。$u</em>{(j)}^{(i)}$就是第i个U矩阵的第j列。一般来说，固定k,$\mathcal{Y} \in V<em>{1} \otimes \cdots \otimes V</em>{p}$，其中$\operatorname{dim}\left(V<em>{n}\right)=I</em>{n}$。然后我们找具体的$\lambda$和$U$，使得$\mathcal{Y} \approx \mathcal{X} \equiv [\lambda ; U^{(1)}, \ldots, U^{(p)}]$。比如说我们熟悉的SVD就可以写成$[\sigma; U, V]$。</p>
+<p>$[\lambda ; U^{(1)}, \ldots, U^{(p)}] \equiv \sum_{j=1}^{k} \lambda_{j} u_{(j)}^{(1)} \otimes \cdots \otimes u_{(j)}^{(p)}$</p>
+<p>$I_n$是一个数列，表示每个U矩阵的行数。每个U矩阵都有k列，并且规定它们全是$l_2$-norm为1的。$u_{(j)}^{(i)}$就是第i个U矩阵的第j列。一般来说，固定k,$\mathcal{Y} \in V_{1} \otimes \cdots \otimes V_{p}$，其中$\operatorname{dim}\left(V_{n}\right)=I_{n}$。然后我们找具体的$\lambda$和$U$，使得$\mathcal{Y} \approx \mathcal{X} \equiv [\lambda ; U^{(1)}, \ldots, U^{(p)}]$。比如说我们熟悉的SVD就可以写成$[\sigma; U, V]$。</p>
 <p>这里约等于的意思还不明确。我们通过定义张量上的距离来解决这个问题。例如，Frobenius内积</p>
-<p>$\langle t, s\rangle<em>{F}=\sum</em>{i<em>{1}, \ldots, i</em>{p}} t^{i<em>{1} \ldots i</em>{p}} s^{i<em>{1} \ldots i</em>{p}}$。</p>
+<p>$\langle t, s\rangle_{F}=\sum_{i_{1}, \ldots, i_{p}} t^{i_{1} \ldots i_{p}} s^{i_{1} \ldots i_{p}}$。</p>
 </li>
 <li><p>Tensor Embedding of Vectorial Data</p>
-<p>量子力学里面，人们关心张量积，是因为想要分解一个复杂系统的波函数，分离出它的自由度来。固体物理最近的一些进展使得人们产生了如下的想法：把n维欧氏空间的数据点表示成张量$t^{i<em>{1} \cdots i</em>{p}}$，那么</p>
-<p>$\hat{y}=w<em>{i</em>{i} \cdots i<em>{p}} t^{i</em>{1} \cdots i_{p}}$</p>
+<p>量子力学里面，人们关心张量积，是因为想要分解一个复杂系统的波函数，分离出它的自由度来。固体物理最近的一些进展使得人们产生了如下的想法：把n维欧氏空间的数据点表示成张量$t^{i_{1} \cdots i_{p}}$，那么</p>
+<p>$\hat{y}=w_{i_{i} \cdots i_{p}} t^{i_{1} \cdots i_{p}}$</p>
 <p>就是一个predictor。这个weight tensor元素太多，一般是通过分解成低秩张量来近似求解。据这课的老师讲，那些固体物理学家盯上了一个叫TT decomposition的东西，原理是把高秩的w压缩成一些矩阵，减少需要优化的参数的数目。</p>
 <p>还有另外一个故事（思路），这就是把张量积空间当做是普通的线性空间，然后用我们熟悉的线性空间的工具来处理。例如，考虑一个embedding</p>
-<p>$\left(\begin{array}{l}{x} \ {y}\end{array}\right) \mapsto\left(\begin{array}{c}{\cos \frac{\pi x}{4}} \ {\sin \frac{\pi x}{4}}\end{array}\right) \otimes\left(\begin{array}{c}{\cos \frac{\pi y}{4}} \ {\sin \frac{\pi y}{4}}\end{array}\right) \in \mathbb{R}^{2} \otimes \mathbb{R}^{2}$</p>
+<p>$\left(\begin{array}{l}{x} \\ {y}\end{array}\right) \mapsto\left(\begin{array}{c}{\cos \frac{\pi x}{4}} \\ {\sin \frac{\pi x}{4}}\end{array}\right) \otimes\left(\begin{array}{c}{\cos \frac{\pi y}{4}} \\ {\sin \frac{\pi y}{4}}\end{array}\right) \in \mathbb{R}^{2} \otimes \mathbb{R}^{2}$</p>
 <p>考虑一个如下图左上角的数据</p>
 <p><img src="https://i.loli.net/2019/11/02/SiraAQRDo5KLcv1.png" alt=""></p>
-<p>x值接近0的点会产生向量$\left(\begin{array}{l}{1} \ {0}\end{array}\right)$，而$x\sim\pm1$的点会产生$\left(\begin{array}{c}{0} \ {\pm 1}\end{array}\right)$。y也一样。如图下方，在张量积第1,3个分量的图中，这些点恰当地分开了。</p>
+<p>x值接近0的点会产生向量$\left(\begin{array}{l}{1} \\ {0}\end{array}\right)$，而$x\sim\pm1$的点会产生$\left(\begin{array}{c}{0} \\ {\pm 1}\end{array}\right)$。y也一样。如图下方，在张量积第1,3个分量的图中，这些点恰当地分开了。</p>
 </li>
 <li><p>Symmetric and Alternating tensors</p>
 <p>令$\pi_{p}$是置换群。取其元素$\sigma$，作用在$T^{p}(V)$的分量上，</p>
-<p>$\sigma(t)=t^{i<em>{\sigma(1)}, \ldots, i</em>{\sigma(p)}} e<em>{i</em>{1}} \otimes \cdots \otimes e<em>{i</em>{p}}$</p>
-<p>如果$\forall \sigma \in \pi<em>{p}$，$\sigma(t)=t$，那么就说这个tensor是symmetric的；如果$\forall \sigma \in \pi</em>{p}$，$\sigma(t)=\operatorname{sign}(\sigma) t$，那就是alternating的。所有(p,0)的symmetric 的张量的集合写作$\operatorname{Sym}^{p}(V)$ 或$S^{p}(V)$，alternating的则写作$\bigwedge^p(V)$。</p>
+<p>$\sigma(t)=t^{i_{\sigma(1)}, \ldots, i_{\sigma(p)}} e_{i_{1}} \otimes \cdots \otimes e_{i_{p}}$</p>
+<p>如果$\forall \sigma \in \pi_{p}$，$\sigma(t)=t$，那么就说这个tensor是symmetric的；如果$\forall \sigma \in \pi_{p}$，$\sigma(t)=\operatorname{sign}(\sigma) t$，那就是alternating的。所有(p,0)的symmetric 的张量的集合写作$\operatorname{Sym}^{p}(V)$ 或$S^{p}(V)$，alternating的则写作$\bigwedge^p(V)$。</p>
 </li>
 <li><p>什么是tensor unfolding</p>
-<p>取$t \in V<em>{1} \otimes \cdots \otimes V</em>{p}$。在分量记号下，$t^{i<em>{1} \cdots i</em>{p}}$所有n-th index的集合叫做第n个模。例如，取</p>
-<p>$t=\left(\begin{array}{ccc}{1} &amp; {2} &amp; {3} \ {4} &amp; {5} &amp; {6}\end{array}\right)$</p>
+<p>取$t \in V_{1} \otimes \cdots \otimes V_{p}$。在分量记号下，$t^{i_{1} \cdots i_{p}}$所有n-th index的集合叫做第n个模。例如，取</p>
+<p>$t=\left(\begin{array}{ccc}{1} &amp; {2} &amp; {3} \\ {4} &amp; {5} &amp; {6}\end{array}\right)$</p>
 <p>那么第一个模就是行指标1,2，第二个模就是列指标1,2,3.</p>
 <p>然后，固定一个mode，变化其他所有的指标，得到的就是mode-n fibre。比如说，</p>
-<p>令$t \in V<em>{1} \otimes \cdots \otimes V_p$，$I_i$是$V_i$的维数。那么t的mode-n unfolding/matricization/flattening 就是一个$I</em>{n} \times\left(\prod<em>{i \neq n} I</em>{i}\right)$维的矩阵，记做$\mathbf{t}<em>{(n)}$，其中原张量分量$t^{i</em>{1} \cdots i_{p}}$被map到矩阵的第$i_n$行，j列，其中</p>
-<p>$j=1+\sum<em>{\ell=1, \ell \neq n}^{p}\left[\left(i</em>{\ell}-1\right) J_{\ell}\right]$</p>
-<p>$J<em>{\ell}=\left{\begin{array}{cl}{\prod</em>{m=\ell+1}^{n-1} I<em>{m},} &amp; {\ell \leq n-2} \ {1,} &amp; {\ell=n-1} \ {\prod</em>{r=1}^{n-1} I<em>{r} \prod</em>{s=\ell+1}^{p} I_{s},} &amp; {\ell \geq n+1}\end{array}\right.$</p>
+<p>令$t \in V_{1} \otimes \cdots \otimes V_p$，$I_i$是$V_i$的维数。那么t的mode-n unfolding/matricization/flattening 就是一个$I_{n} \times\left(\prod_{i \neq n} I_{i}\right)$维的矩阵，记做$\mathbf{t}_{(n)}$，其中原张量分量$t^{i_{1} \cdots i_{p}}$被map到矩阵的第$i_n$行，j列，其中</p>
+<p>$j=1+\sum_{\ell=1, \ell \neq n}^{p}\left[\left(i_{\ell}-1\right) J_{\ell}\right]$</p>
+<p>$J_{\ell}=\left\{\begin{array}{cl}{\prod_{m=\ell+1}^{n-1} I_{m},} &amp; {\ell \leq n-2} \\ {1,} &amp; {\ell=n-1} \\ {\prod_{r=1}^{n-1} I_{r} \prod_{s=\ell+1}^{p} I_{s},} &amp; {\ell \geq n+1}\end{array}\right.$</p>
 <p><strong>这玩意到底是什么意思？</strong>我到现在也不知道。这种充满指标的公式对我来说是不可理解的。我只能拿一个性质当做定义来理解，即</p>
-<p>$\mathbf{X}<em>{(n)}=v</em>{n}\left(v<em>{n+1} \otimes \cdots v</em>{p} \otimes v<em>{1} \otimes \cdots v</em>{n-1}\right)^{t}$</p>
-<p>所以说，行数是指标$i<em>n$决定的，而至于每一列怎么排，那就是先紧着$i</em>{n+1}$排，然后是$i<em>{n+2}$，一直到$i_p$，再是$i_1$，然后再到$i</em>{n-1}$。根据我看到的资料，这个顺序好像不是什么物理意义之类的东西决定的，而是Fortran的习惯。</p>
+<p>$\mathbf{X}_{(n)}=v_{n}\left(v_{n+1} \otimes \cdots v_{p} \otimes v_{1} \otimes \cdots v_{n-1}\right)^{t}$</p>
+<p>所以说，行数是指标$i_n$决定的，而至于每一列怎么排，那就是先紧着$i_{n+1}$排，然后是$i_{n+2}$，一直到$i_p$，再是$i_1$，然后再到$i_{n-1}$。根据我看到的资料，这个顺序好像不是什么物理意义之类的东西决定的，而是Fortran的习惯。</p>
 </li>
 <li><p>n-mode product</p>
-<p>$\mathcal{X} \in V<em>{1} \otimes \cdots \otimes V</em>{p}$，$A=W \otimes V_{n}^{*}$，那么矩阵A从张量（把它想象成一个高维数阵立方体）的第n个维度上乘过去，就是</p>
-<p>$\mathcal{Y} \equiv \mathcal{X} \times<em>{n} A=C</em>{1}^{n}(\mathcal{X} \otimes A)$</p>
-<p>从这个角度想，$\mathcal{Y}=\mathcal{X} \times<em>{n} A \Longleftrightarrow \mathbf{Y}</em>{(n)}=\mathbf{A} \mathbf{X}<em>{(n)}$就是显然的了。如果$\mathcal{Y}=\mathcal{X} \times</em>{1} U<em>{1} \times</em>{2} U<em>{2} \times</em>{3} \cdots \times<em>{p} U</em>{p}$，那么flattening就可以相应地写成$\mathbf{Y}<em>{(n)}=U</em>{n} \mathbf{X}<em>{(n)}\left(U</em>{n+1} \otimes \cdots \otimes U<em>{p} \otimes U</em>{1} \otimes \cdots \otimes U_{n-1}\right)^{t}$。</p>
+<p>$\mathcal{X} \in V_{1} \otimes \cdots \otimes V_{p}$，$A=W \otimes V_{n}^{*}$，那么矩阵A从张量（把它想象成一个高维数阵立方体）的第n个维度上乘过去，就是</p>
+<p>$\mathcal{Y} \equiv \mathcal{X} \times_{n} A=C_{1}^{n}(\mathcal{X} \otimes A)$</p>
+<p>从这个角度想，$\mathcal{Y}=\mathcal{X} \times_{n} A \Longleftrightarrow \mathbf{Y}_{(n)}=\mathbf{A} \mathbf{X}_{(n)}$就是显然的了。如果$\mathcal{Y}=\mathcal{X} \times_{1} U_{1} \times_{2} U_{2} \times_{3} \cdots \times_{p} U_{p}$，那么flattening就可以相应地写成$\mathbf{Y}_{(n)}=U_{n} \mathbf{X}_{(n)}\left(U_{n+1} \otimes \cdots \otimes U_{p} \otimes U_{1} \otimes \cdots \otimes U_{n-1}\right)^{t}$。</p>
 </li>
 <li><p>CP decomposition</p>
 <p>这玩意叫canonical，主要原因是它是从tensor rank的定义出发的。但是实际上哪怕是对矩阵这种低阶张量的分解也不是这样做的：我们是做SVD，动用一个稀疏的“core tensor”或者说singular value matrix，来分担这个矩阵在空间上多么“椭”的信息，而不是拿几个矩阵乘积加权求和去得到原矩阵（这种做法相当于使用identity作core tensor）。</p>
 <p>CP decomposition唯一的优势是它简单。算法上，它是这样做的：首先，定义Khatri-Rao product</p>
-<p>$A \odot B=\left(A<em>{; 1} \otimes B</em>{; 1} \cdots A<em>{:, K} \otimes B</em>{:, K}\right)$</p>
-<p>现在有$\mathcal{Y}\in V<em>{1} \otimes \cdots \otimes V</em>{p}$，想拿$\mathcal{X}=[ \lambda ; U^{(1)}, \ldots, U^{(p)} ]$去套它，判断标准采用frobenius norm。我们首先固定所有的U，只留一个$U^{(n)}$来优化。为了方便起见，采用unfolding出来的矩阵，这样比较好处理：</p>
+<p>$A \odot B=\left(A_{; 1} \otimes B_{; 1} \cdots A_{:, K} \otimes B_{:, K}\right)$</p>
+<p>现在有$\mathcal{Y}\in V_{1} \otimes \cdots \otimes V_{p}$，想拿$\mathcal{X}=[ \lambda ; U^{(1)}, \ldots, U^{(p)} ]$去套它，判断标准采用frobenius norm。我们首先固定所有的U，只留一个$U^{(n)}$来优化。为了方便起见，采用unfolding出来的矩阵，这样比较好处理：</p>
 <p>$\mathbf{X}_{(n)}=U^{(n)} \Lambda\left(U^{(n+1)} \odot \cdots \odot U^{(p)} \odot U^{(1)} \odot \cdots \odot U^{(n-1)}\right)^{t}$</p>
-<p>解$\min <em>{A}\left|\mathbf{Y}</em>{(n)}-A\left(U^{(n+1)} \odot \cdots \odot U^{(p)} \odot U^{(1)} \odot \cdots \odot U^{(n-1)}\right)^{t}\right|_{F}^{2}$</p>
+<p>解$\min _{A}\left|\mathbf{Y}_{(n)}-A\left(U^{(n+1)} \odot \cdots \odot U^{(p)} \odot U^{(1)} \odot \cdots \odot U^{(n-1)}\right)^{t}\right|_{F}^{2}$</p>
 <p>令$A=U^{(n)} \Lambda$，$B=\left(U^{(n+1)} \odot \cdots \odot U^{(p)} \odot\right.\left.U^{(1)} \odot \cdots \odot U^{(n-1)}\right)$</p>
 <p>那么就可以用MP伪逆求得</p>
-<p>$A\left(B^{t} B\right)=\mathbf{Y}<em>{(n)} B \Rightarrow A=\mathbf{Y}</em>{(n)} B\left(B^{t} B\right)^{+}$</p>
+<p>$A\left(B^{t} B\right)=\mathbf{Y}_{(n)} B \Rightarrow A=\mathbf{Y}_{(n)} B\left(B^{t} B\right)^{+}$</p>
 <p>那么，$\lambda$就是A的每一列的模，$U^{(n)}$就是A的每一列归一化之后得到的矩阵。</p>
 <p>如此这般，先随机搞一批U，然后一个一个地优化。这个方法很令人不舒服，因为它是ill-posed的，不能保证收敛。</p>
 </li>
 <li><p>HOSVD（high order SVD）</p>
-<p>这是低维的SVD在高维的推广，也叫tucker decomposition，但tucker本人只是搞了三维的情况。现在令$I<em>n$是每个$V_n$的维数，那么$\mathcal{X} \in V</em>{1} \otimes \cdots \otimes V_{p} \equiv T^{p}$可以被分解成</p>
-<p>$\mathcal{X}=\mathcal{S} \times<em>{1} U^{(1)} \times</em>{2} U^{(2)} \cdots \times_{p} U^{(p)}$</p>
+<p>这是低维的SVD在高维的推广，也叫tucker decomposition，但tucker本人只是搞了三维的情况。现在令$I_n$是每个$V_n$的维数，那么$\mathcal{X} \in V_{1} \otimes \cdots \otimes V_{p} \equiv T^{p}$可以被分解成</p>
+<p>$\mathcal{X}=\mathcal{S} \times_{1} U^{(1)} \times_{2} U^{(2)} \cdots \times_{p} U^{(p)}$</p>
 <p>比如说，对于一个矩阵，$M=\Sigma\times_1U\times_2 V$。</p>
 <p>我个人理解这个S是sparse，不是singular。可能是因为我从来就没理解singular value这个名字到底啥意思。sparse不仅是说S“只有对角元”，也说明这个新东西参数少。还是拿矩阵的SVD来说，本来T的维数是$m\times n$，现在有$k\ll m,n$个奇异值，那么只需要$k(m+n-1)\ll mn$个参数就能刻画整个矩阵。</p>
 <p>这个S也满足矩阵的奇异值分解的诸般性质。比如</p>
 <ul>
-<li>$U^{(n)}=\left(U<em>{(1)}^{(n)} \cdots U</em>{\left(I<em>{n}\right)}^{(n)}\right)$是$I</em>{n} \times I_{n}$的正交矩阵；</li>
-<li>$\forall n \in{1, \ldots, p},\left\langle S^{i n=\alpha}, S^{i<em>{n}=\beta}\right\rangle</em>{F}=0$ for $\alpha \neq \beta$，S的“列”互相正交；</li>
-<li>$\left|S^{i<em>{n}=1}\right|</em>{F} \geq \cdots \geq\left|S^{i<em>{n}=I</em>{n}}\right|_{F} \geq 0$，S的“列”可以排序。</li>
+<li>$U^{(n)}=\left(U_{(1)}^{(n)} \cdots U_{\left(I_{n}\right)}^{(n)}\right)$是$I_{n} \times I_{n}$的正交矩阵；</li>
+<li>$\forall n \in\{1, \ldots, p\},\left\langle S^{i n=\alpha}, S^{i_{n}=\beta}\right\rangle_{F}=0$ for $\alpha \neq \beta$，S的“列”互相正交；</li>
+<li>$\left|S^{i_{n}=1}\right|_{F} \geq \cdots \geq\left|S^{i_{n}=I_{n}}\right|_{F} \geq 0$，S的“列”可以排序。</li>
 </ul>
 <p>怎么求这个分解呢？我们可以对unfolding得到的矩阵做SVD：</p>
 <p>$\mathbf{X}_{(n)}=U^{(n)} \Sigma^{(n)} V^{(n)^{t}}$</p>
 <p>顺手排序：</p>
-<p>$\sigma<em>{1}^{(n)} \geq \sigma</em>{2}^{(n)} \cdots \geq \sigma<em>{I</em>{n}}^{(n)} \geq 0$</p>
+<p>$\sigma_{1}^{(n)} \geq \sigma_{2}^{(n)} \cdots \geq \sigma_{I_{n}}^{(n)} \geq 0$</p>
 <p>然后用这个$U^{(i)}$定义</p>
-<p>$S=\mathcal{X} \times<em>{1} U^{(1)^{t}} \times</em>{2} U^{(2) t} \cdots \times_{p} U^{(p)^{t}}$</p>
+<p>$S=\mathcal{X} \times_{1} U^{(1)^{t}} \times_{2} U^{(2) t} \cdots \times_{p} U^{(p)^{t}}$</p>
 <p>这样就都求出来了。这样得到的结果自然满足以上性质，例如后两条（第一条是平凡的）</p>
-<p>$\begin{aligned} \mathbf{S}<em>{(n)} &amp;=U^{(n) t} \mathbf{X}</em>{(n)}\left(U^{(n+1)^{t}} \otimes \cdots \otimes U^{(p) t} \otimes U^{(1)^{t}} \otimes \cdots \otimes U^{(n-1)^{t}}\right)^{t} \ &amp;=U^{(n)^{t}} \mathbf{X}_{(n)}\left(U^{(n+1)} \otimes \cdots \otimes U^{(p)} \otimes U^{(1)} \otimes \cdots \otimes U^{(n-1)}\right) \&amp;=\Sigma^{(n)} V^{(n)^{t}}\left(U^{(n+1)} \otimes \cdots \otimes U^{(p)} \otimes U^{(1)} \otimes \cdots \otimes U^{(n-1)}\right)\end{aligned}$</p>
-<p>从这里能看出来，那一串U是正交变换，所以S的orthogonality是V决定的，V自然满足这性质。然后$\left|S^{i<em>{n}=1}\right|</em>{F}=\sigma_1^{(n)}$，以此类推，所以排序必然成立。这样，所有性质都满足。</p>
+<p>$\begin{aligned} \mathbf{S}_{(n)} &amp;=U^{(n) t} \mathbf{X}_{(n)}\left(U^{(n+1)^{t}} \otimes \cdots \otimes U^{(p) t} \otimes U^{(1)^{t}} \otimes \cdots \otimes U^{(n-1)^{t}}\right)^{t} \\ &amp;=U^{(n)^{t}} \mathbf{X}_{(n)}\left(U^{(n+1)} \otimes \cdots \otimes U^{(p)} \otimes U^{(1)} \otimes \cdots \otimes U^{(n-1)}\right) \\&amp;=\Sigma^{(n)} V^{(n)^{t}}\left(U^{(n+1)} \otimes \cdots \otimes U^{(p)} \otimes U^{(1)} \otimes \cdots \otimes U^{(n-1)}\right)\end{aligned}$</p>
+<p>从这里能看出来，那一串U是正交变换，所以S的orthogonality是V决定的，V自然满足这性质。然后$\left|S^{i_{n}=1}\right|_{F}=\sigma_1^{(n)}$，以此类推，所以排序必然成立。这样，所有性质都满足。</p>
 </li>
 <li><p>TTSVD</p>
 <p>所谓Tensor Train SVD，指的是把张量的每个分量用一连串矩阵相乘的形式表示的操作。附图中，TTSVD的记号长得像一列火车，因此得名。我对这个东西的理解不是很好，所以简要记之，以后再想。</p>
-<p>$A\left(i<em>{1}, i</em>{2}, \ldots, i<em>{p}\right)=G</em>{1}\left(i<em>{1}\right) G</em>{2}\left(i<em>{2}\right) \ldots G</em>{p}\left(i_{p}\right)$</p>
-<p>其中$G<em>{k}\left(i</em>{k}\right)$ 是 $R<em>{k-1} \times R</em>{k}$的一族矩阵（换句话说，$G<em>k$是一个$V^{R</em>{k-1}}\otimes V^{R<em>k}\otimes V^{I_k}$的张量）。由“边界条件”，$r_0=r</em>{p}=0$。算法是这样的：从$i_1$这维度unfold，做SVD，然后得到$U_1$，这是一个$1\times I_1\times R_1$的数阵。接着，对SVD右面的$\Sigma V$部分做unfolding，同时unfold$r_1$和$i_2$两个维度，再做SVD，得到$U_2$，这是一个$(R_1\times I_2)\times R_2$的矩阵……通过这种方式，我们就可以从$U$得出$G$来。</p>
+<p>$A\left(i_{1}, i_{2}, \ldots, i_{p}\right)=G_{1}\left(i_{1}\right) G_{2}\left(i_{2}\right) \ldots G_{p}\left(i_{p}\right)$</p>
+<p>其中$G_{k}\left(i_{k}\right)$ 是 $R_{k-1} \times R_{k}$的一族矩阵（换句话说，$G_k$是一个$V^{R_{k-1}}\otimes V^{R_k}\otimes V^{I_k}$的张量）。由“边界条件”，$r_0=r_{p}=0$。算法是这样的：从$i_1$这维度unfold，做SVD，然后得到$U_1$，这是一个$1\times I_1\times R_1$的数阵。接着，对SVD右面的$\Sigma V$部分做unfolding，同时unfold$r_1$和$i_2$两个维度，再做SVD，得到$U_2$，这是一个$(R_1\times I_2)\times R_2$的矩阵……通过这种方式，我们就可以从$U$得出$G$来。</p>
 </li>
 </ul>
 <p><img src="https://i.loli.net/2019/11/02/yTdcDQqHLWOEfg9.jpg" alt=""></p>
@@ -781,7 +781,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">274.7k</span>
+    <span title="Site words total count">275.1k</span>
   
 </div>
 
@@ -1000,6 +1000,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

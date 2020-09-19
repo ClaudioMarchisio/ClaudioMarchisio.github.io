@@ -382,7 +382,7 @@
 <p>h2: the mutation was independent of the infections.</p>
 <p>The authors noticed that the variance of the number of mutants may help testing, which was a great step leaned in history of quantitative biology. Without much experimental exquisiteness, the second hypothesis was proved.</p>
 <p>First, under h1 the N(mutants) at one specific time (after a contact with phages) must obey a Poisson distribution, meaning that $\frac{\mathrm{average}}{\mathrm{variance}} = 1$.</p>
-<p>Things under h2 however, are a bit more complicated. Assume that $r$ is the number of mutants and $N$ is the overall population. To make things simple, we just say that $N=N<em>0e^t$ and $\frac{\mathrm{d}r}{\mathrm{d}t}=aN+r$. Integrating the second equation from $t_0$ to $t$, we have $r = (t-t_0)aN$. The idea of integrating from $t_0$ is to make sure that integration begins at a time when there <em>is</em> at least one mutant, eliminating potential errors. Denoting number of cultures as $C$, we can write $a(N</em>{t_0}-N_0)C=1$, in which $N_0$ could be ignored and $t-t_0=\ln(aNC)$ be acquired. With all these above, $r = aN\ln (aNC)$.</p>
+<p>Things under h2 however, are a bit more complicated. Assume that $r$ is the number of mutants and $N$ is the overall population. To make things simple, we just say that $N=N_0e^t$ and $\frac{\mathrm{d}r}{\mathrm{d}t}=aN+r$. Integrating the second equation from $t_0$ to $t$, we have $r = (t-t_0)aN$. The idea of integrating from $t_0$ is to make sure that integration begins at a time when there <em>is</em> at least one mutant, eliminating potential errors. Denoting number of cultures as $C$, we can write $a(N_{t_0}-N_0)C=1$, in which $N_0$ could be ignored and $t-t_0=\ln(aNC)$ be acquired. With all these above, $r = aN\ln (aNC)$.</p>
 <p>Then we consider the average number of new mutations occurred in $[t-\tau, t-\tau+\mathrm{d}\tau]$, which should be $N_te^{-\tau}a\mathrm{d}\tau$. Since the mutation is a Poisson process, that should also be its variance, hence during the time $[t-\tau, t]$, the variance caused by these mutations grows to $N_te^{\tau}a\mathrm{d}\tau$. Integrating $\tau$ in $[0, t-t_0]$, we have that $\mathrm{var}_r=aN_t(e^{t-t_0}-1)=Ca^2N_t^2$. </p>
 <p>Therefore, $\frac{\ln(aNC)}{aNC}$ and 1 can be compared with the data to see which was closer. It turned out to be the former, suggesting a much larger variance. That is natural, since compared to acquired immunity in which all the mutants originate at the same time, independent mutation is more like </p>
 <blockquote>
@@ -620,7 +620,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">274.7k</span>
+    <span title="Site words total count">275.1k</span>
   
 </div>
 

@@ -382,18 +382,18 @@
 <h4 id="三个统计（Bose-Einstein，Fermi-Dirac，Boltzmann）的直观理解"><a href="#三个统计（Bose-Einstein，Fermi-Dirac，Boltzmann）的直观理解" class="headerlink" title="三个统计（Bose-Einstein，Fermi-Dirac，Boltzmann）的直观理解"></a>三个统计（Bose-Einstein，Fermi-Dirac，Boltzmann）的直观理解</h4><p>如果我们想从细致平衡原理去解单粒子量子态的分布，我们可以考虑这样一个图景：</p>
 <p><img src="https://cdn.mathpix.com/snip/images/hWTwNN2EXRn2toJNTsb60DDtLtdb2YNGAKv-lhdprEY.original.fullsize.png" alt=""></p>
 <p>当气体<em>接近</em>理想气体的时候，可以用微扰论得到量子态之间单位时间的转换概率</p>
-<p>$P<em>{a b}=\frac{2 \pi}{\hbar} \rho</em>{0}\left|\left\langle b\left|H_{1}\right| a\right\rangle\right|^{2}$</p>
+<p>$P_{a b}=\frac{2 \pi}{\hbar} \rho_{0}\left|\left\langle b\left|H_{1}\right| a\right\rangle\right|^{2}$</p>
 <p>其中$H_1$是相互作用的哈密顿。从细致平衡原理，我们假设$f_i$代表量子态$i$的占据数，并且假设气体是<em>稀薄</em>的（意味着碰撞前两粒子无关联，$f(1, 2) = f(1)f(2)$）那么</p>
-<p>$Rate <em>{i \rightarrow f}=\left|\left\langle 3,4\left|H</em>{1}\right| 1,2\right\rangle\right|^{2} f<em>{1} f</em>{2}=Rate <em>{f \rightarrow i}=\left|\left\langle 1,2\left|H</em>{1}\right| 3,4\right\rangle\right|^{2} f<em>{3} f</em>{4}$</p>
+<p>$Rate _{i \rightarrow f}=\left|\left\langle 3,4\left|H_{1}\right| 1,2\right\rangle\right|^{2} f_{1} f_{2}=Rate _{f \rightarrow i}=\left|\left\langle 1,2\left|H_{1}\right| 3,4\right\rangle\right|^{2} f_{3} f_{4}$</p>
 <p>这个过程由能量守恒，得到函数方程</p>
 <p>$f(E_1)f(E_2)=f(E_3)f(E_4)$</p>
 <p>和约束$E_1+E_2=E_3+E_4$</p>
 <p>（至于动量，由于系统的各向同性，f肯定只是动量的模的函数，所以就合并到E去了）</p>
 <p>这就解出玻尔兹曼分布。</p>
 <p>考虑玻色子和费米子的对易关系：</p>
-<p>$\left[c<em>{p}, c</em>{p^{\prime}}^{\dagger}\right]=\delta<em>{p p^{\prime}} \quad$ boson<br>$\left{c</em>{p}, c<em>{p^{\prime}}^{\dagger}\right}=\delta</em>{p p^{\prime}} \quad$ fermion</p>
+<p>$\left[c_{p}, c_{p^{\prime}}^{\dagger}\right]=\delta_{p p^{\prime}} \quad$ boson<br>$\left\{c_{p}, c_{p^{\prime}}^{\dagger}\right\}=\delta_{p p^{\prime}} \quad$ fermion</p>
 <p>因此，对于上述细致平衡原理给出的函数方程，恐怕要进行一些修正。玻色子的对易关系对应一个等效的吸引作用，其效果为在Rate上加有系数$(1+f_3)(1+f_4)$，因此函数方程变化为</p>
-<p>$\frac{f<em>{1}}{1+f</em>{1}} \frac{f<em>{2}}{1+f</em>{2}}=\frac{f<em>{3}}{1+f</em>{3}} \frac{f<em>{4}}{1+f</em>{4}}$</p>
+<p>$\frac{f_{1}}{1+f_{1}} \frac{f_{2}}{1+f_{2}}=\frac{f_{3}}{1+f_{3}} \frac{f_{4}}{1+f_{4}}$</p>
 <p>同样由能量守恒，由这个函数方程，就解出Bose-Einstein分布。</p>
 <p>至于费米子，上式+变-即可。直观上，这是泡利不相容原理的一个体现。费米子因为这个原理而表现出等效的互斥作用。这样，就得到了Fermi-Dirac分布。</p>
 <h4 id="统计力学的量子基础"><a href="#统计力学的量子基础" class="headerlink" title="统计力学的量子基础"></a>统计力学的量子基础</h4><p>在Sackur-Tetrode的熵公式中，有两处对于经典结果的修正（虽然这公式本身也是一个半经典结果，能量高的时候才成立）。</p>
@@ -664,7 +664,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">274.7k</span>
+    <span title="Site words total count">275.1k</span>
   
 </div>
 
@@ -883,6 +883,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

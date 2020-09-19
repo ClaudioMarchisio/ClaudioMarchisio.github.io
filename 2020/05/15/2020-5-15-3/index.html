@@ -383,13 +383,13 @@
 <p>From this, our task would be using hydrodynamics together with conservation of force and torque to uniquely solve the path in the configuration space $\mathcal{C}$ given its path in $\tilde{\mathcal{C}}$, where $\tilde{\mathcal{C}}=\mathcal{C}/E_3$, and $E_3$ is the Euclidean group. </p>
 <h3 id="Kinematics"><a href="#Kinematics" class="headerlink" title="Kinematics"></a>Kinematics</h3><p>For each $S_0(\sigma)\in\mathcal{C}$, we could find a matrix </p>
 <script type="math/tex; mode=display">
- \mathcal{R} \equiv[R, d]=\left(\begin{array}{ll}R & d \\ 0 & 1\end{array}\right)</script><p>in representation of $E<em>3$ so that $S(\sigma)=\mathcal{R} S</em>{0}(\sigma)$. Over the parametrized path on $\tilde{\mathcal{C}}$, it is $S(t)=\mathcal{R}(t) S_{0}(t)$. Given $S_0(t)$, knowing $\mathcal{R}(t)$ is knowing the motion.</p>
+ \mathcal{R} \equiv[R, d]=\left(\begin{array}{ll}R & d \\ 0 & 1\end{array}\right)</script><p>in representation of $E_3$ so that $S(\sigma)=\mathcal{R} S_{0}(\sigma)$. Over the parametrized path on $\tilde{\mathcal{C}}$, it is $S(t)=\mathcal{R}(t) S_{0}(t)$. Given $S_0(t)$, knowing $\mathcal{R}(t)$ is knowing the motion.</p>
 <p>It is convenient to define an infinitesimal motion $A(t)$ by</p>
 <script type="math/tex; mode=display">
 \begin{equation}
 \label{defineA}
     \frac{\mathrm{d} \mathcal{R}}{\mathrm{d} t}=\mathcal{R}\left(\mathcal{R}^{-1} \frac{\mathrm{d} \mathcal{R}}{\mathrm{d} t}\right) \equiv \mathcal{R} A.
-\end{equation}</script><p>Physically, from $\mathcal{R}^{-1} \frac{\mathrm{d} \mathcal{R}}{\mathrm{d} t}=A$, $A=\left(\begin{array}{cc}A^{\operatorname{rot}} &amp; A^{\operatorname{tr}} \ 0 &amp; 0\end{array}\right)$, where $A^{\operatorname{rot}}$ is a generator of rotations and $A^{\operatorname{tr}}$ is a velocity vector. For a cyclic motion, as long as we know $A$, we could find out</p>
+\end{equation}</script><p>Physically, from $\mathcal{R}^{-1} \frac{\mathrm{d} \mathcal{R}}{\mathrm{d} t}=A$, $A=\left(\begin{array}{cc}A^{\operatorname{rot}} &amp; A^{\operatorname{tr}} \\ 0 &amp; 0\end{array}\right)$, where $A^{\operatorname{rot}}$ is a generator of rotations and $A^{\operatorname{tr}}$ is a velocity vector. For a cyclic motion, as long as we know $A$, we could find out</p>
 <script type="math/tex; mode=display">
 \begin{equation}
 \label{int}
@@ -402,8 +402,8 @@
     \mathbf{r}(t)&=\tilde{r}_{a}(t) \tilde{\mathbf{e}}_{a} \quad \text{in the space frame}\\
 &=r_{a} \mathbf{e}_{a}(t) \quad \text{in the body frame},
 \end{aligned}
-\end{equation}</script><p>where the rotation acts as $\tilde{r}<em>{b}(t)=r</em>{a} R<em>{a b}(t)$. By taking time derivative of the second expression, we would get the familiar angular velocity defined by $\left{\mathbf{e}_a\right}$: $\frac{d \mathbf{e}</em>{a}}{d t}=\omega \times \mathbf{e}<em>{a}$, where $\omega=\dot{R}R^{-1}$. However, if we take time derivative of the first one, we could get the “convective angular velocity” $\tilde{\omega}=R^{-1}\dot{R}$, where $\dot{\tilde{r}}</em>{b}=r<em>{a} \dot{R}</em>{a b}=\tilde{r}<em>{a}\left(R^{-1} \dot{R}\right)</em>{a b}$. In our previous approach, $\mathcal{R}$ is a generalized version of $R$ here, and we cared more about the $\tilde{r}_{a}(t)$, so we chose to go with equation $\ref{defineA}$.</p>
-<p>And now there is an ambiguity in this angular velocity: we could freely give a change of $\tilde{S}<em>{0}(\sigma)=\Omega\left(S</em>{0}(\sigma)\right) S<em>{0}(\sigma)$ for every standard shape in $\tilde{\mathcal{C}}$. This leads to a change in $\mathcal{R}$: $\tilde{\mathcal{R}}(t)=\mathcal{R}(t) \Omega^{-1}\left(S</em>{0}(t)\right)$. The transformation rule on $A$ is therefore</p>
+\end{equation}</script><p>where the rotation acts as $\tilde{r}_{b}(t)=r_{a} R_{a b}(t)$. By taking time derivative of the second expression, we would get the familiar angular velocity defined by $\left\{\mathbf{e}_a\right\}$: $\frac{d \mathbf{e}_{a}}{d t}=\omega \times \mathbf{e}_{a}$, where $\omega=\dot{R}R^{-1}$. However, if we take time derivative of the first one, we could get the “convective angular velocity” $\tilde{\omega}=R^{-1}\dot{R}$, where $\dot{\tilde{r}}_{b}=r_{a} \dot{R}_{a b}=\tilde{r}_{a}\left(R^{-1} \dot{R}\right)_{a b}$. In our previous approach, $\mathcal{R}$ is a generalized version of $R$ here, and we cared more about the $\tilde{r}_{a}(t)$, so we chose to go with equation $\ref{defineA}$.</p>
+<p>And now there is an ambiguity in this angular velocity: we could freely give a change of $\tilde{S}_{0}(\sigma)=\Omega\left(S_{0}(\sigma)\right) S_{0}(\sigma)$ for every standard shape in $\tilde{\mathcal{C}}$. This leads to a change in $\mathcal{R}$: $\tilde{\mathcal{R}}(t)=\mathcal{R}(t) \Omega^{-1}\left(S_{0}(t)\right)$. The transformation rule on $A$ is therefore</p>
 <script type="math/tex; mode=display">
 \begin{equation}
 \label{amb}
@@ -420,7 +420,7 @@ A(t)_{ab}=\epsilon_{a b c} \tilde{I}_{c d}^{-1} \tilde{L}_{d},</script><p>where 
 \tilde{L}_{a}=\epsilon_{a b c} \sum_{i} m_{i}\left(\tilde{\mathbf{r}}_{i}\right)_{b}\left(\dot{\tilde{\mathbf{r}}}_{i}\right)_{c}\begin{equation}
 \tilde{L}_{a}=\epsilon_{a b c} \sum_{i} m_{i}\left(\tilde{\mathbf{r}}_{i}\right)_{b}\left(\dot{\tilde{\mathbf{r}}}_{i}\right)_{c}
 \end{equation}</script><p>is the apparent angular momentum.</p>
-<p>However, it is generally hard to analyze the integral in $\ref{int}$, but one can do it for infinitesimal deformations. Suppose we start with a particular shape $S<em>{0}(t)$, and move infinitesimally in a loop by $S</em>{0}(t)=S<em>{0}+s(t)$. We could express $s(t)$ in the local fixed basis of the vector field on $S_0$ as $s(t)=\sum</em>{i} \alpha<em>{i}(t) w</em>{i}$. Define the rate of deformation</p>
+<p>However, it is generally hard to analyze the integral in $\ref{int}$, but one can do it for infinitesimal deformations. Suppose we start with a particular shape $S_{0}(t)$, and move infinitesimally in a loop by $S_{0}(t)=S_{0}+s(t)$. We could express $s(t)$ in the local fixed basis of the vector field on $S_0$ as $s(t)=\sum_{i} \alpha_{i}(t) w_{i}$. Define the rate of deformation</p>
 <script type="math/tex; mode=display">
  v(t)=\frac{\delta S_{0}(t)}{\delta t}=\sum_{i} \dot{\alpha}_{i} w_{i},\begin{equation}
     v(t)=\frac{\delta S_{0}(t)}{\delta t}=\sum_{i} \dot{\alpha}_{i} w_{i},
@@ -460,7 +460,7 @@ F_{w_{i} w_{j}} \equiv \frac{\partial A_{w_{i}}}{\partial w_{j}}-\frac{\partial 
 \end{equation}</script><p>The hydrodynamics of the fluid is described by equations $\ref{eq:lowRe}$-$\ref{boundary}$. A method was developed by Shapere and Wilczek to solve for $F$ from $S_0(t)$ through these equations, and then solve the motion by integrating $F$. Here we would rather skip these calculations and take a look at the geometric concepts involved in the physics here.</p>
 <h3 id="Geometry"><a href="#Geometry" class="headerlink" title="Geometry"></a>Geometry</h3><p>If one want to visualize $\mathbb{R}^3$, a popular way is to draw a cartesian coordinate system, which implies specific unit lengths and orientations. However, when one describes certain “geometric” properties of objects in $\mathbb{R}^3$, like the Pythagoras theorem, he would realize that the choice of the coordinate system does not affect such properties. </p>
 <p>To describe this redundancy of description, we could view the coordinate system $\Phi$ as $\Phi: A \rightarrow S$ that identifies an arbitrary geometric object $A$ with a standard object $S$. By applying an isomorphism $\Psi: S \rightarrow S$, we change the coordinate to $\Psi \circ \Phi: A \rightarrow S$. In this way the space of coordinate system would be the group of isomorphism of $S$, $\operatorname{Isom}(S)$. This is called the gauge group. </p>
-<p>Now, think about not one $A$, but a set of parametrized $\left(A<em>{x}\right)</em>{x \in X}$ (“fibres”) that fills up the configuration space $C$, which is also called the total space or “the bundle”. It is usual that $C$ is not “flat”, and we need to identify a standard $S<em>x$ with an $A_x$. Thus we would encounter a set of coordinates $\Phi</em>{x}: A<em>{x} \rightarrow S$, and $\Phi=\left(\Phi</em>{x}\right)_{x \in X}$ is called the gauge of this bundle. For the coordinate-invariant properties that we care about, we could discuss them in $C/\operatorname{Isom}(S)$, which is called the base space. It could be viewed as a section of the bundle. $C$, $\Phi$, and $C/\operatorname{Isom}(S)$ together are viewed as the geomertric object fiber bundle. In our previous setup of the deformation problem, the configuration space $\mathcal{C}$ is the bundle, and the shape space $\tilde{\mathcal{C}}=\mathcal{C}/E_3$ is the base space. Also, $E_3$ could be identified with the set of fibres. When the fibres is a group $G$, which is true in this case, the above bundle is a principal G-bundle. </p>
+<p>Now, think about not one $A$, but a set of parametrized $\left(A_{x}\right)_{x \in X}$ (“fibres”) that fills up the configuration space $C$, which is also called the total space or “the bundle”. It is usual that $C$ is not “flat”, and we need to identify a standard $S_x$ with an $A_x$. Thus we would encounter a set of coordinates $\Phi_{x}: A_{x} \rightarrow S$, and $\Phi=\left(\Phi_{x}\right)_{x \in X}$ is called the gauge of this bundle. For the coordinate-invariant properties that we care about, we could discuss them in $C/\operatorname{Isom}(S)$, which is called the base space. It could be viewed as a section of the bundle. $C$, $\Phi$, and $C/\operatorname{Isom}(S)$ together are viewed as the geomertric object fiber bundle. In our previous setup of the deformation problem, the configuration space $\mathcal{C}$ is the bundle, and the shape space $\tilde{\mathcal{C}}=\mathcal{C}/E_3$ is the base space. Also, $E_3$ could be identified with the set of fibres. When the fibres is a group $G$, which is true in this case, the above bundle is a principal G-bundle. </p>
 <p>The gauge potential $A$ and the field strength $F$ also has geometric meanings. By parallel transport, one can define directional derivatives on the section of the principal bundle:</p>
 <script type="math/tex; mode=display">
 \begin{equation}
@@ -729,7 +729,7 @@ A \rightarrow g A g^{-1}+g \mathrm{d} g^{-1}.
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">274.7k</span>
+    <span title="Site words total count">275.1k</span>
   
 </div>
 
@@ -948,6 +948,26 @@ A \rightarrow g A g^{-1}+g \mathrm{d} g^{-1}.
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

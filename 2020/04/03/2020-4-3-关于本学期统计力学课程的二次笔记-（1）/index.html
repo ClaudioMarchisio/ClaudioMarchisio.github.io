@@ -443,7 +443,7 @@
 </blockquote>
 <ul>
 <li><p>由于等概率原理，一个能量处的简并度（参与）决定了这个能量在测量中出现的概率。因此我们就计算简并度</p>
-<p>$\Gamma(E)=\frac{1}{N !} \frac{1}{2^{3 N}} \sum<em>{\left{\mathbf{n}</em>{i}\right}} \delta^{(k)}\left(E-\sum<em>{j} \frac{\hbar^{2}}{2 m}\left(\frac{\pi}{L}\right)^{2} n</em>{j}^{2}\right)$</p>
+<p>$\Gamma(E)=\frac{1}{N !} \frac{1}{2^{3 N}} \sum_{\left\{\mathbf{n}_{i}\right\}} \delta^{(k)}\left(E-\sum_{j} \frac{\hbar^{2}}{2 m}\left(\frac{\pi}{L}\right)^{2} n_{j}^{2}\right)$</p>
 </li>
 </ul>
 <blockquote>
@@ -452,13 +452,13 @@
 </blockquote>
 <ul>
 <li><p>现在取热力学极限。</p>
-<p>$\Gamma(E)=\frac{1}{N !} \frac{V^{N}}{(2 \pi)^{3 N}} \int d^{3} \mathbf{k}<em>{1} \ldots d^{3} \mathbf{k}</em>{N} \delta^{(D)}\left(E-\frac{\hbar^{2}}{2 m} \sum<em>{i=1}^{N} \mathbf{k}</em>{i}^{2}\right)dE$。</p>
+<p>$\Gamma(E)=\frac{1}{N !} \frac{V^{N}}{(2 \pi)^{3 N}} \int d^{3} \mathbf{k}_{1} \ldots d^{3} \mathbf{k}_{N} \delta^{(D)}\left(E-\frac{\hbar^{2}}{2 m} \sum_{i=1}^{N} \mathbf{k}_{i}^{2}\right)dE$。</p>
 <p>我们略去许多数学。最终，</p>
 </li>
 <li><p>$\Gamma(E)=\frac{V^{N}}{N !}\left(\frac{2 m \pi}{\hbar^{2}}\right)^{3 N / 2} \frac{E^{3 N / 2-1}}{\Gamma(3 N / 2)}$</p>
 </li>
 <li><p>可以得到Sackur-Tetrode的熵公式：</p>
-<p>$S=k<em>{B} \log \Gamma(E)=k</em>{B} N\left[\log \frac{V}{N}+\frac{3}{2} \log \frac{4 \pi m E}{3 N \hbar^{2}}+\frac{5}{2}+\mathcal{O}\left(\frac{\log N}{N}\right)\right]$</p>
+<p>$S=k_{B} \log \Gamma(E)=k_{B} N\left[\log \frac{V}{N}+\frac{3}{2} \log \frac{4 \pi m E}{3 N \hbar^{2}}+\frac{5}{2}+\mathcal{O}\left(\frac{\log N}{N}\right)\right]$</p>
 </li>
 </ul>
 <blockquote>
@@ -466,7 +466,7 @@
 </blockquote>
 <ul>
 <li>就可以得到$\frac{1}{T}=\frac{\partial S}{\partial E} \Rightarrow E=\frac{3}{2} N k_{B} T$；</li>
-<li>以及状态方程$P=\left.T \frac{\partial S}{\partial V}\right|<em>{E}=\frac{N k</em>{B} T}{V}$；</li>
+<li>以及状态方程$P=\left.T \frac{\partial S}{\partial V}\right|_{E}=\frac{N k_{B} T}{V}$；</li>
 </ul>
 <blockquote>
 <p>以及作者没有提到的$\frac{\partial S}{\partial N}=k_{B} \log \left(\frac{V}{N}\left(\frac{4 \pi m E}{3 N h^{2}}\right)^{3 / 2}\right)$。</p>
@@ -476,17 +476,17 @@
 <p>我们谈到了F，$\Omega$，S，内能U是热力学的基础，同样重要。那么G为什么也是一个自然的量呢？为什么我们要有吉布斯自由能？一个想法是，G=G(T,P,N)，作为广延量，可以直接写$G=Ng(T,P)$，对N求导知道$G=N\mu$。一个等温等压体系，其演化以化学势为依托。对于化学家来说，这样的体系看上去算是自然的。但是这一块的问题我想得很不清楚。留待以后有心情了再考虑。</p>
 </blockquote>
 <h4 id="玻色统计，费米统计"><a href="#玻色统计，费米统计" class="headerlink" title="玻色统计，费米统计"></a>玻色统计，费米统计</h4><ul>
-<li><p>考虑一点动力学。系统会演化。对于微扰$H<em>1$，Fermi’s Golden Rule 指出量子态之间演化的概率$P</em>{a b}=\frac{2 \pi}{\hbar} \rho<em>{0}\left|\left\langle b\left|H</em>{1}\right| a\right\rangle\right|^{2}$，由此我们知道，$P<em>{a b}=P</em>{b a}$。实际上两个态之间演化的流是$R<em>{a b}=w</em>{a} P_{a b}$，</p>
+<li><p>考虑一点动力学。系统会演化。对于微扰$H_1$，Fermi’s Golden Rule 指出量子态之间演化的概率$P_{a b}=\frac{2 \pi}{\hbar} \rho_{0}\left|\left\langle b\left|H_{1}\right| a\right\rangle\right|^{2}$，由此我们知道，$P_{a b}=P_{b a}$。实际上两个态之间演化的流是$R_{a b}=w_{a} P_{a b}$，</p>
 </li>
-<li><p>主方程$\frac{d w<em>{a}}{d t}=\sum</em>{b}\left(R<em>{b a}-R</em>{a b}\right)$</p>
+<li><p>主方程$\frac{d w_{a}}{d t}=\sum_{b}\left(R_{b a}-R_{a b}\right)$</p>
 </li>
-<li><p>平衡态时主方程左边是0。因此，$\sum<em>{b} P</em>{a b}\left(w<em>{b}-w</em>{a}\right)=0$。微扰论的另一个结果是$\operatorname{det}(P) \neq 0$，因此必须$w<em>{a}=w</em>{b}$（单粒子的等概率原理）进而$R<em>{b a}=R</em>{a b}$（细致平衡）。</p>
+<li><p>平衡态时主方程左边是0。因此，$\sum_{b} P_{a b}\left(w_{b}-w_{a}\right)=0$。微扰论的另一个结果是$\operatorname{det}(P) \neq 0$，因此必须$w_{a}=w_{b}$（单粒子的等概率原理）进而$R_{b a}=R_{a b}$（细致平衡）。</p>
 </li>
 <li><p>考虑两个粒子（费米子）分别从1,2态撞到3,4态。</p>
-<p>Rate $<em>{i \rightarrow f}=\left|\left\langle 3,4\left|H</em>{1}\right| 1,2\right\rangle\right|^{2} f<em>{1} f</em>{2}\left(1-f<em>{3}\right)\left(1-f</em>{4}\right)$</p>
+<p>Rate $_{i \rightarrow f}=\left|\left\langle 3,4\left|H_{1}\right| 1,2\right\rangle\right|^{2} f_{1} f_{2}\left(1-f_{3}\right)\left(1-f_{4}\right)$</p>
 <p>其中已经利用了费米子的反对易关系。然后我们利用细致平衡，经过几步推导得到</p>
 </li>
-<li><p>$\frac{f<em>{k}}{1-f</em>{k}}=e^{-\alpha-\beta E<em>{k}-\gamma \cdot \mathbf{P}</em>{k}}$</p>
+<li><p>$\frac{f_{k}}{1-f_{k}}=e^{-\alpha-\beta E_{k}-\gamma \cdot \mathbf{P}_{k}}$</p>
 </li>
 </ul>
 <blockquote>
@@ -494,7 +494,7 @@
 </blockquote>
 <ul>
 <li>为了确定这两个系数，利用色散关系$\epsilon=\hbar^{2} k^{2} / 2 m$，知道$D(\epsilon)=\frac{V}{2 \pi^{2}}\left(\frac{2 m}{\hbar^{2}}\right)^{3 / 2} \epsilon^{1 / 2}$，写出$\frac{E}{N}=\frac{\int d \epsilon \epsilon^{1 / 2} \epsilon e^{-\beta \epsilon}}{\int d \epsilon \epsilon^{1 / 2} e^{-\beta \epsilon}}=\frac{3}{2 \beta}$，和S-T公式的结果比对，就知道$\beta=1/kT$；写出N，比对，就知道$\alpha=-\frac{\mu}{k_{B} T}$。</li>
-<li>因此，F-D分布给出$f<em>{k}=\left(e^{\left(E</em>{k}-\mu\right) / k_{B} T}+1\right)^{-1}$。改变散射过程中的系数，就可以同样的办法得到B-E分布或Boltzmann分布。</li>
+<li>因此，F-D分布给出$f_{k}=\left(e^{\left(E_{k}-\mu\right) / k_{B} T}+1\right)^{-1}$。改变散射过程中的系数，就可以同样的办法得到B-E分布或Boltzmann分布。</li>
 </ul>
 <blockquote>
 <p>还是应该注意，这个分布是量子态的分布。</p>
@@ -503,7 +503,7 @@
 <ul>
 <li>什么时候这些统计回到经典的结果？<ul>
 <li>这些统计永远不会“回到”经典的结果，因为经典的理论里面没解释粒子的全同性。</li>
-<li>不过，考虑到不确定性原理，如果说势能显著变化的尺度是$D$，那么，为了让我们的动量足够确定，需要$|p| \gg \frac{\hbar}{2 D}$。由于系统能量的尺度是$k<em>{B} T=\frac{1}{\pi} \frac{p^{2}}{2 m} ,\quad p=\frac{h}{\lambda</em>{T}}$，实际上经典极限就是$\lambda<em>{T} \ll D$（对于一个流体，就相当于$\lambda</em>{T} \ll \rho^{-1 / 3}$），其中“德布罗意”热波长是$\lambda<em>{T}=\frac{h}{\sqrt{2 \pi m k</em>{B} T}}$。</li>
+<li>不过，考虑到不确定性原理，如果说势能显著变化的尺度是$D$，那么，为了让我们的动量足够确定，需要$|p| \gg \frac{\hbar}{2 D}$。由于系统能量的尺度是$k_{B} T=\frac{1}{\pi} \frac{p^{2}}{2 m} ,\quad p=\frac{h}{\lambda_{T}}$，实际上经典极限就是$\lambda_{T} \ll D$（对于一个流体，就相当于$\lambda_{T} \ll \rho^{-1 / 3}$），其中“德布罗意”热波长是$\lambda_{T}=\frac{h}{\sqrt{2 \pi m k_{B} T}}$。</li>
 </ul>
 </li>
 </ul>
@@ -525,23 +525,23 @@
 <p>在我看来，<em>伊辛模型</em>是统计物理的果蝇，因为它是一个（关于有粒子间相互作用的）想法的试验场。但<em>平衡态量子理想气体</em>更像是这个球形鸡。</p>
 </blockquote>
 <h5 id="理想经典气体"><a href="#理想经典气体" class="headerlink" title="理想经典气体"></a>理想经典气体</h5><ul>
-<li>$\mathcal{Z}=\frac{1}{N !} \frac{1}{\Lambda<em>{T}^{3 N} Q</em>{N}}$<br>$Q<em>{N}=\int d^{3} \mathbf{r}</em>{i} \ldots d^{3} \mathbf{r}_{N}=V^{N}$</li>
+<li>$\mathcal{Z}=\frac{1}{N !} \frac{1}{\Lambda_{T}^{3 N} Q_{N}}$<br>$Q_{N}=\int d^{3} \mathbf{r}_{i} \ldots d^{3} \mathbf{r}_{N}=V^{N}$</li>
 </ul>
 <blockquote>
-<p>$\Xi=\sum<em>{N=0}^{\infty} \mathrm{e}^{-a N} Z</em>{N}=\sum_{N=0}^{\infty} \frac{\left(\mathrm{e}^{-\alpha} Z\right)^{N}}{N !}=\exp \left(\mathrm{e}^{-\alpha} Z\right)$</p>
+<p>$\Xi=\sum_{N=0}^{\infty} \mathrm{e}^{-a N} Z_{N}=\sum_{N=0}^{\infty} \frac{\left(\mathrm{e}^{-\alpha} Z\right)^{N}}{N !}=\exp \left(\mathrm{e}^{-\alpha} Z\right)$</p>
 </blockquote>
 <h5 id="理想费米气体"><a href="#理想费米气体" class="headerlink" title="理想费米气体"></a>理想费米气体</h5><ul>
 <li><p>对于理想量子气体，我们只关心它在低温下的性质。</p>
 </li>
-<li><p>$\Xi=\sum<em>{N=0}^{\infty}\left{\sum</em>{n<em>{1}} \sum</em>{n<em>{2}} \ldots \sum</em>{n<em>{i}} e^{-\beta\left(\sum</em>{j} n<em>{j} \epsilon</em>{j}-\mu N\right)}\right}$，n取0或1</p>
+<li><p>$\Xi=\sum_{N=0}^{\infty}\left\{\sum_{n_{1}} \sum_{n_{2}} \ldots \sum_{n_{i}} e^{-\beta\left(\sum_{j} n_{j} \epsilon_{j}-\mu N\right)}\right\}$，n取0或1</p>
 </li>
 </ul>
 <blockquote>
 <p>为什么处理量子统计要用巨正则系综？因为巨正则系综下各能级的粒子数独立。$f_i$或者说$\langle n_i\rangle$很好求，对$\Xi$求导就行了。这样的话，（巨）配分函数就可以写成级数的形式。</p>
 </blockquote>
 <ul>
-<li><p>甚至不用对整个$\Xi$求导。直接观察这个求和，写出单粒子配分函数，$\Xi<em>{i}=1+e^{-\beta\left(\epsilon</em>{i}-\mu\right)}$，就有</p>
-<p>$f<em>{i} \equiv\left\langle n</em>{i}\right\rangle=\frac{1}{\Xi<em>{i}} \sum</em>{n<em>{i}=0}^{1} n</em>{i} e^{-\beta\left(\epsilon<em>{i}-\mu\right) n</em>{i}}\frac{1}{1+e^{\beta\left(\epsilon_{i}-\mu\right)}}$。</p>
+<li><p>甚至不用对整个$\Xi$求导。直接观察这个求和，写出单粒子配分函数，$\Xi_{i}=1+e^{-\beta\left(\epsilon_{i}-\mu\right)}$，就有</p>
+<p>$f_{i} \equiv\left\langle n_{i}\right\rangle=\frac{1}{\Xi_{i}} \sum_{n_{i}=0}^{1} n_{i} e^{-\beta\left(\epsilon_{i}-\mu\right) n_{i}}\frac{1}{1+e^{\beta\left(\epsilon_{i}-\mu\right)}}$。</p>
 </li>
 <li><p>然而这个时候并不是$\mu$固定，而是$N$固定，所以由$N=2 \sum_{\epsilon \leq \mu(T=0)}=\sum f_i$求N。</p>
 </li>
@@ -557,35 +557,35 @@
 <p>另外，我们知道热力学上$\mu = -T(\frac{\partial S}{\partial N})|_{E, V}$。考虑向低温的费米气体内部加入一个基态的粒子，不改变体系的能量。这时候，由于基态本来也几乎排满了，新来的粒子势必导致微观状态数目的减少，故熵会减少，化学势是正的。对于玻色气体，包括高温下的费米气体，肯定是没有这回事。</p>
 </blockquote>
 <ul>
-<li><p>零温下的内能为$\mathcal{U}=\sum<em>{i} f</em>{i} \epsilon<em>{i}=2 \frac{V}{8 \pi^{3}} \int</em>{0}^{k<em>{F}} 4 \pi k^{2} d k \frac{\hbar^{2} k^{2}}{2 m}=\frac{3 N}{5} \epsilon</em>{F}$。</p>
+<li><p>零温下的内能为$\mathcal{U}=\sum_{i} f_{i} \epsilon_{i}=2 \frac{V}{8 \pi^{3}} \int_{0}^{k_{F}} 4 \pi k^{2} d k \frac{\hbar^{2} k^{2}}{2 m}=\frac{3 N}{5} \epsilon_{F}$。</p>
 <blockquote>
 <p> 升温的话，肯定是只有费米面附近(分布的宽度为$kT$，故其数目$\sim NkT$)的一部分粒子会跳到高温去。每一粒子对热容的贡献，根据能量均分定理，为$1.5k$。因此热容量正比于温度。在低温下，费米气体的热容比经典气体小得多，这是因为大部分粒子被泡利不相容原理锁住了，只有费米能量附近的粒子才容易被激发。</p>
 </blockquote>
 </li>
-<li><p>$\Xi=\prod<em>{i}\left(1+e^{-\beta \epsilon</em>{i}-\mu}\right)$</p>
-<p>$\begin{aligned} \frac{P}{k<em>{B} T} &amp;=\frac{4 \pi(1+2 s)}{h^{3}} \int</em>{0}^{\infty} p^{2} d p \log \left(1+\lambda e^{-\beta p^{2} / 2 m}\right) \ &amp; \frac{N}{V}=\frac{4 \pi(1+2 s)}{h^{3}} \int_{0}^{\infty} p^{2} d p \frac{1}{1+\lambda^{-1} e^{\beta p^{2} / 2 m}} \end{aligned}$</p>
+<li><p>$\Xi=\prod_{i}\left(1+e^{-\beta \epsilon_{i}-\mu}\right)$</p>
+<p>$\begin{aligned} \frac{P}{k_{B} T} &amp;=\frac{4 \pi(1+2 s)}{h^{3}} \int_{0}^{\infty} p^{2} d p \log \left(1+\lambda e^{-\beta p^{2} / 2 m}\right) \\ &amp; \frac{N}{V}=\frac{4 \pi(1+2 s)}{h^{3}} \int_{0}^{\infty} p^{2} d p \frac{1}{1+\lambda^{-1} e^{\beta p^{2} / 2 m}} \end{aligned}$</p>
 <p>其中$\lambda$是fugacity（$\exp(\beta\mu)$）。</p>
 </li>
 <li><p>要算这个状态方程，实际上就是算这两个积分（的渐进行为）。取温度较高时，</p>
-<p>$\frac{P V}{k<em>{B} T}=\frac{v(1+2 s)}{\Lambda</em>{T}^{3}}\left(\lambda-\frac{\lambda^{2}}{2^{5 / 2}}+\ldots\right)=1+\frac{\Lambda_{T}^{3}}{2^{5 / 2}(1+2 s) v}+\ldots$</p>
+<p>$\frac{P V}{k_{B} T}=\frac{v(1+2 s)}{\Lambda_{T}^{3}}\left(\lambda-\frac{\lambda^{2}}{2^{5 / 2}}+\ldots\right)=1+\frac{\Lambda_{T}^{3}}{2^{5 / 2}(1+2 s) v}+\ldots$</p>
 <p>可见费米气体的等效斥力。</p>
 </li>
 </ul>
 <h5 id="理想玻色气体"><a href="#理想玻色气体" class="headerlink" title="理想玻色气体"></a>理想玻色气体</h5><ul>
-<li><p>$f<em>{i} \equiv\left\langle n</em>{i}\right\rangle=\frac{1}{\beta} \frac{\partial}{\partial \mu} \log \Xi<em>{i}=\frac{1}{e^{\beta\left(\epsilon</em>{i}-\mu\right)}-1}$，这要求化学势必须是负的。如上节所说，这很正常。</p>
+<li><p>$f_{i} \equiv\left\langle n_{i}\right\rangle=\frac{1}{\beta} \frac{\partial}{\partial \mu} \log \Xi_{i}=\frac{1}{e^{\beta\left(\epsilon_{i}-\mu\right)}-1}$，这要求化学势必须是负的。如上节所说，这很正常。</p>
 </li>
 <li><p>我们在小学时代的科普书里面学习到，玻色气体在低温的时候可能会堆在基态。这样的话，我们求平均的时候不能对能级做积分，因为积分项里面没办法算上$\epsilon=0$ 的态。这也是玻色气体好玩的地方，所以这一节主要就谈这个。</p>
 </li>
 <li><p>一种定量描述这个现象的方式是算$\mu=0$时的温度。我们写出N的表达式，</p>
-<p>$\frac{N}{V} 2 \times 2 \pi^{2}\left(\frac{\hbar^{2}}{2 m}\right)^{3 / 2}=\left(k<em>{B} T</em>{c}\right)^{3 / 2} \int_{0}^{\infty} \frac{x^{1 / 2} d x}{e^{x}-1}$</p>
+<p>$\frac{N}{V} 2 \times 2 \pi^{2}\left(\frac{\hbar^{2}}{2 m}\right)^{3 / 2}=\left(k_{B} T_{c}\right)^{3 / 2} \int_{0}^{\infty} \frac{x^{1 / 2} d x}{e^{x}-1}$</p>
 </li>
 </ul>
 <blockquote>
-<p>对于积分$I(s,z)=\int<em>0^\infty\frac{x^{s-1}}{e^x/z-1}dx$，可以写成$\Gamma(s)\text{Li}_s(z)$，其中Li是多重对数，可以展开成$\sum</em>{l=1}^\infty\frac{z^l}{l^s}$。</p>
+<p>对于积分$I(s,z)=\int_0^\infty\frac{x^{s-1}}{e^x/z-1}dx$，可以写成$\Gamma(s)\text{Li}_s(z)$，其中Li是多重对数，可以展开成$\sum_{l=1}^\infty\frac{z^l}{l^s}$。</p>
 </blockquote>
 <ul>
-<li>得到$\frac{N}{V}=2.6\left(\frac{k k<em>{B} T</em>{c}}{2 \pi \hbar^{2}}\right)^{3 / 2}$。</li>
-<li>重新观察$\frac{1}{V} \sum<em>{l} \frac{\omega</em>{l}}{\mathrm{e} \frac{\epsilon<em>{l}-\mu}{k T}-1}=\frac{N}{V}=n$，可以发现$\mu(T\to0)\sim1/V$。这样，由于可以把总的粒子数写成$N=\frac{1}{e^{-\beta \mu}-1}+\frac{V}{4 \pi^{2}}\left(\frac{2 m}{\hbar^{2}}\right)^{3 / 2} \int</em>{0}^{\infty} \frac{\epsilon^{1 / 2} d \epsilon}{e^{\beta(\epsilon-\mu)}-1}$，在低温下，头一项$\sim V$，第二项的积分号里面由于$\epsilon\sim k^2\sim V^{-2/3}$占据大头了，所以第二项$\sim V^{2/3}$。两相比较，在热力学极限下，粒子确乎是堆在基态的。这就是Bose-Einstein Condensation。</li>
+<li>得到$\frac{N}{V}=2.6\left(\frac{k k_{B} T_{c}}{2 \pi \hbar^{2}}\right)^{3 / 2}$。</li>
+<li>重新观察$\frac{1}{V} \sum_{l} \frac{\omega_{l}}{\mathrm{e} \frac{\epsilon_{l}-\mu}{k T}-1}=\frac{N}{V}=n$，可以发现$\mu(T\to0)\sim1/V$。这样，由于可以把总的粒子数写成$N=\frac{1}{e^{-\beta \mu}-1}+\frac{V}{4 \pi^{2}}\left(\frac{2 m}{\hbar^{2}}\right)^{3 / 2} \int_{0}^{\infty} \frac{\epsilon^{1 / 2} d \epsilon}{e^{\beta(\epsilon-\mu)}-1}$，在低温下，头一项$\sim V$，第二项的积分号里面由于$\epsilon\sim k^2\sim V^{-2/3}$占据大头了，所以第二项$\sim V^{2/3}$。两相比较，在热力学极限下，粒子确乎是堆在基态的。这就是Bose-Einstein Condensation。</li>
 <li>但这使得我们想：如果是二维的话$\epsilon\sim k^2\sim V^{-1}$，那BEC还存不存在了？</li>
 </ul>
 <blockquote>
@@ -597,11 +597,11 @@
 <p>实际上我感觉这一部分比较无聊。</p>
 </blockquote>
 <ul>
-<li><p>经典情况下，$E=-\sum<em>{i=1}^{N} \boldsymbol{\mu}</em>{1} . \mathbf{H}=-\mu H \sum<em>{i=1}^{N} \cos \theta</em>{1}$，</p>
-<p>$\mathcal{Z}<em>{N}=\operatorname{Tr}</em>{\left{\theta<em>{1}\right}\left{\phi</em>{i}\right}} e^{-\beta E}$</p>
-<p>这个是可以因式分解（为$Z<em>1^N$）的，而$\mathcal{Z}</em>{1}(\beta, H)=\frac{4 \pi \sinh (\beta \mu H)}{\beta \mu H}$。</p>
+<li><p>经典情况下，$E=-\sum_{i=1}^{N} \boldsymbol{\mu}_{1} . \mathbf{H}=-\mu H \sum_{i=1}^{N} \cos \theta_{1}$，</p>
+<p>$\mathcal{Z}_{N}=\operatorname{Tr}_{\left\{\theta_{1}\right\}\left\{\phi_{i}\right\}} e^{-\beta E}$</p>
+<p>这个是可以因式分解（为$Z_1^N$）的，而$\mathcal{Z}_{1}(\beta, H)=\frac{4 \pi \sinh (\beta \mu H)}{\beta \mu H}$。</p>
 </li>
-<li><p>$M<em>z=\frac{1}{\beta} \frac{d}{d H} \log \mathcal{Z}</em>{N}$</p>
+<li><p>$M_z=\frac{1}{\beta} \frac{d}{d H} \log \mathcal{Z}_{N}$</p>
 <p>即$M_{z}=N \mu\left[\operatorname{coth} x-\frac{1}{x}\right] \quad x=\beta \mu H$</p>
 <p>$\operatorname{coth} x-\frac{1}{x}=\frac{x}{3}-\frac{x^{3}}{45} \quad x \ll 1$<br>$\operatorname{coth} x-\frac{1}{x}=1-\mathcal{O}\left(e^{-x}\right) \quad x \gg 1$</p>
 <p>低温下的行为是可以预见的。高温下，注意到x的一次项非零，这导致居里定律。这也是线性响应的一个例子。</p>
@@ -612,9 +612,9 @@
 <blockquote>
 <p>在平衡态统计力学中，由于量子基础很不行，我常常感到自己是一个调库侠。</p>
 </blockquote>
-<p>$\mathcal{Z}<em>{1}=\sum</em>{m=-J}^{J} e^{\beta g \mu<em>{B} m H}=\sum</em>{m=-J}^{J} e^{x(m / J)}$。</p>
+<p>$\mathcal{Z}_{1}=\sum_{m=-J}^{J} e^{\beta g \mu_{B} m H}=\sum_{m=-J}^{J} e^{x(m / J)}$。</p>
 </li>
-<li><p>$M<em>{z}=N g \mu</em>{B} J\left[\left(1+\frac{1}{2 J}\right) \operatorname{coth}\left[\left(1+\frac{1}{2 J}\right) x\right]-\frac{1}{2 J} \operatorname{coth}\left(\frac{x}{2 J}\right)\right]$，其中中括号里面是布里渊函数。可以知道，这个东西的高温近似是$B_{J}(x) \simeq \frac{1}{3}\left(1+\frac{1}{J}\right) x+\mathcal{O}\left(x^{2}\right)$。</p>
+<li><p>$M_{z}=N g \mu_{B} J\left[\left(1+\frac{1}{2 J}\right) \operatorname{coth}\left[\left(1+\frac{1}{2 J}\right) x\right]-\frac{1}{2 J} \operatorname{coth}\left(\frac{x}{2 J}\right)\right]$，其中中括号里面是布里渊函数。可以知道，这个东西的高温近似是$B_{J}(x) \simeq \frac{1}{3}\left(1+\frac{1}{J}\right) x+\mathcal{O}\left(x^{2}\right)$。</p>
 </li>
 <li><p>当磁矩可以取连续而非分立的方向，就得到经典极限。这时J无穷大。在这个情况下</p>
 <p>$B_{J}(x) \simeq \operatorname{coth} x-\frac{1}{2 J} \frac{2 J}{x}=\operatorname{coth} x-\frac{1}{x}$</p>
@@ -623,7 +623,7 @@
 </ul>
 <h5 id="谐振子和光子气体"><a href="#谐振子和光子气体" class="headerlink" title="谐振子和光子气体"></a>谐振子和光子气体</h5><ul>
 <li><p>一维量子谐振子的能级是$\epsilon_{n}=\left(n+\frac{1}{2}\right) \hbar \omega$。因此，</p>
-<p>$\mathcal{Z}<em>{1}=\sum</em>{n=0}^{\infty} e^{-\beta\left(n+\frac{1}{2}\right) \hbar \omega}=\frac{e^{-\beta \hbar \omega / 2}}{1-e^{-\beta \hbar \omega}}$</p>
+<p>$\mathcal{Z}_{1}=\sum_{n=0}^{\infty} e^{-\beta\left(n+\frac{1}{2}\right) \hbar \omega}=\frac{e^{-\beta \hbar \omega / 2}}{1-e^{-\beta \hbar \omega}}$</p>
 <p>$\mathcal{U}=N\left[\frac{1}{2} \hbar \omega+\frac{\hbar \omega}{e^{\beta \hbar \omega}-1}\right]$</p>
 </li>
 <li><p>光子气体可以看做是谐振子的气体。什么是光子气体？几乎没有相互作用的、在温度为T的腔内的电磁波。这个腔内是什么颜色的？这就是黑体辐射的问题。</p>
@@ -634,11 +634,11 @@
 </blockquote>
 <ul>
 <li><p>但是我们想换个库来调。我们这回从波的性质来算光子气体的能谱。对于电磁波来说，</p>
-<p>$\mathbf{E}(\mathbf{x}, t)=\sum<em>{n</em>{x} n<em>{y} n</em>{z}=1}^{\infty} A\left(n<em>{x}, n</em>{y}, n_{z}\right) \exp \left(i\left[\frac{\pi}{L} \mathbf{n} . \mathbf{x}+\omega(\mathbf{n}) t\right]\right)$</p>
-<p>$\omega(\mathbf{n})^{2}=\frac{c^{2} \pi^{2}}{L^{2}}\left(n<em>{x}^{2}+n</em>{y}^{2}+n_{z}^{2}\right)=c^{2} k^{2}$</p>
+<p>$\mathbf{E}(\mathbf{x}, t)=\sum_{n_{x} n_{y} n_{z}=1}^{\infty} A\left(n_{x}, n_{y}, n_{z}\right) \exp \left(i\left[\frac{\pi}{L} \mathbf{n} . \mathbf{x}+\omega(\mathbf{n}) t\right]\right)$</p>
+<p>$\omega(\mathbf{n})^{2}=\frac{c^{2} \pi^{2}}{L^{2}}\left(n_{x}^{2}+n_{y}^{2}+n_{z}^{2}\right)=c^{2} k^{2}$</p>
 </li>
 <li><p>对于这样的谐振子，</p>
-<p>$\left\langle E<em>{\mathbf{n}}\right\rangle=\frac{1}{2} \hbar \omega(\mathbf{n})+\frac{\hbar \omega(\mathbf{n})}{e^{\beta \hbar \omega(\mathbf{n})}-1}$，$\mathcal{U}=2 \sum</em>{\mathbf{n}}\left\langle E<em>{\mathbf{n}}\right\rangle=2 \sum</em>{\mathbf{k} \text { in } 1^{s t} \text { octant }} \frac{\hbar \omega(\mathbf{k})}{e^{\beta \hbar \omega(\mathbf{k})}-1}+\text{zero point energy}$</p>
+<p>$\left\langle E_{\mathbf{n}}\right\rangle=\frac{1}{2} \hbar \omega(\mathbf{n})+\frac{\hbar \omega(\mathbf{n})}{e^{\beta \hbar \omega(\mathbf{n})}-1}$，$\mathcal{U}=2 \sum_{\mathbf{n}}\left\langle E_{\mathbf{n}}\right\rangle=2 \sum_{\mathbf{k} \text { in } 1^{s t} \text { octant }} \frac{\hbar \omega(\mathbf{k})}{e^{\beta \hbar \omega(\mathbf{k})}-1}+\text{zero point energy}$</p>
 </li>
 </ul>
 <blockquote>
@@ -646,11 +646,11 @@
 <p>麻烦在于，这个零点能无穷大。实际上，只能借助重整化的办法把他搞成0。</p>
 </blockquote>
 <ul>
-<li><p>$\mathcal{U}=2 \frac{V}{8 \pi^{2}} \int<em>{0}^{\infty} \frac{4 \pi k^{2} d k \hbar c k}{e^{\hbar c k / k</em>{B} T}-1}$</p>
+<li><p>$\mathcal{U}=2 \frac{V}{8 \pi^{2}} \int_{0}^{\infty} \frac{4 \pi k^{2} d k \hbar c k}{e^{\hbar c k / k_{B} T}-1}$</p>
 <p>作代换$x=\hbar c k / k_{B} T$，把T弄出积分去，知道$U\sim T^4$，这就是Stefan-Boltzmann。</p>
 </li>
-<li><p>U写成$\mathcal{U}=\int<em>{0}^{\infty} \frac{d \omega}{c} \frac{V}{\pi^{2}} \hbar c \frac{\omega^{3}}{c^{3}} \frac{1}{e^{\hbar \omega / k</em>{B} T}-1} \equiv V \int<em>{0}^{\infty} d \omega \mathcal{U}</em>{\omega}$，其中</p>
-<p>$\mathcal{U}<em>{\omega}=\frac{\hbar}{\pi^{3} c^{3}} \frac{\omega^{3}}{e^{\hbar \omega / k</em>{B} T}-1}$</p>
+<li><p>U写成$\mathcal{U}=\int_{0}^{\infty} \frac{d \omega}{c} \frac{V}{\pi^{2}} \hbar c \frac{\omega^{3}}{c^{3}} \frac{1}{e^{\hbar \omega / k_{B} T}-1} \equiv V \int_{0}^{\infty} d \omega \mathcal{U}_{\omega}$，其中</p>
+<p>$\mathcal{U}_{\omega}=\frac{\hbar}{\pi^{3} c^{3}} \frac{\omega^{3}}{e^{\hbar \omega / k_{B} T}-1}$</p>
 <p>这就是黑体辐射的频谱。</p>
 </li>
 </ul>
@@ -911,7 +911,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">274.7k</span>
+    <span title="Site words total count">275.1k</span>
   
 </div>
 
@@ -1130,6 +1130,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

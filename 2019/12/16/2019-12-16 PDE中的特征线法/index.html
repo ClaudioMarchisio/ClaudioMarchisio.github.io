@@ -392,15 +392,15 @@
 <p>记</p>
 <p>$\boldsymbol{p}=\frac{\partial u}{\partial \boldsymbol{x}}$</p>
 <p>得到</p>
-<p>$\begin{aligned} 0 &amp;=\frac{\partial F}{\partial \boldsymbol{x}} \cdot \frac{d \boldsymbol{x}}{d s}+\frac{\partial F}{\partial u} \frac{\partial u}{\partial \boldsymbol{x}} \cdot \frac{d \boldsymbol{x}}{d s}+\frac{\partial F}{\partial \boldsymbol{p}} \cdot \frac{d \boldsymbol{p}}{d s} \&amp;=\left(\frac{\partial F}{\partial \boldsymbol{x}}+\frac{\partial F}{\partial u} \boldsymbol{p}\right) \cdot \frac{d \boldsymbol{x}}{d s}+\frac{\partial F}{\partial \boldsymbol{p}} \cdot \frac{d \boldsymbol{p}}{d s}\end{aligned}$</p>
+<p>$\begin{aligned} 0 &amp;=\frac{\partial F}{\partial \boldsymbol{x}} \cdot \frac{d \boldsymbol{x}}{d s}+\frac{\partial F}{\partial u} \frac{\partial u}{\partial \boldsymbol{x}} \cdot \frac{d \boldsymbol{x}}{d s}+\frac{\partial F}{\partial \boldsymbol{p}} \cdot \frac{d \boldsymbol{p}}{d s} \\&amp;=\left(\frac{\partial F}{\partial \boldsymbol{x}}+\frac{\partial F}{\partial u} \boldsymbol{p}\right) \cdot \frac{d \boldsymbol{x}}{d s}+\frac{\partial F}{\partial \boldsymbol{p}} \cdot \frac{d \boldsymbol{p}}{d s}\end{aligned}$</p>
 <p>我们为了达成这个条件，指定</p>
 <p>$\frac{d \boldsymbol{x}}{d s}=\frac{\partial F}{\partial \boldsymbol{p}}, \quad \frac{d \boldsymbol{p}}{d s}=-\frac{\partial F}{\partial \boldsymbol{x}}-\frac{\partial F}{\partial u} \boldsymbol{p}$</p>
 <p>为了表示出我们对p的定义，写下</p>
 <p>$\frac{d u}{d s}=\frac{\partial u}{\partial \boldsymbol{x}} \cdot \frac{d \boldsymbol{x}}{d s}=\boldsymbol{p} \cdot \frac{\partial F}{\partial \boldsymbol{p}}$</p>
 <p>放在一起得到</p>
-<p>$\left{\begin{aligned} \frac{d \boldsymbol{x}}{d s} &amp;=\frac{\partial F}{\partial \boldsymbol{p}} \ \frac{d \boldsymbol{p}}{d s} &amp;=-\frac{\partial F}{\partial \boldsymbol{x}}-\frac{\partial F}{\partial u} \boldsymbol{p} \\frac{d u}{d s} &amp;=\boldsymbol{p} \cdot \frac{\partial F}{\partial \boldsymbol{p}} \ F(\boldsymbol{x}, u, \boldsymbol{p}) &amp;=0 \end{aligned}\right.$</p>
+<p>$\left\{\begin{aligned} \frac{d \boldsymbol{x}}{d s} &amp;=\frac{\partial F}{\partial \boldsymbol{p}} \\ \frac{d \boldsymbol{p}}{d s} &amp;=-\frac{\partial F}{\partial \boldsymbol{x}}-\frac{\partial F}{\partial u} \boldsymbol{p} \\\frac{d u}{d s} &amp;=\boldsymbol{p} \cdot \frac{\partial F}{\partial \boldsymbol{p}} \\ F(\boldsymbol{x}, u, \boldsymbol{p}) &amp;=0 \end{aligned}\right.$</p>
 <p>这个形式非常眼熟，使人想到哈密顿力学。将$\boldsymbol{x}$换成$\boldsymbol{q}$，F换成H，我们就得到</p>
-<p>$\left{\begin{aligned} \frac{dH(\boldsymbol{p}, \boldsymbol{q}, S)}{dt}=\frac{\partial H}{\partial t}&amp;=0\\frac{\partial H}{\partial S}&amp;=0 \end{aligned}\right.$</p>
+<p>$\left\{\begin{aligned} \frac{dH(\boldsymbol{p}, \boldsymbol{q}, S)}{dt}=\frac{\partial H}{\partial t}&amp;=0\\\frac{\partial H}{\partial S}&amp;=0 \end{aligned}\right.$</p>
 <p>其中S是作用量。</p>
 <h4 id="不止一阶的PDE"><a href="#不止一阶的PDE" class="headerlink" title="不止一阶的PDE"></a>不止一阶的PDE</h4><h5 id="cauchy-data"><a href="#cauchy-data" class="headerlink" title="cauchy data"></a>cauchy data</h5><p>我很粗略地理解为，给定某个条件，能够通过在特征线上的propagation把方程解出来的话，这条件就算是cauchy data。反例比如热传导方程</p>
 <p>$\frac{\partial \phi}{\partial t}=\kappa \frac{\partial^{2} \phi}{\partial x^{2}}$</p>
@@ -413,7 +413,7 @@
 <p>$0=\left(\frac{\partial^{2} \varphi}{\partial x^{2}}-\frac{1}{c^{2}} \frac{\partial^{2} \varphi}{\partial t^{2}}\right)=\left(\frac{\partial}{\partial x}+\frac{1}{c} \frac{\partial}{\partial t}\right)\left(\frac{\partial \varphi}{\partial x}-\frac{1}{c} \frac{\partial \varphi}{\partial t}\right)$</p>
 <p>就得到两组特征线$x\pm ct=const. $</p>
 <p>从这可以得出达朗贝尔解</p>
-<p>$\varphi(x, t)=\frac{1}{2}\left{\varphi<em>{0}(x+c t)+\varphi</em>{0}(x-c t)\right}+\frac{1}{2 c} \int<em>{x-c t}^{x+c t} v</em>{0}(\xi) d \xi$</p>
+<p>$\varphi(x, t)=\frac{1}{2}\left\{\varphi_{0}(x+c t)+\varphi_{0}(x-c t)\right\}+\frac{1}{2 c} \int_{x-c t}^{x+c t} v_{0}(\xi) d \xi$</p>
 <p>从这个解的形式可以看出来相空间中某一点的值是由哪些点决定的，又能影响得到哪些点。实际上尽管不同组的特征线现在相交了，同一组的特征线还是不相交的。</p>
 <p><img src="https://i.loli.net/2019/12/17/Q9OyCawtdUcBfDW.png" alt=""></p>
 <p>我觉得可以把这东西理解成一个非相对论版本的光锥。</p>
@@ -436,28 +436,28 @@
 <p>如果车速低于线缆音速，那么可以改写</p>
 <p>$-y^{\prime \prime}+\frac{\gamma^{2} \Omega^{2}}{c^{2}} y=\frac{\gamma^{2} F}{T} \delta(x-U t)$</p>
 <p>其中$\gamma^{2}=\left(1-U^{2} / c^{2}\right)^{-1}$。这解出来是个指数函数的形式：</p>
-<p>$y(x, t)=\frac{\gamma^{2} F}{T}\left(\frac{c}{2 \Omega \gamma}\right) \exp \left{-\frac{\Omega \gamma}{c}|x-U t|\right}$，即使在左边也会很快衰减到0.</p>
+<p>$y(x, t)=\frac{\gamma^{2} F}{T}\left(\frac{c}{2 \Omega \gamma}\right) \exp \left\{-\frac{\Omega \gamma}{c}|x-U t|\right\}$，即使在左边也会很快衰减到0.</p>
 <p>如果车速高于线缆音速，那么则是</p>
 <p>$-y^{\prime \prime}-\frac{\tilde{\gamma}^{2} \Omega^{2}}{c^{2}} y=\frac{\tilde{\gamma}^{2} F}{T} \delta(x-U t)$</p>
 <p>其中$\tilde{\gamma}^{2}=\left(U^{2} / c^{2}-1\right)^{-1}$。这解出来则是正弦形式的</p>
-<p>$y(x, t)=\left{\begin{array}{ll}{\frac{\tilde{\gamma}^{2} F}{T}\left(\frac{c}{\Omega \tilde{\gamma}}\right) \sin \left(\frac{\Omega \tilde{\gamma}}{c}(U t-x)\right),} &amp; {x<u t}="" \\="" {0,}="" &="" {x="">U t}\end{array}\right.$</u></p>
+<p>$y(x, t)=\left\{\begin{array}{ll}{\frac{\tilde{\gamma}^{2} F}{T}\left(\frac{c}{\Omega \tilde{\gamma}}\right) \sin \left(\frac{\Omega \tilde{\gamma}}{c}(U t-x)\right),} &amp; {x<u t}="" \\="" {0,}="" &="" {x="">U t}\end{array}\right.$</u></p>
 <p>这个拖在火车后面的正弦波学名叫wake，我也不知道中文是啥。总之，在这种情况下，可以算出来这个wake单位长度的能量密度</p>
-<p>$\begin{aligned} \mathcal{E} &amp;=\frac{1}{2} \rho \dot{y}^{2}+\frac{1}{2} T\left(y^{\prime}\right)^{2}+\frac{1}{2} \rho \Omega^{2} y^{2} \ &amp;=\rho\left(\frac{\tilde{\gamma}^{2} F}{T}\right)^{2} U^{2} \sin ^{2}\left(\frac{\Omega \tilde{\gamma}}{c}|x-U t|\right) \end{aligned}$</p>
+<p>$\begin{aligned} \mathcal{E} &amp;=\frac{1}{2} \rho \dot{y}^{2}+\frac{1}{2} T\left(y^{\prime}\right)^{2}+\frac{1}{2} \rho \Omega^{2} y^{2} \\ &amp;=\rho\left(\frac{\tilde{\gamma}^{2} F}{T}\right)^{2} U^{2} \sin ^{2}\left(\frac{\Omega \tilde{\gamma}}{c}|x-U t|\right) \end{aligned}$</p>
 <p>$\langle\mathcal{E}\rangle=\frac{1}{2} \rho \tilde{\gamma}^{4}\left(\frac{F}{T}\right)^{2} U^{2}$</p>
 <p>这个能量是以群速度向前传播的。然而，火车的速度比这要更快，因此火车不断地消耗其发动机做的功，用来补这个wake的能量。这相当于有一个恒定的阻力作用在火车上面：</p>
-<p>$ UF<em>{drag}=\langle\mathcal{E}\rangle\left(U-U</em>{g}\right)$</p>
+<p>$ UF_{drag}=\langle\mathcal{E}\rangle\left(U-U_{g}\right)$</p>
 <p>（从Klein-Gordon方程的色散关系可以算出群速度。）</p>
 <p>当然，这个阻力只有在$U&gt;c$的时候才会出现。</p>
 <h5 id="激波和孤子"><a href="#激波和孤子" class="headerlink" title="激波和孤子"></a>激波和孤子</h5><p>在流体中，由质量守恒</p>
-<p>$\partial<em>{t} \rho+\partial</em>{x}(\rho v)=0$</p>
+<p>$\partial_{t} \rho+\partial_{x}(\rho v)=0$</p>
 <p>和牛顿第二定律</p>
-<p>$\rho\left(\partial<em>{t} v+v \partial</em>{x} v\right)=-\partial_{x} P$</p>
+<p>$\rho\left(\partial_{t} v+v \partial_{x} v\right)=-\partial_{x} P$</p>
 <p>以及声速</p>
 <p>$c^{2}=\frac{d P}{d \rho}$</p>
 <p>研究声音的传播，时，黎曼定义了一个热力学量</p>
-<p>$\pi=\int<em>{P</em>{0}}^{P} \frac{1}{\rho c} d P$</p>
+<p>$\pi=\int_{P_{0}}^{P} \frac{1}{\rho c} d P$</p>
 <p>并且写出方程</p>
-<p>$\partial<em>{t}(v+\pi)+(v+c) \partial</em>{x}(v+\pi)=0$<br>$\partial<em>{t}(v-\pi)+(v-c) \partial</em>{x}(v-\pi)=0$</p>
+<p>$\partial_{t}(v+\pi)+(v+c) \partial_{x}(v+\pi)=0$<br>$\partial_{t}(v-\pi)+(v-c) \partial_{x}(v-\pi)=0$</p>
 <p>对此，知道黎曼不变量$v \pm \pi$在两组特征线$\frac{d x}{d t}=v \pm c$上是定值。</p>
 <p><img src="https://i.loli.net/2019/12/17/yK69Fp7brXBtsJe.png" alt=""></p>
 <p>然而，如果声速随压强改变（非线性性），那么这些特征线就会相交，造成问题。下图展示了这种情况下产生激波的过程。</p>
@@ -721,7 +721,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">274.7k</span>
+    <span title="Site words total count">275.1k</span>
   
 </div>
 
@@ -940,6 +940,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

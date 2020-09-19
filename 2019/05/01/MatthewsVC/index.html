@@ -382,7 +382,7 @@
 <p>第五章介绍了一些“Integral Theorems”但是没有提到广义斯托克斯公式。</p>
 <p>第六章讲非 Cartesian 的（正交）坐标系并给出了 grad Div Curl Laplcaian 的做法。</p>
 <p>第七章讲 Cartesian 张量。</p>
-<p>第八章讲了一些物理应用。在（三维的）连续介质中，存在量纲为压强的应力$P<em>{ij}$，可以写出 $\delta F_i=P</em>{ij}n_j\delta S$，由力和力矩平衡，得到约束</p>
+<p>第八章讲了一些物理应用。在（三维的）连续介质中，存在量纲为压强的应力$P_{ij}$，可以写出 $\delta F_i=P_{ij}n_j\delta S$，由力和力矩平衡，得到约束</p>
 <script type="math/tex; mode=display">\frac{\partial P_{ij}}{\partial x_j}=0</script><script type="math/tex; mode=display">P_{ij}=P_{ji}</script><p>在固体中存在无量纲的应变，定义为$E_{ij}=\frac{1}{2}(\frac{\partial v_i}{\partial x_j}+\frac{\partial v_j}{\partial x_i})$，小形变下有胡克定律</p>
 <script type="math/tex; mode=display">P_{ij}=c_{ijkl}E_{kl}</script><p>由张量$c$的各向同性，最终可以写为</p>
 <script type="math/tex; mode=display">P_{ij}=\lambda\delta_{ij}E_{kk}+2\mu E_{ij}</script><p>$\lambda$和$\mu$就是叫做$Lam\’{e}$ 常量的。</p>
@@ -622,7 +622,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">274.7k</span>
+    <span title="Site words total count">275.1k</span>
   
 </div>
 
@@ -841,6 +841,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
