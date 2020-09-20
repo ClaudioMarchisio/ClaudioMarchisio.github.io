@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Miralem 的博客">
 <meta property="og:description" content="本学期还上了一门场论课。实际上，我本来是想选量子力学（1）划水的，但是出于种种原因，还是选了场论。这东西我本来是不懂的，因此我料想可以学到许多东西。特别的，我预计一篇文档写不完这个笔记。我打算每三个或两个章节写一篇笔记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-20T05:30:31.332Z">
+<meta property="og:updated_time" content="2020-09-20T21:39:28.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="场论笔记">
 <meta name="twitter:description" content="本学期还上了一门场论课。实际上，我本来是想选量子力学（1）划水的，但是出于种种原因，还是选了场论。这东西我本来是不懂的，因此我料想可以学到许多东西。特别的，我预计一篇文档写不完这个笔记。我打算每三个或两个章节写一篇笔记。">
@@ -350,7 +350,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  32 minutes
+                  31 minutes
                 </span>
               
             </div>
@@ -376,7 +376,7 @@
 <h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>量子场论有许多种讲法。从我在逼乎上看到的东西可以推测，这玩意要求你有一个比较不错的量子力学基础，这可以让你更容易地通过一些你已经有些熟悉的例子去把玩新学到的数学。因此我想选一本合适的教材来减弱我的量子无知带来的负面影响。</p>
 <p>人们说Peskin的书大概是以上面那种考虑为主而写出来的。在我的情形，我肯定不看这本书。逼乎上还说Zee和Weinberg的书不适合初学者。逼乎上还说Srednicki（我一直把他读成“斯列德尼茨基”，结果好像人们实际并不这样叫他）的书很好。我搞了一本pdf来，还没有看。同Peskin相比，他的书似乎对粒子物理背景之外的人比较好读一些。他开头的“you should recognize and understand”部分对我来说也相对友好些。还有一本QFT for gifted amateurs，可能对我这种低门槛学习者是最友好的，我还得靠这本书补习一些二次量子化之类的玩意。</p>
 <p>但以上这些都不是最理想的。最理想的情形是我能够首先学习数学，然后通过这些数学去理解量子物理，而不是相反。好消息是，这门课的老师似乎也是这么想的。毕竟，这门课叫场论，没有“量子”。所以我最后决定，主要看他的讲义。实在有不明白的，再去看其他书。我读书太慢，没有精力看许多书。也许如果当我懂了数学之后，我可以去看srednicki，用他的模块化的办法去理解相关的物理领域，明白相互调用的关系，看看能不能形成一点粗浅的图景式的理解。</p>
-<h2 id="Chapter-1-2"><a href="#Chapter-1-2" class="headerlink" title="Chapter 1, 2"></a>Chapter 1, 2</h2><p>从一个例子（Dirac field），了解一下场论的动机，以及一些基本的概念。然后再通过我们比较熟悉的电磁场和Landau-Ginzburg理论的例子，了解一下场论的pipeline。这些内容属于相对论性（c=1）经典（h=0）场论。</p>
+<h2 id="Chapter-1-2"><a href="#Chapter-1-2" class="headerlink" title="Chapter 1, 2"></a>Chapter 1, 2</h2><p>从一个例子（Dirac field），了解一下场论的动机，以及一些基本的概念。然后再通过我们比较熟悉的电磁场和Landau-Ginzburg理论的例子，了解一下场论的pipeline。</p>
 <h3 id="Dirac-Field：自旋1-2粒子"><a href="#Dirac-Field：自旋1-2粒子" class="headerlink" title="Dirac Field：自旋1/2粒子"></a>Dirac Field：自旋1/2粒子</h3><p>现代QFT的最初动机非常简单：缝合量子力学和狭义相对论。薛定谔方程并不是洛伦兹协变的，这显然是有问题的嘛！在1920年代，有两拨人试图解决这个问题。</p>
 <ul>
 <li><p>第一拨人的想法是用（人们那时已经习惯的）把波函数语言翻译成粒子语言的办法，形式上从相对论色散关系$E^2 = p^2 + m^2c^4$写出</p>
@@ -463,7 +463,7 @@
 <h3 id="内部（internal）对称性"><a href="#内部（internal）对称性" class="headerlink" title="内部（internal）对称性"></a>内部（internal）对称性</h3><p>我们到底为什么要这样区分内部与时空对称性，它们有什么不同？我看到的材料都没有好好解释这个问题，但我的一个粗浅的理解是，后者是时空<strong>坐标</strong>的对称性/不变性，它长什么样是由度规决定的。而前者是<strong>场本身</strong>的对称性/不变性，它是由场的形式决定的。想象一下，所有的场的函数形式构成一个流形。如果我沿着某一个方向做一个无穷小的扰动，而场方程的形式不变，那说明这个方向是特殊的。现在我们考虑这个流形上每一点都有这么一个方向，形成一个向量场，我们可以把这个向量场理解成附加的一种代数结构，它刻画了我们这个场的描述的冗余度。拿这个流形“除“掉这个向量场（我的数学很差，我也不知道数学家怎么形容这个事， 我曾经看过fiber bundle的资料，但转眼又飘散如烟），就得到“不冗余”的描述，而你除掉的这个结构就是这个internal对称性的代数结构。特别的，如果这个结构是显式跟时空坐标couple起来的，也就是说，是局域的，那么这种<strong>局域的、内部的</strong>对称性叫做<strong>规范对称性</strong>。</p>
 <hr>
 <p>现在比如说我们有一个场，他有一个<strong>全局的内部对称性</strong>，比如说实值标量场、$U(1)$对称性。</p>
-<p>$\begin{aligned} \phi(x) &amp; \mapsto \phi^{\prime}(x)=e^{i \alpha} \phi(x) \\ \phi^{*}(x) &amp; \mapsto \phi^{\prime <em>}(x)=e^{-i \alpha} \phi^{\</em>}(x) \end{aligned}$</p>
+<p>$\begin{aligned} \phi(x) &amp; \mapsto \phi^{\prime}(x)=e^{i \alpha} \phi(x) \\ \phi^{*}(x) &amp; \mapsto \phi^{\prime *}(x)=e^{-i \alpha} \phi^{*}(x) \end{aligned}$</p>
 <p>利用变换后最小作用量原理仍成立这一点，得到</p>
 <p>$\delta \mathcal{L}=\partial_{\mu}\left[i\left(\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi} \phi-\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi^{*}} \phi^{*}\right) \alpha\right]=0$</p>
 <p>那就自然有了一个守恒流</p>
@@ -485,7 +485,7 @@
 <blockquote>
 <p>所以，为了描述局部坐标系的影响，我们得做些准备工作。</p>
 </blockquote>
-<p>首先，可以用数学结构（一个向量场）把相邻的局部坐标系联系起来，这就是联络。比如，可以记作$\delta \phi(x)=i A_{\mu}(x) d x^{\mu} \phi(x)$，A就是联络。考虑联络因素后，我们将导数改写成协变导数，$D_{\mu} \phi \equiv \partial_{\mu} \phi(x)-i e A_{\mu}(x) \phi(x) \equiv\left(\partial_{\mu}-i e A_{\mu}\right) \phi$，其中e是所谓“耦合常数”，表示时空坐标耦合进来的程度。</p>
+<p>首先，可以用数学结构（一个向量场）把相邻的局部坐标系联系起来，这就是联络。比如，可以记作$\delta \phi(x)=i A_{\mu}(x) d x^{\mu} \phi(x)$，A就是联络。考虑联络因素后，我们将导数改写成协变导数，$D_{\mu} \phi \equiv \partial_{\mu} \phi(x)-i e A_{\mu}(x) \phi(x) \equiv\left(\partial_{\mu}-i e A_{\mu}\right) \phi$，其中e是所谓“耦合常数”。我们之后会看到，在物质场和规范场耦合的情况下，这个量具有物理意义。</p>
 <p>为了让协变导数真的协变，我们可以得到联络在$\phi \rightarrow e^{i \theta} \phi$下变换为$A_{\mu} \rightarrow A_{\mu}^{\prime}=A_{\mu}+\frac{1}{e} \partial_{\mu} \theta$。协变导数为零的解称之为测地线：$D_{\mu} \phi_{c}=\left(\partial_{\mu}-i e A_{\mu}\right) \phi_{c} \equiv 0$。测地线上，</p>
 <p>$\phi_{c}(x)=e^{-i e \int_{\Gamma(x, y)} d z_{\mu} A^{\mu}(z)} \phi_{c}(y)$。</p>
 <p>注意，沿着测地线走一圈，相位的变化为</p>
