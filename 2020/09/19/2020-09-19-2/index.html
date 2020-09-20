@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Miralem 的博客">
 <meta property="og:description" content="本学期还上了一门场论课。实际上，我本来是想选量子力学（1）划水的，但是出于种种原因，还是选了场论。这东西我本来是不懂的，因此我料想可以学到许多东西。特别的，我预计一篇文档写不完这个笔记。我打算每三个或两个章节写一篇笔记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-20T05:11:47.075Z">
+<meta property="og:updated_time" content="2020-09-20T05:30:31.332Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="场论笔记">
 <meta name="twitter:description" content="本学期还上了一门场论课。实际上，我本来是想选量子力学（1）划水的，但是出于种种原因，还是选了场论。这东西我本来是不懂的，因此我料想可以学到许多东西。特别的，我预计一篇文档写不完这个笔记。我打算每三个或两个章节写一篇笔记。">
@@ -302,7 +302,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-19T15:38:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-19T02:38:00-05:00">
                 2020-09-19
               </time>
             
@@ -463,18 +463,18 @@
 <h3 id="内部（internal）对称性"><a href="#内部（internal）对称性" class="headerlink" title="内部（internal）对称性"></a>内部（internal）对称性</h3><p>我们到底为什么要这样区分内部与时空对称性，它们有什么不同？我看到的材料都没有好好解释这个问题，但我的一个粗浅的理解是，后者是时空<strong>坐标</strong>的对称性/不变性，它长什么样是由度规决定的。而前者是<strong>场本身</strong>的对称性/不变性，它是由场的形式决定的。想象一下，所有的场的函数形式构成一个流形。如果我沿着某一个方向做一个无穷小的扰动，而场方程的形式不变，那说明这个方向是特殊的。现在我们考虑这个流形上每一点都有这么一个方向，形成一个向量场，我们可以把这个向量场理解成附加的一种代数结构，它刻画了我们这个场的描述的冗余度。拿这个流形“除“掉这个向量场（我的数学很差，我也不知道数学家怎么形容这个事， 我曾经看过fiber bundle的资料，但转眼又飘散如烟），就得到“不冗余”的描述，而你除掉的这个结构就是这个internal对称性的代数结构。特别的，如果这个结构是显式跟时空坐标couple起来的，也就是说，是局域的，那么这种<strong>局域的、内部的</strong>对称性叫做<strong>规范对称性</strong>。</p>
 <hr>
 <p>现在比如说我们有一个场，他有一个<strong>全局的内部对称性</strong>，比如说实值标量场、$U(1)$对称性。</p>
-<p>$\begin{aligned} \phi(x) &amp; \mapsto \phi^{\prime}(x)=e^{i \alpha} \phi(x) \\ \phi^{<em>}(x) &amp; \mapsto \phi^{\prime </em>}(x)=e^{-i \alpha} \phi^{*}(x) \end{aligned}$</p>
+<p>$\begin{aligned} \phi(x) &amp; \mapsto \phi^{\prime}(x)=e^{i \alpha} \phi(x) \\ \phi^{*}(x) &amp; \mapsto \phi^{\prime <em>}(x)=e^{-i \alpha} \phi^{\</em>}(x) \end{aligned}$</p>
 <p>利用变换后最小作用量原理仍成立这一点，得到</p>
-<p>$\delta \mathcal{L}=\partial_{\mu}\left[i\left(\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi} \phi-\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi^{<em>}} \phi^{</em>}\right) \alpha\right]=0$</p>
+<p>$\delta \mathcal{L}=\partial_{\mu}\left[i\left(\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi} \phi-\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi^{*}} \phi^{*}\right) \alpha\right]=0$</p>
 <p>那就自然有了一个守恒流</p>
-<p>$j^{\mu}=i\left(\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi} \phi-\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi^{<em>}} \phi^{</em>}\right)$。</p>
+<p>$j^{\mu}=i\left(\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi} \phi-\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi^{*}} \phi^{*}\right)$。</p>
 <p>对于全局内部对称性的一般情形，人们用N*N矩阵$\lambda^{k}$作为对应的李群的生成元的表示（复习：N是表示的维数，而k的最大值是群的秩，这俩没啥关系），场的对称性写作</p>
 <p>$\phi_{a}^{\prime}(x)=\left(\exp \left[i \lambda^{k} \theta^{k}\right]\right)_{a b} \phi_{b}(x)$</p>
 <p>$\lambda^{k}$对应一个李代数$\left[\lambda^{j}, \lambda^{k}\right]=i f^{j k l} \lambda^{l}$。（已经归一化为$\operatorname{tr} \lambda^{a} \lambda^{b}=\frac{1}{2} \delta^{a b}$），我们比较关心的系数$f$称作李群的结构常数。比如说，对于角动量的$S U(2)$对称性，有$\left[J_{i}, J_{j}\right]=i \epsilon_{i j k} J_{k}$，$\operatorname{tr}\left(J_{i} J_{j}\right)=\frac{1}{2} \delta_{i j}$。</p>
 <p>总之呢，对于这种一般情形，我们可以一样的写出守恒流。注意到生成元的数目等于守恒流的数目。如果是个实值场，那么</p>
 <p>$j_{\mu}^{k}(x)=\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi^{a}(x)} \lambda_{a b}^{k} \phi_{b}(x)$</p>
 <p>如果是个复值场，那么</p>
-<p>$j_{\mu}^{k}(x)=i\left(\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi^{a}(x)} \lambda_{a b}^{k} \phi_{b}(x)-\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi^{a}(x)^{<em>}} \lambda_{a b}^{k} \phi_{b}(x)^{</em>}\right)$。</p>
+<p>$j_{\mu}^{k}(x)=i\left(\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi^{a}(x)} \lambda_{a b}^{k} \phi_{b}(x)-\frac{\delta \mathcal{L}}{\delta \partial_{\mu} \phi^{a}(x)^{*}} \lambda_{a b}^{k} \phi_{b}(x)^{*}\right)$。</p>
 <hr>
 <p>稍微复杂些，对于<strong>规范对称性</strong>，分量$\theta_k$成为时空坐标的函数，即</p>
 <p>$\phi_{a}(x) \rightarrow \phi_{a}^{\prime}(x)=\left(\exp \left[i \lambda^{k} \theta^{k}(x)\right]\right)_{a b} \phi_{b}(x)$</p>
