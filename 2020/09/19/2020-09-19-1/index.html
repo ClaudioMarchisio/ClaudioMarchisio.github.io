@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Miralem 的博客">
 <meta property="og:description" content="这学期选了一个数值分析。说老实话，是实在找不到特别有意思的课，稍微有点凑学分拔将军的意味。不过这课教的知识的确非常有用，所以最好还是写一下笔记，以备以后不时之需。这课用的教材是heath的scientific computing。这笔记基本上就是抄书。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-19T20:37:13.460Z">
+<meta property="og:updated_time" content="2020-10-14T15:03:46.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数值分析笔记">
 <meta name="twitter:description" content="这学期选了一个数值分析。说老实话，是实在找不到特别有意思的课，稍微有点凑学分拔将军的意味。不过这课教的知识的确非常有用，所以最好还是写一下笔记，以备以后不时之需。这课用的教材是heath的scientific computing。这笔记基本上就是抄书。">
@@ -334,7 +334,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  3.1k words
+                  6k words
                 </span>
               
 
@@ -350,7 +350,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  12 minutes
+                  24 minutes
                 </span>
               
             </div>
@@ -445,7 +445,81 @@
 <li><p>不加说明地列举一下各个方法的性能。</p>
 <p>若A为m*n矩阵，那么在$m \approx n$时，householder QR不如最普通的办法（$\boldsymbol{A}^{T} \boldsymbol{A} \boldsymbol{x}=\boldsymbol{A}^{T} \boldsymbol{b}$）。$m \gg n$时，普通法更优。但householder法的误差基本永远更小。</p>
 <p>cholesky分解在$\operatorname{cond}(\boldsymbol{A}) \approx 1 / \sqrt{\epsilon_{\mathrm{mach}}}$时不可用，而householder法仅在$\operatorname{cond}(\boldsymbol{A}) \approx 1 / \epsilon_{\mathrm{mach}}$时才不可用。</p>
-<p>SVD是最稳定、最慢的。</p>
+<p>SVD是最稳定，同时也最慢的。</p>
+</li>
+</ul>
+<h3 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h3><p>特征值和与之有关的性质刻画了线性算子的几何性质。这一章就来讲一讲特征值问题的数值方法。</p>
+<ul>
+<li><p>一些评论</p>
+<ul>
+<li>数学上，需要意识到，由于五次以上的方程没有根式解，大矩阵的特征值也很难去精确求解。不过，我们有收敛很快的近似方法。</li>
+<li>我们可以大致划定特征值的范围。Gershgorin定理说明本征值被限制在一系列圆盘里面，其圆心为对角元，而半径则是这一行其他元素的模长之和。</li>
+</ul>
+</li>
+<li><p>问题的敏感性</p>
+<ul>
+<li><p>取方阵A，其有本征值$\lambda_i$，本征向量组X。对A做微扰，变为$A+E$，有本征值$\mu$，则（可以证明）：</p>
+<p>$\left|\mu-\lambda_{k}\right|\le\operatorname{cond}_{2}(\boldsymbol{X})|\boldsymbol{E}|_{2}$。</p>
+<p>因此，本征向量的性质决定conditioning的好坏。本征向量越是倾向于两两垂直，则conditioning就越好。正交矩阵也因此总是well-conditioned的。对于接近不满秩的矩阵，则本征向量接近于线性相关，而conditioning不好。</p>
+</li>
+</ul>
+</li>
+<li><p>问题的清洗</p>
+<p>进行预处理，尽量不改变本征值，而将问题转化为可解的形式。一种最普遍的办法是利用相似形$B=T^{-1} A T$，其中T满秩。则：</p>
+<p>$B y=\lambda y \quad \Rightarrow \quad T^{-1} A T y=\lambda y \quad \Rightarrow \quad A T y=\lambda T y$。</p>
+<p>例如，你可以（通过一些相似变换）把矩阵变成General Schur form</p>
+<p>$\boldsymbol{A}=\left[\begin{array}{cccc}\boldsymbol{A}_{11} &amp; \boldsymbol{A}_{12} &amp; \cdots &amp; \boldsymbol{A}_{1 p} \\ &amp; \boldsymbol{A}_{22} &amp; \cdots &amp; \boldsymbol{A}_{2 p} \\ &amp; &amp; \ddots &amp; \vdots \\ &amp; &amp; &amp; \boldsymbol{A}_{p p}\end{array}\right]$</p>
+<p>其中$\lambda(\boldsymbol{A})=\bigcup_{j=1}^{p} \lambda\left(\boldsymbol{A}_{j j}\right)$。</p>
+<p>这基本上是最坏的情况。如果好一些，A是实的，那么该form的对角元要么是实的本征值，要么是2*2的block，对应一组复的本征值。如果还要好一些（但不是同一个意义上的好），就是说，如果A是满秩的，那么对于相似变换$\boldsymbol{B}=\boldsymbol{T}^{-1} \boldsymbol{A T}$，可以让B是diag$(\lambda_i)$，T是本征向量。如果再更好，那么B和T的性质也可以更好。</p>
+<p>对于下面的一些办法，例如QR迭代，应该尽量把矩阵洗干净，弄成尽量tridiagonal（原矩阵对称的情况）或hessenberg（原矩阵不对称的情况）的形式。这样做，可以把每次QR的花销从$\mathcal{O}\left(n^{3}\right)$ 降到 $\mathcal{O}\left(n^{2}\right)$，并且减少QR的次数。总的来说，QR迭代是一个$\mathcal{O}\left(n^{3}\right)$的算法。 </p>
+</li>
+<li><p>计算方法。</p>
+<ul>
+<li>Power iteration。任取向量$x_{0}=\sum_{j=1}^{n} \alpha_{j} v_{j}$，那么乘以A（并重新归一化）许多次，肯定会迭代到对应最大本征值的那个本征向量。当然，有可能会失败，比如$\alpha_0$恰巧为0，或者最大的本征值是简并的，等等。<ul>
+<li>换成A的逆，这么做就可以知道最小的本征值。</li>
+<li>平移一下，弄成$\boldsymbol{A}-\sigma \boldsymbol{I}$（的逆），就可以知道离$\sigma$最近的本征值。（这就是inverse iteration强的地方）恰当的平移可以在任何情况下改进最大和次大的本征值的比例。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>瑞利商。取一个x，当成是近似的本征向量，可以像求解最小二乘问题那样求解本征值：$\boldsymbol{x} \lambda \cong \boldsymbol{A} \boldsymbol{x}$。结果是$\lambda=\frac{x^{T} A x}{x^{T} x}$，这被称为瑞利商。在用A的逆去迭代求解时，你可以先得到一个迭代的结果x，算出瑞利商$\sigma$，然后平移。</p>
+</li>
+<li><p>算出一个本征值之后，就像算出多项式的根那样，你可以除以（x-a），然后去求解别的根。</p>
+<ul>
+<li>一种做法是，用Householder变换对第一个本征向量得出$H x_{1}=\alpha e_{1}$，然后以$H A H^{-1}=\left[\begin{array}{cc}\lambda_{1} &amp; \boldsymbol{b}^{T} \\ \mathbf{0} &amp; \boldsymbol{B}\end{array}\right]$得到B，B的本征值就是接下来要求的了。但它的本征向量和A不一样。求出B的本征向量$y_2$后，求出$\alpha=\frac{\boldsymbol{b}^{T} \boldsymbol{y}_{2}}{\lambda_{2}-\lambda_{1}}$，再求出A的本征向量$x_{2}=H^{-1}\left[\begin{array}{l}\alpha \\ y_{2}\end{array}\right]$。</li>
+<li>或者，取$\boldsymbol{u}_{1}^{T} \boldsymbol{x}_{1}=\lambda_{1}$，然后$\boldsymbol{A}-\boldsymbol{x}_{1} \boldsymbol{u}_{1}^{T}$。我觉得这样更自然。</li>
+</ul>
+</li>
+<li><p>还有一些迭代法。比如，从$n \times p$的$\boldsymbol{X}_{0}$开始，一次迭代p个向量，$\boldsymbol{X}_{k}=\boldsymbol{A} \boldsymbol{X}_{k-1}$，你将会得到最大的p个本征值所对应的那些本征向量张成的空间。但是，你会总是需要归一化你的各个向量。一个简单的办法是每轮都做QR分解，然后从单位矩阵$X_{0}=I$开始，用</p>
+<p>$\begin{aligned} \hat{\boldsymbol{Q}}_{k} \boldsymbol{R}_{k} &amp;=\boldsymbol{X}_{k-1} \\ \boldsymbol{X}_{k} &amp;=\boldsymbol{A} \hat{\boldsymbol{Q}}_{k} \end{aligned}$</p>
+<p>来取代之前的过程。我们可以把这个认为是每轮更新Q，使得$\boldsymbol{A}_{k}=\hat{\boldsymbol{Q}}_{k}^{H} \boldsymbol{A} \hat{\boldsymbol{Q}}_{k}$是一个三角之类容易算本征值的形式（$H\equiv\dagger$）。同样，也可以在这个里面引入平移来加速整个计算。从$\boldsymbol{A}_{0}=\boldsymbol{A}$开始，用</p>
+<p>  $\boldsymbol{Q}_{k} \boldsymbol{R}_{k}=\boldsymbol{A}_{k-1}-\sigma_{k} \boldsymbol{I}$<br>$\boldsymbol{A}_{k}=\boldsymbol{R}_{k} \boldsymbol{Q}_{k}+\sigma_{k} \boldsymbol{I}$</p>
+<p>来迭代。这么做能行，是因为在迭代$\boldsymbol{A}^{k}=\hat{\boldsymbol{Q}}_{k} \hat{\boldsymbol{R}}_{k}$的同时，你实际上也迭代了$A^\dagger$的逆：$\left(\boldsymbol{A}^{-H}\right)^{k}=\hat{\boldsymbol{Q}}_{k} \hat{\boldsymbol{R}}_{k}^{-H}$（因为Q是厄密的）。实用上说，$\boldsymbol{A}_{k-1}$的右下角取一个2*2矩阵，它的本征值可以作为对平移距离$\sigma_k$（或对最大本征值）的估计。或者更粗略，直接取右下角的元素$a_{n n}^{(k-1)}$。</p>
+</li>
+<li><p>Krylov子空间方法。首先，将Power iteration的各步作为列向量排成一个矩阵：</p>
+<p>$\boldsymbol{K}_{k}=\left[\begin{array}{llllll}\boldsymbol{x}_{0} &amp; \boldsymbol{x}_{1} &amp; \cdots &amp; \boldsymbol{x}_{k-1}\end{array}\right]=\left[\begin{array}{lllll}\boldsymbol{x}_{0} &amp; \boldsymbol{A} \boldsymbol{x}_{0} &amp; \cdots &amp; \boldsymbol{A}^{k-1} \boldsymbol{x}_{0}\end{array}\right]$。</p>
+<p>该序列的元素张成Krylov子空间$\mathcal{K}_{k}=\operatorname{span}\left(\boldsymbol{K}_{k}\right)$。此时，我们发现</p>
+<p>$\begin{array}{llllll}\boldsymbol{A} \boldsymbol{K}_{n} &amp; = &amp; {\left[\begin{array}{llll}\boldsymbol{A} x_{0} &amp; \cdots &amp; \boldsymbol{A} \boldsymbol{x}_{n-2} &amp; \boldsymbol{A} \boldsymbol{x}_{n-1}\end{array}\right]}\end{array}=\boldsymbol{K}_{n}\left[\boldsymbol{e}_{2} \quad \cdots \quad \boldsymbol{e}_{n} \quad \boldsymbol{a}\right] \equiv \boldsymbol{K}_{n} \boldsymbol{C}_{n}$</p>
+<p>而$\boldsymbol{a}=\boldsymbol{K}_{n}^{-1} \boldsymbol{x}_{n}$。注意到这里C是一个Hessenberg矩阵。这样，实际上就是$K_{n}^{-1} A K_{n}=C_{n}$。进一步，由于Kn不是一组好的基，我们应当做QR分解，$Q_{n} R_{n}=K_{n}$，这样仍然是$\boldsymbol{Q}_{n}^{H} \boldsymbol{A} \boldsymbol{Q}_{n}=\boldsymbol{R}_{n} \boldsymbol{C}_{n} \boldsymbol{R}_{n}^{-1} \equiv \boldsymbol{H}$，其中H是个hessenberg矩阵。</p>
+<p>我们使用Arnoldi迭代来计算Q的列向量q，并用q得到H，用H得到A的本征值和本征向量。H的本征值叫做Ritz values，它们近似等于A的本征值。用Qk乘以H的本征值（Ritz向量），就得到近似的A的本征值。计算q们所使用的办法就是一边乘以A，一边Gram-Schimidt正交化。这种办法每次需要动用此前算出的所有q，因此时间和内存上都比较贵。</p>
+<p>如果待分解的矩阵是对称或厄密的，那么计算起来会容易很多。我们使用Lanczos迭代（这就是个名字）来计算。为什么？因为这个时候H是tridiagonal的，我们并不需要每次正交化q的时候都让它和之前的所有q都垂直，而只需要让它和它之前的两个q垂直，剩下的就自动垂直。所以我们大量减少了计算量和内存。</p>
+<ul>
+<li>雅克比方法。这是一种计算对阵矩阵本征值的办法。它通过平面旋转来一次消去待求解矩阵的对称的两个元素。但是这种方法比较慢，而且也很难推广到非对称的矩阵。</li>
+</ul>
+</li>
+</ul>
+<h3 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h3><p>这一章的主题是非线性问题。这样的问题可以归结为求一个非线性函数或函数组的零点。</p>
+<ul>
+<li>解的存在性和唯一性。一般来说，这是比较复杂的。一般我们在一个区间或区域内求解，这叫做bracket，而在bracket上使用中值定理、反函数定理可以得到一些关于解的数学性质（比如存在性）。但是总的来说，似乎没有什么好的办法。</li>
+<li>敏感性。absolute condition number，可以想见，是雅可比矩阵决定的。在某根$x*$处的此数值为$\left|\boldsymbol{J}_{f}^{-1}\left(\boldsymbol{x}^*\right)\right|$。</li>
+<li>迭代方法。<ul>
+<li>人们用指数记录迭代方法收敛的速度，例如，线性收敛的convergence rate是1。</li>
+<li>二分法。它当然是线性收敛的。还有不动点法，一般来说，它的收敛速度是和泰勒展开有关的，如果在不动点处$g^{\prime}\left(x^{*}\right)=0$，那么就肯定至少是二次以上的快速收敛。</li>
+<li>牛顿法。这就是说，$x_{k+1}=x_{k}-\frac{f\left(x_{k}\right)}{f^{\prime}\left(x_{k}\right)}$，或$x_{k+1}=x_{k}-J\left(x_{k}\right)^{-1} f\left(x_{k}\right)$。这相当于解$g(x)=x-f(x) / f^{\prime}(x)$的不动点，可以知道，一般情况下，牛顿法至少是二次的收敛（但要离根够近，否则不收敛）。计算雅克比矩阵的成本是$n^{2}$，n是维数，而解线性系统的成本（回忆两章前）是$\mathcal{O}\left(n^{3}\right)$。</li>
+<li>割线法。牛顿法有个问题，就是每次都要在下一个点重新算一遍导数的值。割线法就是用$f^{\prime}\left(x_{k}\right) \approx \frac{f\left(x_{k}\right)-f\left(x_{k-1}\right)}{x_{k}-x_{k-1}}$来算这个导数。在二维以上，如果最初的Jacobian是$B_{0}$，那么每一轮的jacobian是$\boldsymbol{B}_{k+1}=\boldsymbol{B}_{k}+\left(\left(\boldsymbol{y}_{k}-\boldsymbol{B}_{k} \boldsymbol{s}_{k}\right) \boldsymbol{s}_{k}^{T}\right) /\left(\boldsymbol{s}_{k}^{T} \boldsymbol{s}_{k}\right)$（这个时候叫Broyden方法）。它的conv rate是1.618。</li>
+<li>反向内插。实际上，可以认为割线法里面用了一次函数去内插下一轮的解，而我们也可以用更高次的函数。例如，用二次函数，用前三轮去（lagrange法）逼近一个二次函数，找它的零点。它的conv rate是1.839。</li>
+<li>一些安全方法。安全是说，其他的一些方法虽然更快，但如果起点离实际值太远，则可能不收敛，而安全的方法不会有这个情况。特别是，如果某一轮使用快速方法的结果跑到bracket外面去了，那么这时应该做一轮安全方法。这些办法的核心基本上就是不断搜索适当的步长和方向，使得这一步迭代真的能提高精度。</li>
+</ul>
 </li>
 </ul>
 
@@ -574,7 +648,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">100</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -671,7 +745,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数值分析笔记"><span class="nav-number">1.</span> <span class="nav-text">数值分析笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章"><span class="nav-number">1.1.</span> <span class="nav-text">第一章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章"><span class="nav-number">1.2.</span> <span class="nav-text">第二章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三章"><span class="nav-number">1.3.</span> <span class="nav-text">第三章</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数值分析笔记"><span class="nav-number">1.</span> <span class="nav-text">数值分析笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章"><span class="nav-number">1.1.</span> <span class="nav-text">第一章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章"><span class="nav-number">1.2.</span> <span class="nav-text">第二章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三章"><span class="nav-number">1.3.</span> <span class="nav-text">第三章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四章"><span class="nav-number">1.4.</span> <span class="nav-text">第四章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第五章"><span class="nav-number">1.5.</span> <span class="nav-text">第五章</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -705,7 +779,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">289.2k</span>
+    <span title="Site words total count">298.8k</span>
   
 </div>
 

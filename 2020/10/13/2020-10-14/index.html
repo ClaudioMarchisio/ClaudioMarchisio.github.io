@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="课程笔记,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="近两三周的内容，正则量子化与路径积分">
+<meta name="keywords" content="课程笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="场论笔记（2）">
+<meta property="og:url" content="http://yoursite.com/2020/10/13/2020-10-14/index.html">
+<meta property="og:site_name" content="Miralem 的博客">
+<meta property="og:description" content="近两三周的内容，正则量子化与路径积分">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-10-14T15:06:31.655Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="场论笔记（2）">
+<meta name="twitter:description" content="近两三周的内容，正则量子化与路径积分">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/10/13/2020-10-14/">
+
+
+
+
+
+  <title>场论笔记（2） | Miralem 的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Miralem 的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Miralemi r'ykdisykhr</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-jokes">
+          <a href="/jokes/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            jokes
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-maktaba">
+          <a href="/libre/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            maktaba
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/13/2020-10-14/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Miralem">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2019/01/19/5c4290acb14e1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Miralem 的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">场论笔记（2）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-10-14T10:03:59+08:00">
+                2020-10-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  6.7k words
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  32 minutes
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>近两三周的内容，正则量子化与路径积分</p>
+<a id="more"></a>
+<h2 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4"></a>Chapter 4</h2><p>这一章来讨论场的量子化。这种做法叫做正则量子化，这大概是因为这种做法涉及到哈密顿力学里面的运动方程，或者叫“正则方程”的缘故。正则量子化要求，对于一对经典的物理量$(q, p)$，其满足$\{q, p\}_{P B}=1$的话，则将其量子化为算符，使得这些算符满足</p>
+<p>$[\hat{q}, \hat{p}]=i \hbar,[\hat{q}, \hat{q}]=[\hat{p}, \hat{p}]=0$。</p>
+<h3 id="自由标量场"><a href="#自由标量场" class="headerlink" title="自由标量场"></a>自由标量场</h3><h4 id="场的量子化"><a href="#场的量子化" class="headerlink" title="场的量子化"></a>场的量子化</h4><p>在经典场论里面，我们有$\phi(x)$， 有广义动量$\Pi(x)=\frac{\delta \mathcal{L}}{\delta \partial_{0} \phi(x)}$。现在，我们把它们写成算符。这些算符满足海森堡不确定性关系$[\hat{\phi}(\boldsymbol{x}), \hat{\Pi}(\boldsymbol{y})]=i \hbar \delta(\boldsymbol{x}-\boldsymbol{y})$。现在，新的Hilbert空间，或者说Fock空间，就是场$\phi$的泛函的空间。波函数就是这个标量场的泛函：$\Psi[\{\phi(\boldsymbol{x})\}] \equiv\langle\{\phi(\boldsymbol{x})\} \mid \Psi\rangle$。我们依然会有$\langle\{\phi\}|\widehat{\Pi}(x)| \Psi\rangle \equiv \frac{\hbar}{i} \frac{\delta}{\delta \phi(x)} \Psi[\{\phi\}]$。</p>
+<p>在海森堡绘景（$\hat{A}_{H}\left(x_{0}\right)=e^{\frac{i}{h} \hat{H} x_{0}} \hat{A} e^{-\frac{i}{h} \hat{H} x_{0}}$）下，运动方程是$i \hbar \partial_{0} \hat{A}_{H}\left(x_{0}\right)=\left[\hat{A}_{H}\left(x_{0}\right), \widehat{H}\right]$。因此，对眼下的问题（自由标量场），运动方程就是$i \hbar \partial_{0} \hat{\phi}\left(\boldsymbol{x}, x_{0}\right)=\left[\hat{\phi}\left(\boldsymbol{x}, x_{0}\right), \widehat{H}\right], \quad i \hbar \partial_{0} \hat{\Pi}\left(\boldsymbol{x}, x_{0}\right)=\left[\hat{\Pi}\left(\boldsymbol{x}, x_{0}\right), \widehat{H}\right]$。</p>
+<p>其中，哈密顿量是$\widehat{H}=\int d^{3} x\left[\frac{1}{2} \widehat{\Pi}^{2}(x)+\frac{1}{2}(\nabla \hat{\phi}(x))^{2}+\frac{1}{2} m^{2} \hat{\phi}^{2}(x)\right]$。代入之，得到</p>
+<p>$\partial_{0} \hat{\phi}\left(\boldsymbol{x}, x_{0}\right)=\hat{\Pi}\left(\boldsymbol{x}, x_{0}\right)$<br>$\partial_{0} \hat{\Pi}\left(\boldsymbol{x}, x_{0}\right)=\nabla^{2} \hat{\phi}\left(\boldsymbol{x}, x_{0}\right)-m^{2} \hat{\phi}\left(\boldsymbol{x}, x_{0}\right)$</p>
+<p>1式代入2式，发现这就是KG方程$\left(\partial^{2}+m^{2}\right) \hat{\phi}(x)=0$。这也应当是我们所期待的。</p>
+<h4 id="升降算符"><a href="#升降算符" class="headerlink" title="升降算符"></a>升降算符</h4><p>解这个方程时，我们利用傅里叶变换，写成</p>
+<p>$\phi(\mathbf{x}, t)=\int \frac{d^{3} k}{f(k)}\left[a(\mathbf{k}) e^{i \mathbf{k} \cdot \mathbf{x}-i \omega t}+b(\mathbf{k}) e^{i \mathbf{k} \cdot \mathbf{x}+i \omega t}\right]$</p>
+<p>其中，$\omega=+\left(\mathbf{k}^{2}+m^{2}\right)^{1 / 2}$。分母的f(k)是为了维持场的洛伦兹协变性。我们之后会选取恰当的函数。括号里的部分么，可以认为第二项代表某种“波函数”里面负能量的部分。出于场的厄密性对系数a、b的要求，以及将指数写成两个4-矢量内积的考虑，我们把上式写成：</p>
+<p>$\phi(x)=\int \frac{d^{3} k}{f(k)}\left[a(\mathbf{k}) e^{i k x}+a^{\dagger}(\mathbf{k}) e^{-i k x}\right]$</p>
+<p>我们来看看$f$。$d^3k$不是洛伦兹协变的，但是$dw\wedge d^3k$是。我们注意到$d(\frac{d^3k}{2\omega})=\frac{d\omega\wedge d^3k}{k^2+m^2}$满足条件。所以，$f(k)\propto2\omega$完全可以。出于傅里叶变换习惯上的考虑，我们把这部分的体积元记作$\widetilde{d k} \equiv \frac{d^{3} k}{(2 \pi)^{3} 2 \omega}$。我们的新写法就是</p>
+<p>$\phi(x)=\int \widetilde{d k}\left[a(\mathbf{k}) e^{i k x}+a^{\dagger}(\mathbf{k}) e^{-i k x}\right]$。这些傅里叶系数的对易关系是</p>
+<p>$\begin{aligned}\left[a(\mathbf{k}), a\left(\mathbf{k}^{\prime}\right)\right] &amp;=0 \\\left[a^{\dagger}(\mathbf{k}), a^{\dagger}\left(\mathbf{k}^{\prime}\right)\right] &amp;=0 \\\left[a(\mathbf{k}), a^{\dagger}\left(\mathbf{k}^{\prime}\right)\right] &amp;=(2 \pi)^{3} 2 \omega \delta^{3}\left(\mathbf{k}-\mathbf{k}^{\prime}\right) \end{aligned}$</p>
+<p>我们首先关心怎样用这个形式表达H。经过一顿操作，可以算得</p>
+<p>$H=\frac{1}{2} \int \widetilde{d k} \omega\left(a^{\dagger}(\mathbf{k}) a(\mathbf{k})+a(\mathbf{k}) a^{\dagger}(\mathbf{k})\right)$。</p>
+<p>让我们假设有一个态会被$a^\dagger$给砍没了。$a(\boldsymbol{k})|0\rangle=0$。这个态就是系统的基态，又称为真空态。我们可以把H作用在上面得到零点能。我们把对易关系代入H，使得所有的$a$而非$a^\dagger$都直接作用于基态。得到$\widehat{H}=: \widehat{H}:+E_{0}$，其中，$: \widehat{H}:|0\rangle=0$，而$E_{0}=\int d^{3} k \frac{1}{2} \omega(\boldsymbol{k}) \delta(0)$。然而，此delta函数根据定义</p>
+<p>$\delta(0)=\lim _{p \rightarrow 0} \delta^{3}(\boldsymbol{p})=\lim _{p \rightarrow 0} \int \frac{d^{3} x}{(2 \pi)^{3}} e^{i \boldsymbol{p} \cdot \boldsymbol{x}}=\frac{V}{(2 \pi)^{3}}$</p>
+<p>在红外端是发散的，因为空间无穷大。另一方面，积分$\varepsilon_{0}=\int \frac{d^{3} k}{(2 \pi)^{3}} \frac{\omega(k)}{2} \equiv \frac{1}{2} \int \frac{d^{3} k}{(2 \pi)^{3}} \sqrt{k^{2}+m^{2}}$在紫外端是发散的。这是因为系统即使在一个有限的体积里也有无限的自由度（相当于无穷多个谐振子）。现在，对于这个发散，我们可以把它当做常数，认为零点能对于系统的物理没啥影响。不过，以后我们会遇到一些无穷大，它对系统的物理性质有定性的影响。对于这些情况，我们将用重整化的办法来处理。这里的重整化和统计力学里的重整化是一样的。</p>
+<h4 id="占有数表象"><a href="#占有数表象" class="headerlink" title="占有数表象"></a>占有数表象</h4><p>从傅里叶变换的角度可以把$\hat{n}(\boldsymbol{k}) \equiv \hat{a}^{\dagger}(\boldsymbol{k}) \hat{a}(\boldsymbol{k})$理解为某个频率上的谐振子的数目。这个量和（减去零点能部分的）哈密顿量对易，因此它的本征向量组是完备的，并且这组本征向量对应的各个激发态就对应不同的粒子数目。从这个角度考虑的希尔伯特空间叫Fock空间。这些本征态记作</p>
+<p>$\left.\left|\{n(\boldsymbol{k})\}\rangle=\prod_{\boldsymbol{k}} \mathcal{N}(\boldsymbol{k})\left[\hat{a}^{\dagger}(\boldsymbol{k})\right]^{n(\boldsymbol{k})}\right| 0\right\rangle$，</p>
+<p>并有本征值$\hat{n}(\boldsymbol{k})|\{n(\boldsymbol{k})\}\rangle=(2 \pi)^{3} 2 \omega(\boldsymbol{k}) n(\boldsymbol{k}) \mid\{n(\boldsymbol{k})\}\rangle$。这就是所谓的占有数表象。对频率积分得到总的粒子的数目：$\widehat{N} \equiv \int \frac{d^{3} k}{(2 \pi)^{3} 2 \omega(k)} \hat{n}(k)$。</p>
+<p>一个占有数的本征态的能量是$\widehat{H}|\{n(\boldsymbol{k})\}\rangle=\left[\int d^{3} k n(\boldsymbol{k}) \omega(\boldsymbol{k})+E_{0}\right]|\{n(\boldsymbol{k})\}\rangle$。在零点能之外的激发能是$\varepsilon(\boldsymbol{k})=\int d^{3} k n(\boldsymbol{k}) \omega(\boldsymbol{k})$。另一方面，系统的线动量可以记为$\widehat{\boldsymbol{P}}=\int_{x_{0} \text { fixed }} d^{3} x \widehat{\Pi}\left(\boldsymbol{x}, x_{0}\right) \nabla \hat{\phi}\left(\boldsymbol{x}, x_{0}\right)$，将它在占有数表象下写出来，是$\widehat{\boldsymbol{P}}=\int \frac{d^{3} k}{(2 \pi)^{3} 2 \omega(\boldsymbol{k})} \boldsymbol{k} \hat{n}(\boldsymbol{k})$，非常合理。</p>
+<p>给基态一个激发，变成$|\boldsymbol{k}\rangle \equiv \hat{a}^{\dagger}(\boldsymbol{k})|0\rangle$，可以用以上的结果算出来这个态的能量是$\omega(\boldsymbol{k})$，动量是$k$。因此它具有色散关系$E=\sqrt{k^{2}+m^{2}}$。这个色散关系定义了一个相对论性的粒子，从这个意义上，我们把粒子看作是场的激发。</p>
+<h4 id="对称性"><a href="#对称性" class="headerlink" title="对称性"></a>对称性</h4><p>在量子场论中，诺特定理的形式与经典场论类似。我们有一个守恒流，携带一个荷$\widehat{Q}=\int_{x_{0} \text { fixed }} d^{3} x \hat{j}^{0}\left(\boldsymbol{x}, x_{0}\right)$，我们要求$[\widehat{Q}, \widehat{H}]=0$，在这种情况下这个守恒的荷对应一个对称性，或者说，它是一个对称性的生成元：</p>
+<p>$\widehat{U}(\alpha)=\exp (i \alpha \widehat{Q})$。</p>
+<p>例如，$P^{\mu}=\int_{x_{0}} d^{3} x T^{0 \mu}$守恒，而总动量和H正是对易的。因此，总动量充当了平移变换的生成元，使得$\hat{\phi}\left(\boldsymbol{x}+\boldsymbol{a}, x_{0}\right)=e^{i \boldsymbol{a} \cdot \widehat{\boldsymbol{P}}} \hat{\phi}\left(\boldsymbol{x}, x_{0}\right) e^{-i \boldsymbol{a} \cdot \widehat{\boldsymbol{P}}}$。</p>
+<p>又例如，有一个全局的内部对称性。考虑一个自由的复标量场，它对于一个全局的相位变化不变。首先，我们的场这回没有必要是厄密的，因此可以写</p>
+<p>$\begin{aligned} \hat{\phi}(x) &amp;=\int \frac{d^{3} k}{(2 \pi)^{3} 2 \omega(k)}\left(\hat{a}(k) e^{-i k \cdot x}+\hat{b}^{\dagger}(k) e^{i k \cdot x}\right) \\ \hat{\phi}^{\dagger}(x) &amp;=\int \frac{d^{3} k}{(2 \pi)^{3} 2 \omega(k)}\left(\hat{b}(k) e^{-i k \cdot x}+\hat{a}^{\dagger}(k) e^{i k \cdot x}\right) \end{aligned}$</p>
+<p>其中，有对易关系$\left[\hat{a}(\boldsymbol{k}), \hat{a}^{\dagger}\left(\boldsymbol{k}^{\prime}\right)\right]=\left[\hat{b}(\boldsymbol{k}), \hat{b}^{\dagger}\left(\boldsymbol{k}^{\prime}\right)\right]=(2 \pi)^{3} 2 \omega(\boldsymbol{k}) \delta^{3}\left(\boldsymbol{k}-\boldsymbol{k}^{\prime}\right)$。我们将得到场的哈密顿量为$: \widehat{H}:=\int \frac{d^{3} k}{(2 \pi)^{3} 2 \omega(k)} \omega(k)\left(\hat{a}^{\dagger}(k) \hat{a}(k)+\hat{b}^{\dagger}(k) \hat{b}(k)\right)$，它包含两种粒子，a粒子和b粒子。场$\phi$生成b粒子，消灭a粒子，场$\phi^\dagger$则正好相反。并且这两种粒子带有相同的能量。因此，可以想象它们是正物质和反物质粒子。对于这种对称性，经典场论中的守恒流是$j_{\mu}=i \phi^{*} \stackrel{\leftrightarrow}{\partial_{\mu}} \phi$，它对应一个荷，在量子场论中是：</p>
+<p>$\begin{aligned} \widehat{Q} &amp;=: \int d^{3} x i\left(\hat{\phi}^{\dagger} \partial_{0} \hat{\phi}-\left(\partial_{0} \hat{\phi}^{\dagger}\right) \hat{\phi}\right): \\ &amp;=\int \frac{d^{3} k}{(2 \pi)^{3} 2 \omega(k)}\left(\hat{a}^{\dagger}(k) \hat{a}(k)-\hat{b}^{\dagger}(k) \hat{b}(k)\right) \\ &amp;=\hat{N}_{a}-\hat{N}_{b} \end{aligned}$</p>
+<p>这是守恒的。或者说，正反粒子总是成对出现。</p>
+<p>在这些关于对称性的例子中，基态总是满足所有对称性的。例如，在自由标量场的例子，基态满足平移不变性，所以$\widehat{\boldsymbol{P}}|0\rangle=0$。一般来说，对称的态是非简并的。但是，有一些时候，基态本身却是简并的。人们管这种情况叫做自发对称性破缺。例如，伊辛模型的基态就是简并的。在带有相互作用的量子场论中，我们将会讨论这类系统。</p>
+<h2 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h2><p>路径积分方法。</p>
+<h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><h4 id="传播子"><a href="#传播子" class="headerlink" title="传播子"></a>传播子</h4><p>我们最初的动机是考察两点之间的态的相关性：$F\left(q_{f}, t_{f} \mid q_{i}, t_{i}\right)=\left\langle q_{f}, t_{f} \mid q_{i}, t_{i}\right\rangle$。为了简单起见，考虑$\left|q_{i}, t_{i}\right\rangle=|0,0\rangle$， $\left|q_{f}, t_{f}\right\rangle=|q, t\rangle$的情况。于是，得到初态$\lim _{t \rightarrow 0} F(q, t \mid 0,0)=\langle q \mid 0\rangle=\delta(q)$，以及$F$随时间的演化：</p>
+<p>$\begin{aligned} i \hbar \frac{\partial F}{\partial t} &amp;=i \hbar \frac{\partial}{\partial t}\langle q, t \mid 0,0\rangle=i \hbar \frac{\partial}{\partial t}\left\langle q\left|e^{-i \hat{H} t / \hbar}\right| 0\right\rangle \\ &amp;=\left\langle q\left|\hat{H} e^{-i \hat{H} t / \hbar}\right| 0\right\rangle \\ &amp;=\int d q^{\prime}\left\langle q|\hat{H}| q^{\prime}\right\rangle\left\langle q^{\prime}\left|e^{-i \hat{H} t / h}\right| 0\right\rangle \\ &amp;=\int d q^{\prime}\left\langle q|\hat{H}| q^{\prime}\right\rangle F\left(q^{\prime}, t \mid 0,0\right) \\ &amp;\equiv \hat{H}_{q} F(q, t \mid 0,0)\end{aligned}$</p>
+<p>这个演化长得像一个薛定谔方程。这个$F$叫薛定谔传播子。</p>
+<h4 id="路径积分"><a href="#路径积分" class="headerlink" title="路径积分"></a>路径积分</h4><p>还有另外一种计算传播子的方法，这就是路径积分（对所有可能的路径进行积分，而非沿着某条路径进行积分）。这就是说，利用$|q,t\rangle$的完备性，</p>
+<p>$F\left(q_{f}, t_{f} \mid q_{i}, t_{i}\right)=\int d q_{1} \ldots d q_{N}\left\langle q_{f}, t_{f} \mid q_{N}, t_{N}\right\rangle\left\langle q_{N}, t_{N} \mid q_{N-1}, t_{N-1}\right\rangle \times \ldots$<br>$\times \ldots\left\langle q_{j}, t_{j} \mid q_{j-1}, t_{j-1}\right\rangle \ldots\left\langle q_{1}, t_{1} \mid q_{i}, t_{i}\right\rangle$</p>
+<p>当我们取$N\to\infty$的极限的时候，可以取近似</p>
+<p>$\left\langle q_{j}, t_{j} \mid q_{j-1}, t_{j-1}\right\rangle=\delta\left(q_{j}-q_{j-1}\right)-i \frac{\Delta t}{h}\left\langle q_{j}|\hat{H}| q_{j-1}\right\rangle+O\left((\Delta t)^{2}\right)$</p>
+<p>对于最常见的哈密顿量$\hat{H}=\frac{\hat{p}^{2}}{2 m}+V(\hat{q})$，由于动量的本征函数形如$\langle q \mid p\rangle=\frac{1}{\sqrt{2 \pi \hbar}} e^{i p q / h}$，我们可以将上式化为（H的本征值那里，取相邻q的中点只是一个定则）：</p>
+<p>$\left\langle q_{j}, t_{j} \mid q_{j-1}, t_{j-1}\right\rangle \approx \int \frac{d p_{j}}{2 \pi h} \exp \left[\frac{i}{h}\left(p_{j}\left(q_{j}-q_{j-1}\right)-\Delta t H\left(p_{j}, \frac{q_{j}+q_{j-1}}{2}\right)\right)\right]$</p>
+<p>这样，就可以写成</p>
+<p>$\begin{aligned}\left\langle q_{f}, t_{f} \mid q_{i}, t_{i}\right\rangle=&amp; \lim _{N \rightarrow \infty} \int \prod_{j=1}^{N} d q_{j} \int_{-\infty}^{\infty} \prod_{j=1}^{N+1} \frac{d p_{j}}{2 \pi \hbar} \\ &amp; \exp \left\{\frac{i}{h} \sum_{j=1}^{N+1}\left[p_{j}\left(q_{j}-q_{j-1}\right)-\Delta t H\left(p_{j}, \frac{q_{j}+q_{j-1}}{2}\right)\right]\right\} \end{aligned}$</p>
+<p>我们记$\mathcal{D} p \mathcal{D} q \equiv \lim _{N \rightarrow \infty} \prod_{j=1}^{N} \frac{d p_{j} d q_{j}}{2 \pi h}$，从而写出</p>
+<p>$\left\langle q_{f}, t_{f} \mid q_{i}, t_{i}\right\rangle=\int \mathcal{D} p \mathcal{D} q e^{\frac{i}{\hbar}} \int_{t_{i}}^{t_{f}} d t[p \dot{q}-H(p, q)]=\int \mathcal{D} p \mathcal{D} q e^{\frac{i}{\hbar} S(q, p)}$。</p>
+<p>或者，把动量积掉，得到费曼的路径积分形式：</p>
+<p>$\left\langle q_{f}, t_{f} \mid q_{i}, t_{i}\right\rangle=\int \mathcal{D} q e^{\frac{i}{\hbar}} \int_{t_{i}}^{t_{f}} d t L(q, \dot{q})$</p>
+<h4 id="例子——如何实际地计算路径积分"><a href="#例子——如何实际地计算路径积分" class="headerlink" title="例子——如何实际地计算路径积分"></a>例子——如何实际地计算路径积分</h4><p>考虑一个一维的拉氏量，$L(q, \dot{q})=\frac{1}{2} m \dot{q}^{2}-V(q)$。假设q有一个“经典”部分，也就是经典力学算出来的，满足运动方程的$q_{c}(t)$，又假设系统的量子涨落为$\xi(t)$。并且，认为路径的起点和终点的速度和动量确定。</p>
+<p>可以写出作用量，是：</p>
+<p>$S(q, \dot{q})=S\left(q_{c}, \dot{q}_{c}\right)+S_{\mathrm{eff}}\left(\xi, \dot{\xi} ; q_{c}\right)$<br>$+\int_{t_{i}}^{t_{f}} d t \frac{d}{d t}\left[m \xi \frac{d q_{c}}{d t}\right]+\int_{t_{i}}^{t_{f}} d t\left(m \frac{d^{2} q_{c}}{d t^{2}}+\left.\frac{\partial V}{\partial q}\right|_{q_{c}}\right) \xi(t)$</p>
+<p>（得到此式的过程中用了$m\ddot{q}=-\partial_qV(q)$。）</p>
+<p>Remark：1）后两项可以看出来是0；2）这里面涉及涨落$\xi$的作用量是</p>
+<p>$S_{\mathrm{eff}}(\xi, \dot{\xi})=\int_{t_{i}}^{t_{f}} d t \frac{1}{2} m \dot{\xi}^{2}-\left.\frac{1}{2} \int_{t_{i}}^{t_{f}} d t \int_{t_{i}}^{t_{f}} d t^{\prime} \frac{\partial^{2} V}{\partial q(t) \partial q\left(t^{\prime}\right)}\right|_{q_{c}} \xi(t) \xi\left(t^{\prime}\right)-O\left(\xi^{3}\right)$。</p>
+<ul>
+<li><p><strong>截断</strong>到$\xi^2$是不是一个好主意？我们来看一下经典极限下这个结果会变成什么样。由于h在分母，我们rescale一下，$\xi=\sqrt{\hbar} \tilde{\xi}$，得到</p>
+<p>$\frac{S}{\hbar}=\frac{1}{\hbar} S^{(0)}\left(q_{c}\right)+S^{(2)}\left(\tilde{\xi} ; q_{c}\right)+\sum_{n=3}^{\infty} \hbar^{n / 2} S^{(n)}\left(\tilde{\xi} ; q_{c}\right)$</p>
+<p>所以是可以的。更高次的项都愉快地随着经典极限而消失了。</p>
+</li>
+</ul>
+<p>利用起点和终点确定的条件，可以写</p>
+<p>$S_{\mathrm{eff}}(\tilde{\xi}, \dot{\xi})=\frac{1}{2} \int_{t_{i}}^{t_{f}} d t \tilde{\xi}(t)\left[-m \frac{d^{2}}{d t^{2}}-V^{\prime \prime}\left(q_{c}(t)\right)\right] \tilde{\xi}(t)$</p>
+<p>注意到，其中$\hat{A}=-m \frac{d^{2}}{d t^{2}}-V^{\prime \prime}\left(q_{c}(t)\right)$长得像一个薛定谔算符。我们假设他有完备的本征函数组，并<strong>利用这一组函数把涨落$\xi$展开</strong>为$\tilde{\xi}(t)=\sum_{n} c_{n} \psi_{n}(t)$。这个时候的作用量变为</p>
+<p>$S^{(2)}=\frac{1}{2} \int_{t_{i}}^{t_{f}} d t \tilde{\xi}(t) \hat{A} \tilde{\xi}(t)=\frac{1}{2} \sum_{n} A_{n} c_{n}^{2}$</p>
+<p>而对路径的（泛函）微分可以转换为$\mathcal{D} \tilde{\xi}=\mathcal{N} \prod_{n} \frac{d c_{n}}{\sqrt{2 \pi}}$。这里用了一个归一化常数$\mathcal{N}$。现在对所有量子涨落/可行路径积分已经被转化为一个高斯积分，我们把对$S^{(2)}$这一部分的路径积分记作$\mathcal{Z}^{(2)}$，得到$\mathcal{Z}^{(2)}=\mathcal{N} \prod_{n} A_{n}^{-1 / 2} \equiv \mathcal{N}(\operatorname{Det} \hat{A})^{-1 / 2}$，所以我们的任务就是计算这个算符A的行列式。这仍然是很难的。</p>
+<hr>
+<p>我们可以通过<strong>延拓到虚时间</strong>（仍然换元$t \rightarrow-i \tau$，这时我们其实正在默认t是虚的）来解决这个问题。在这个情况下，重新观察我们的整个问题，</p>
+<p>$\left\langle q_{f}\left|e^{-\frac{i}{h} H\left(t_{f}-t_{i}\right)}\right| q_{i}\right\rangle \rightarrow\left\langle q_{f}\left|e^{-\frac{1}{\hbar} H\left(\tau_{f}-\tau_{i}\right)}\right| q_{i}\right\rangle$</p>
+<p>再规定$\tau_{i}=0 \quad \tau_{f}=\beta h$，因为这时通过把温度（的倒数）看成虚时间，含时演化的相位可以类比成统计力学里面的密度矩阵$\hat{\rho}=e^{-\beta H}$。这时，根据上述过程，我们所要求的这一部分路径积分事实上转化为配分函数</p>
+<p>$\begin{aligned} \mathcal{Z} &amp;=\int \mathcal{D} q[\tau] \exp \left\{-\frac{1}{\hbar} \int_{0}^{\beta \hbar} d \tau\left[\frac{1}{2} m\left(\frac{\partial q}{\partial \tau}\right)^{2}+V(q)\right]\right\} \\ &amp; \equiv \int \mathcal{D} q[\tau] \exp \left\{-\int_{0}^{\beta} d \tau\left[\frac{m}{2 \hbar^{2}}\left(\frac{\partial q}{\partial \tau}\right)^{2}+V(q)\right]\right\} \end{aligned}$。</p>
+<p>并且，（更重要的是）要求初态和末态是同一个态。这给出周期性边界条件$q(\tau)=q(\tau+\beta)$。有了周期性边界条件，就有了离散的频率（这些频率我们后面会提到，叫做松原（Matsubara）频率），就有了离散的能谱。</p>
+<p>拿到配分函数之后，比如说系统的基态是$E_{0}=-\lim _{\beta \rightarrow \infty} \frac{1}{\beta} \ln \operatorname{tr} e^{-\beta H}$，这都可以计算的。可以看到，经过虚时间延拓的路径积分可以让我们从我们熟悉的统计力学/热力学的角度去观察和理解很多东西。</p>
+<p><strong>回到求解行列式的部分</strong>。这个时候，$D=\operatorname{Det}\left[-\frac{m}{h^{2}} \frac{d^{2}}{d \tau^{2}}+V^{\prime \prime}\left(q_{c}(\tau)\right)\right]$。这个算符的解可能满足边界条件$\psi(\tau)=\psi(\tau+\beta)$，或者（当T=0时）$\psi(0)=\psi(L)=0$，其中我们已经换元$x=\frac{\hbar}{\sqrt{m}} \tau$，而$L=h \beta / \sqrt{m}$。</p>
+<ul>
+<li><p>后一种情况（Vanishing boundary，VBC）。这时本征值问题可写为$\left(-\partial^{2}+W(x)\right) \psi(x)=\lambda \psi(x)$。经过一些复分析的戏法，可以知道$\frac{\operatorname{Det}\left(-\partial^{2}+W(x)-\lambda\right)}{\psi_{\lambda}(L)}$是常量。令$\frac{\operatorname{Det}\left(-\partial^{2}+W(x)\right)}{\psi_{0}(L)}=\pi h \mathcal{N}^{2}$，则$\mathcal{N}\left[\operatorname{Det}\left(-\partial^{2}+W\right)\right]^{-1 / 2}=\left[\pi h \psi_{0}(L)\right]^{-1 / 2}$，即</p>
+<p>$\mathcal{Z}=\mathcal{N}\left[\operatorname{Det}\left(-\frac{\partial^{2}}{\partial x^{2}}+m \omega^{2}\right)\right]^{-1 / 2}=\left[\pi \hbar \psi_{0}(L)\right]^{-1 / 2}$。</p>
+<p>例如，对一维简谐振子，$\psi_{0}(x)=\frac{1}{\sqrt{m} \omega} \sinh (\sqrt{m} \omega x)$，那么算出来$E_{0}=\lim _{\beta \rightarrow \infty} \frac{-1}{\beta} \ln \mathcal{Z}=\frac{\hbar \omega}{2}$，正是我们期望的零点能。</p>
+</li>
+<li><p>前一种情况（PBC）。这时展开为离散的频谱$q(\tau)=\sum_{n=-\infty}^{\infty} e^{i \omega_{n} \tau} q_{n}$，松原频率是$\omega_{n}=2 \pi n / \beta$。这个时候泛函微元参数化为$\mathcal{D} q[\tau]=\mathcal{N} \frac{d q_{0}}{\sqrt{2 \pi}} \prod_{n \geq 1} \frac{d \operatorname{Re} q_{n} d \operatorname{Im} q_{n}}{2 \pi}$，并且可以把对配分函数的求解转化为一系列高斯积分。略过过程，结果是</p>
+<p>$\mathcal{Z}=\mathcal{N} \frac{1}{\sqrt{\beta V^{\prime \prime}(0)}} \prod_{n \geq 1} \frac{1}{\frac{\beta m}{h^{2}} \omega_{n}^{2}+\beta V^{\prime \prime}(0)}=\mathcal{N}\left[\prod_{n=-\infty}^{\infty} \frac{1}{\frac{\beta m}{h^{2}} \omega_{n}^{2}+\beta V^{\prime \prime}(0)}\right]^{1 / 2}$。</p>
+<p>参数$\mathcal{N}$将发散的连乘式拉回来，称之为正规化。拉回来之后，变一些数学戏法，成为</p>
+<p>$\mathcal{Z}=\frac{1}{2 \sinh \left(\frac{\beta \hbar}{2}\left(\frac{V^{\prime \prime}(0)}{m}\right)^{1 / 2}\right)}$。</p>
+<p>这正是线性振子的配分函数。</p>
+</li>
+</ul>
+<h4 id="翻译成场的语言"><a href="#翻译成场的语言" class="headerlink" title="翻译成场的语言"></a>翻译成场的语言</h4><p>考虑一个普通的标量场，它具有哈密顿量</p>
+<p>$\hat{H}=\int d^{3} x\left[\frac{1}{2} \hat{\Pi}^{2}(x)+\frac{1}{2}(\nabla \hat{\phi}(x))^{2}+V(\hat{\phi}(x))\right]$</p>
+<p>为了后续的计算方便，我们引入一个额外的项，即$\mathcal{L}_{\text {source }}=J(x) \phi(x)$，它可以认为是外力的因素。并且我们令它在时空的无穷远处为0。</p>
+<p>这个时候，我们关心的关联函数是</p>
+<p>$_{J}\left\langle\left\{\phi\left(\boldsymbol{x}, x_{0}\right)\right\} \mid\left\{\phi^{\prime}\left(\boldsymbol{y}, y_{0}\right)\right\}\right\rangle_{J}=\langle\{\phi(\boldsymbol{x})\}| T \exp[{-\frac{i}{\hbar}} \int_{y_{0}}^{x_{0}} d x_{0}^{\prime} \widehat{H}\left(x_{0}^{\prime}\right)]|\{{\phi}^{\prime}(\boldsymbol{y})\}\rangle$
+
+或者说，和前面一样地写成路径积分，并且把动量的部分积掉：
+
+${ }_{J}\left\langle\left\{\phi\left(\boldsymbol{x}, x_{0}\right)\right\} \mid\left\{\phi^{\prime}\left(\boldsymbol{y}, y_{0}\right)\right\}\right\rangle_{J}=\mathcal{N} \int_{\mathrm{b} . \text { c. }} \mathcal{D} \phi e^{\frac{i}{\hbar} S\left(\phi, \partial_{\mu} \phi, J\right)}$</p>
+<p>b.c.指的是边界条件。</p>
+<p>如果我们延拓到虚时间并让演化的时间足够长，或者说，让$x_0\to-i\infty$, $y_0\to+i\infty$，那么就相当于我们在统计力学当中取零温度，这样的话，整个事情中只有基态是重要的。或者说，在时间久远的情况下，这个振幅完全相当于真空态（基态）在过完这么久之后还剩下多少（vacuum persistence amplitude）</p>
+<p>$Z[J]\equiv{ }_{J}\langle 0 \mid 0\rangle_{J}=\mathcal{N} \lim _{T \rightarrow+i \infty} \lim _{T^{\prime} \rightarrow-i \infty} \int \mathcal{D} \phi \exp\left[{\frac{i}{\hbar}} \int_{T}^{T^{\prime}} d^{4} x\left[\mathcal{L}\left(\phi, \partial_{\mu} \phi\right)+J \phi\right]\right]$</p>
+<p>事实上可以从（物理学家所认为的）数学上推出来这个结果。从这里看到Z[J]实际上是一个生成函数，对他求导可以算出物理量的路径积分在真空态下的期望。它在这里起到和配分函数一样的作用。特别的，它可以用来计算场的关联函数。这里就可以看到引入外部源J的好处了。例如，计算场的二点关联函数：</p>
+<p>$\left.\frac{1}{Z[0]} \frac{\delta^{2} Z[J]}{\delta J(x) \delta J\left(x^{\prime}\right)}\right|_{J=0}=\left.\frac{1}{\langle 0 \mid 0\rangle} \frac{\delta^{2} J\langle 0 \mid 0\rangle_{J}}{\delta J(x) \delta J\left(x^{\prime}\right)}\right|_{J=0}=\left(\frac{i}{\hbar}\right)^{2}\left\langle 0\left|T\left[\phi(x) \phi\left(x^{\prime}\right)\right]\right| 0\right\rangle$</p>
+<p>（其中$T[\hat{A}(x) \hat{B}(y)]=\theta\left(x_{0}-y_{0}\right) \hat{A}(x) \hat{B}(y)+\theta\left(y_{0}-x_{0}\right) \hat{B}(y) \hat{A}(x)$）</p>
+<p>N点关联函数：</p>
+<p>$\begin{aligned}\left\langle 0\left|T\left[\phi\left(x_{1}\right) \ldots \phi\left(x_{N}\right)\right]\right| 0\right\rangle &amp;=\left.(-i \hbar)^{N} \frac{1}{\langle 0 \mid 0\rangle} \frac{\delta^{N}{ }_{J}\langle 0 \mid 0\rangle_{J}}{\delta J\left(x_{1}\right) \ldots \delta J\left(x_{N}\right)}\right|_{J=0} \\ &amp;=\frac{1}{\langle 0 \mid 0\rangle} \int \mathcal{D} \phi \phi\left(x_{1}\right) \ldots \phi\left(x_{N}\right) \exp \left(\frac{i}{\hbar} S\left[\phi, \partial_{\mu} \phi\right]\right) \end{aligned}$</p>
+<p>对应的，在虚时间中的配分函数是$Z^{\prime}[J]=\int \mathcal{D} \phi e^{-\int_{0}^{\beta} d \tau\left(\mathcal{L}_{E}-J \phi\right)}$，而N点的关联函数是</p>
+<p>$\left.\frac{1}{Z^{\prime}[J]} \frac{\delta^{N} Z^{\prime}[J]}{\delta J\left(x_{1}\right) \ldots J\left(x_{N}\right)}\right|_{J=0}=\left\langle\phi\left(x_{1}\right) \ldots \phi\left(x_{N}\right)\right\rangle$。</p>
+<h4 id="标量场的路径积分"><a href="#标量场的路径积分" class="headerlink" title="标量场的路径积分"></a>标量场的路径积分</h4><p>我们首先延拓到虚时间，得到配分函数</p>
+<p>$\mathcal{Z}_{E}[J]=\mathcal{N} \int \mathcal{D} \phi e^{-\int d^{D} x\left[\frac{1}{2}\left(\partial_{\mu} \phi\right)^{2}+\frac{1}{2} m^{2} \phi^{2}-J \phi\right]}$。</p>
+<p>把场记作$\phi(x)=\bar{\phi}(x)+\xi(x)$， 拉氏量变成</p>
+<p>$\begin{aligned} \mathcal{L}_{E} &amp;=\frac{1}{2} \phi\left[-\partial^{2}+m^{2}\right] \phi-J \phi \\ &amp;=\frac{1}{2} \bar{\phi}\left[-\partial^{2}+m^{2}\right] \bar{\phi}-J \bar{\phi}+\frac{1}{2} \xi\left[-\partial^{2}+m^{2}\right] \xi+\xi\left[-\partial^{2}+m^{2}\right] \bar{\phi}-J \xi \end{aligned}$</p>
+<p>这时候，$\left[-\partial^{2}+m^{2}\right] \bar{\phi}=J(x)$是我们把J从涨落中decouple出来的唯一办法。这样的话，形式上可以从格林函数$G_{0}^{E}\left(x-x^{\prime}\right)=\left\langle x\left|\frac{1}{-\partial^{2}+m^{2}}\right| x^{\prime}\right\rangle$写出$\bar{\phi}(x)=\int d^{D} x^{\prime} G_{0}^{E}\left(x-x^{\prime}\right) J\left(x^{\prime}\right)$。这样的话，我们就可以写出总的配分函数</p>
+<p>$Z_{E}[J]=Z_{E}[0] \exp\left[{\frac{1}{2}} \int d^{D} x \int d^{D} x^{\prime} J(x) G_{0}^{E}\left(x-x^{\prime}\right) J\left(x^{\prime}\right)\right]$</p>
+<p><strong>涨落带来的这一部分路径积分</strong>$Z_{E}[0]=\int \mathcal{D} \xi e^{-\frac{1}{2}} \int d^{D} x \xi(x)\left[-\partial^{2}+m^{2}\right] \xi(x)$。同样，把涨落用某组本征函数展开，变成高斯积分，快进到$\left(\operatorname{Det}\left[-\partial^{2}+m^{2}\right]\right)^{-1 / 2}$这一步。注意到这个算符的解是平面波，直接一波</p>
+<p>$\begin{aligned} \ln \operatorname{Det}\left[-\partial^{2}+m^{2}\right] &amp;=\operatorname{Tr} \ln \left[-\partial^{2}+m^{2}\right] \\ &amp;=\sum_{p} \ln \left(p^{2}+m^{2}\right) \\ &amp;=V \int \frac{d^{D} p}{(2 \pi)^{D}} \ln \left(p^{2}+m^{2}\right) \end{aligned}$</p>
+<p>这一部分路径积分的意义就是量子涨落带来的额外的影响。实际上，</p>
+<p>$Z_{E}[0]=\lim _{\beta \rightarrow \infty} \sum_{n} e^{-\beta E_{n}} \sim e^{-\beta E_{0}}+\ldots$，</p>
+<p>可以看到它直接对应基态的能量。</p>
+<p><strong>传播子</strong>$G_{E}^{(0)}\left(x-x^{\prime}\right)$。做傅里叶变换，</p>
+<p>$G_{E}^{(0)}\left(x-x^{\prime}\right)=\int \frac{d^{D} p}{(2 \pi)^{D}} G_{0}^{E}(p) e^{i p_{\mu}\left(x_{\mu}-x_{\mu}^{\prime}\right)}$。</p>
+<p>从格林函数的微分方程解得$G_{E}^{(0)}(p)=\frac{1}{p^{2}+m^{2}}$。代入傅里叶变换中，我们来看这个积分。首先，我们注意到$\frac{1}{A}=\frac{1}{2} \int_{0}^{\infty} d \alpha e^{-\frac{A}{2} \alpha}$，于是令$A=p^{2}+m^{2}$， 可得</p>
+<p>$G_{E}^{(0)}\left(x-x^{\prime}\right)=\frac{1}{2} \int_{0}^{\infty} d \alpha \int \frac{d^{D} p}{(2 \pi)^{D}} e^{-\frac{\alpha}{2}\left(p^{2}+m^{2}\right)+i p_{\mu}\left(x_{\mu}-x_{\mu}^{\prime}\right)}$</p>
+<p>做掉高斯积分的部分，</p>
+<p>$G_{E}^{(0)}\left(x-x^{\prime}\right)=\frac{1}{2(2 \pi)^{D / 2}} \int_{0}^{\infty} d \alpha \alpha^{-D / 2} e^{-\frac{\left|x-x^{\prime}\right|^{2}}{2 \alpha}}-\frac{1}{2} m^{2} \alpha$</p>
+<p>做些换元，利用修正贝塞尔函数的定义$K_{\nu}(z)=\frac{1}{2} \int_{0}^{\infty} d t t^{\nu-1} e^{-\frac{z}{2}\left(t+\frac{1}{t}\right)}$，就可以知道</p>
+<p>$G_{E}^{(0)}\left(x-x^{\prime}\right)=\frac{1}{(2 \pi)^{D / 2}}\left(\frac{m}{\left|x-x^{\prime}\right|}\right)^{\frac{D}{2}-1} K_{\frac{D}{2}-1}\left(m\left|x-x^{\prime}\right|\right)$。</p>
+<p>它在远处表现为指数衰减。这个衰减的特征长度是康普顿波长，在热力学中则是关联长度$\xi$。在近处则表现为多项式增强。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/课程笔记/" rel="tag"># 课程笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/09/25/2020-09-25/" rel="next" title="无题">
+                <i class="fa fa-chevron-left"></i> 无题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDg0Ny8yMTM2OA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://i.loli.net/2019/01/19/5c4290acb14e1.jpg" alt="Miralem">
+            
+              <p class="site-author-name" itemprop="name">Miralem</p>
+              <p class="site-description motion-element" itemprop="description">黑龙江省双鸭山市宝清县东方红林场职业棕熊，每周一三五出摊</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">100</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wzh41807@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/di-ba-la-33" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>Zhihu</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links Interestings
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.preposterousuniverse.com/blog/" title="Preposterous Universe" target="_blank">Preposterous Universe</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.andrewsun.net/panta_rhei/" title="Anything Goes" target="_blank">Anything Goes</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://bactra.org/weblog/" title="Three-Toed Sloth" target="_blank">Three-Toed Sloth</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://changhai.org/" title="Changhai Lu" target="_blank">Changhai Lu</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://math.ucr.edu/home/baez/FUN.html/" title="Baez's fun stuff" target="_blank">Baez's fun stuff</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=1393428089&auto=0&height=32"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=29849350&auto=0&height=32"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=1465666&auto=0&height=32"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=35447243&auto=0&height=32"></iframe>
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-4"><span class="nav-number">1.</span> <span class="nav-text">Chapter 4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自由标量场"><span class="nav-number">1.1.</span> <span class="nav-text">自由标量场</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#场的量子化"><span class="nav-number">1.1.1.</span> <span class="nav-text">场的量子化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#升降算符"><span class="nav-number">1.1.2.</span> <span class="nav-text">升降算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#占有数表象"><span class="nav-number">1.1.3.</span> <span class="nav-text">占有数表象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对称性"><span class="nav-number">1.1.4.</span> <span class="nav-text">对称性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-5"><span class="nav-number">2.</span> <span class="nav-text">Chapter 5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Intro"><span class="nav-number">2.1.</span> <span class="nav-text">Intro</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#传播子"><span class="nav-number">2.1.1.</span> <span class="nav-text">传播子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#路径积分"><span class="nav-number">2.1.2.</span> <span class="nav-text">路径积分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#例子——如何实际地计算路径积分"><span class="nav-number">2.1.3.</span> <span class="nav-text">例子——如何实际地计算路径积分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#翻译成场的语言"><span class="nav-number">2.1.4.</span> <span class="nav-text">翻译成场的语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标量场的路径积分"><span class="nav-number">2.1.5.</span> <span class="nav-text">标量场的路径积分</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Miralem</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">298.8k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<span id="timeDate">��������...</span>
+<span id="times">����ʱ����...</span> 
+<script> 
+    var now = new Date(); 
+    function createtime() {
+    var grt= new Date("01/07/2019 12:00:00");
+    now.setTime(now.getTime()+250); 
+    days = (now - grt ) / 1000 / 60 / 60 / 24; 
+    dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); 
+    hnum = Math.floor(hours); 
+    if(String(hnum).length ==1 ){
+        hnum = "0" + hnum;
+    } 
+    minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 )
+    {
+       mnum = "0" + mnum;
+    } 
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds);
+    if(String(snum).length ==1 ){snum = "0" + snum;} 
+    document.getElementById("timeDate").innerHTML = " Run for " dnum+" days ";
+    document.getElementById("times").innerHTML = hnum + " hours " + mnum + " mins " + snum + " secs";
+} 
+    setInterval("createtime()",250); 
+</script>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
